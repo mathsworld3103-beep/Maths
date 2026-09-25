@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Subjects | MathsWorld</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="/css/responsive.css">
+
+    <!-- Subjects CSS -->
+    <link rel="stylesheet" href="/css/subject.css">
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header class="header">
+
+    <div class="container navbar">
+
+        <!-- Logo -->
+        <a href="index.html" class="logo">
+            <div class="logo-icon">
+                <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+
+            <span>Maths<span>World</span></span>
+        </a>
+
+
+        <!-- Desktop Navigation -->
+        <nav class="nav-menu">
+
+            <a href="index.html">Home</a>
+
+            <a href="subjects.html" class="active">
+                Subjects
+            </a>
+
+            <a href="notes.html">
+                Notes
+            </a>
+
+            <a href="past-papers.html">
+                Past Papers
+            </a>
+
+            <a href="model-papers.html">
+                Model Papers
+            </a>
+
+            <a href="index.html#about">
+                About
+            </a>
+
+            <a href="index.html#contact">
+                Contact
+            </a>
+
+        </nav>
+
+
+        <!-- Login -->
+        <a href="login.html" class="login-btn">
+            <i class="fa-solid fa-user"></i>
+            Login
+        </a>
+
+
+        <!-- Mobile Menu -->
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+    </div>
+
+
+    <!-- Mobile Navigation -->
+
+    <div class="mobile-menu" id="mobileMenu">
+
+        <a href="index.html">
+            <i class="fa-solid fa-house"></i>
+            Home
+        </a>
+
+        <a href="subjects.html" class="active">
+            <i class="fa-solid fa-book-open"></i>
+            Subjects
+        </a>
+
+        <a href="notes.html">
+            <i class="fa-solid fa-file-lines"></i>
+            Notes
+        </a>
+
+        <a href="past-papers.html">
+            <i class="fa-solid fa-file-pdf"></i>
+            Past Papers
+        </a>
+
+        <a href="model-papers.html">
+            <i class="fa-solid fa-copy"></i>
+            Model Papers
+        </a>
+
+        <a href="index.html#about">
+            <i class="fa-solid fa-circle-info"></i>
+            About
+        </a>
+
+        <a href="index.html#contact">
+            <i class="fa-solid fa-envelope"></i>
+            Contact
+        </a>
+
+        <a href="login.html" class="mobile-login">
+            <i class="fa-solid fa-user"></i>
+            Login
+        </a>
+
+    </div>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="subjects-hero">
+
+    <div class="container">
+
+        <div class="subjects-hero-content">
+
+            <span class="hero-label">
+                <i class="fa-solid fa-book-open"></i>
+                Learn With MathsWorld
+            </span>
+
+            <h1>
+                Explore Our
+                <span>Subjects</span>
+            </h1>
+
+            <p>
+                Discover carefully organized subjects, learning materials,
+                notes and model papers designed to help you learn,
+                practice and succeed.
+            </p>
+
+            <div class="hero-actions">
+
+                <a href="#school-subjects" class="primary-btn">
+                    Explore Subjects
+                    <i class="fa-solid fa-arrow-down"></i>
+                </a>
+
+                <a href="materials.html" class="secondary-btn">
+                    Browse Materials
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SEARCH ================= -->
+
+<section class="subject-search-section">
+
+    <div class="container">
+
+        <div class="subject-search-box">
+
+            <div class="search-icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+
+            <input
+                type="text"
+                id="subjectSearch"
+                placeholder="Search subjects... e.g. Physics, Mathematics"
+                autocomplete="off"
+            >
+
+            <button id="clearSearch" class="clear-search" aria-label="Clear search">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+        </div>
+
+        <div class="search-info">
+
+            <span>
+                <i class="fa-solid fa-circle-info"></i>
+                Search by subject name
+            </span>
+
+            <span id="searchCount">
+                6 subjects available
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SCHOOL SUBJECTS ================= -->
+
+<section class="subjects-section" id="school-subjects">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div>
+                <span class="section-tag">
+                    Grade 6 – 11
+                </span>
+
+                <h2>
+                    School Subjects
+                </h2>
+
+                <p>
+                    Build a strong foundation with our Grade 6–11
+                    learning resources.
+                </p>
+            </div>
+
+            <div class="section-icon">
+                <i class="fa-solid fa-school"></i>
+            </div>
+
+        </div>
+
+
+        <div class="subject-grid">
+
+            <!-- Mathematics -->
+
+            <article
+                class="subject-card"
+                data-subject="mathematics"
+                data-level="school"
+            >
+
+                <div class="subject-card-top">
+
+                    <div class="subject-icon mathematics-icon">
+                        <i class="fa-solid fa-calculator"></i>
+                    </div>
+
+                    <span class="level-badge">
+                        Grade 6–11
+                    </span>
+
+                </div>
+
+
+                <div class="subject-card-content">
+
+                    <h3>
+                        Mathematics
+                    </h3>
+
+                    <p>
+                        Learn numbers, algebra, geometry, statistics,
+                        graphs and other important mathematical concepts.
+                    </p>
+
+
+                    <div class="subject-meta">
+
+                        <span>
+                            <i class="fa-solid fa-file-lines"></i>
+                            Notes
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-file-pdf"></i>
+                            Papers
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-copy"></i>
+                            Models
+                        </span>
+
+                    </div>
+
+
+                    <a href="materials.html?subject=mathematics"
+                       class="subject-btn">
+
+                        View Subject
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- Science -->
+
+            <article
+                class="subject-card"
+                data-subject="science"
+                data-level="school"
+            >
+
+                <div class="subject-card-top">
+
+                    <div class="subject-icon science-icon">
+                        <i class="fa-solid fa-flask"></i>
+                    </div>
+
+                    <span class="level-badge">
+                        Grade 6–11
+                    </span>
+
+                </div>
+
+
+                <div class="subject-card-content">
+
+                    <h3>
+                        Science
+                    </h3>
+
+                    <p>
+                        Explore living things, matter, energy, forces,
+                        environment and important scientific concepts.
+                    </p>
+
+
+                    <div class="subject-meta">
+
+                        <span>
+                            <i class="fa-solid fa-file-lines"></i>
+                            Notes
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-file-pdf"></i>
+                            Papers
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-copy"></i>
+                            Models
+                        </span>
+
+                    </div>
+
+
+                    <a href="materials.html?subject=science"
+                       class="subject-btn">
+
+                        View Subject
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= A/L SUBJECTS ================= -->
+
+<section class="subjects-section al-section">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div>
+                <span class="section-tag">
+                    Advanced Level
+                </span>
+
+                <h2>
+                    A/L Subjects
+                </h2>
+
+                <p>
+                    Focused learning resources for Advanced Level
+                    students.
+                </p>
+            </div>
+
+            <div class="section-icon al-icon">
+                <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+
+        </div>
+
+
+        <div class="subject-grid al-grid">
+
+            <!-- Combined Mathematics -->
+
+            <article
+                class="subject-card al-card"
+                data-subject="combined mathematics"
+                data-level="al"
+            >
+
+                <div class="subject-card-top">
+
+                    <div class="subject-icon combined-icon">
+                        <i class="fa-solid fa-square-root-variable"></i>
+                    </div>
+
+                    <span class="level-badge">
+                        A/L
+                    </span>
+
+                </div>
+
+
+                <div class="subject-card-content">
+
+                    <h3>
+                        Combined Mathematics
+                    </h3>
+
+                    <p>
+                        Master pure mathematics, applied mathematics,
+                        calculus, algebra, mechanics and advanced topics.
+                    </p>
+
+
+                    <div class="subject-meta">
+
+                        <span>
+                            <i class="fa-solid fa-file-lines"></i>
+                            Notes
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-file-pdf"></i>
+                            Papers
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-copy"></i>
+                            Models
+                        </span>
+
+                    </div>
+
+
+                    <a href="materials.html?subject=combined-mathematics"
+                       class="subject-btn">
+
+                        View Subject
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- Physics -->
+
+            <article
+                class="subject-card al-card"
+                data-subject="physics"
+                data-level="al"
+            >
+
+                <div class="subject-card-top">
+
+                    <div class="subject-icon physics-icon">
+                        <i class="fa-solid fa-atom"></i>
+                    </div>
+
+                    <span class="level-badge">
+                        A/L
+                    </span>
+
+                </div>
+
+
+                <div class="subject-card-content">
+
+                    <h3>
+                        Physics
+                    </h3>
+
+                    <p>
+                        Study mechanics, waves, electricity, thermal physics,
+                        fields, modern physics and more.
+                    </p>
+
+
+                    <div class="subject-meta">
+
+                        <span>
+                            <i class="fa-solid fa-file-lines"></i>
+                            Notes
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-file-pdf"></i>
+                            Papers
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-copy"></i>
+                            Models
+                        </span>
+
+                    </div>
+
+
+                    <a href="materials.html?subject=physics"
+                       class="subject-btn">
+
+                        View Subject
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- Chemistry -->
+
+            <article
+                class="subject-card al-card"
+                data-subject="chemistry"
+                data-level="al"
+            >
+
+                <div class="subject-card-top">
+
+                    <div class="subject-icon chemistry-icon">
+                        <i class="fa-solid fa-vial"></i>
+                    </div>
+
+                    <span class="level-badge">
+                        A/L
+                    </span>
+
+                </div>
+
+
+                <div class="subject-card-content">
+
+                    <h3>
+                        Chemistry
+                    </h3>
+
+                    <p>
+                        Understand atomic structure, chemical bonding,
+                        organic chemistry, reactions and practical concepts.
+                    </p>
+
+
+                    <div class="subject-meta">
+
+                        <span>
+                            <i class="fa-solid fa-file-lines"></i>
+                            Notes
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-file-pdf"></i>
+                            Papers
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-copy"></i>
+                            Models
+                        </span>
+
+                    </div>
+
+
+                    <a href="materials.html?subject=chemistry"
+                       class="subject-btn">
+
+                        View Subject
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- Biology -->
+
+            <article
+                class="subject-card al-card"
+                data-subject="biology"
+                data-level="al"
+            >
+
+                <div class="subject-card-top">
+
+                    <div class="subject-icon biology-icon">
+                        <i class="fa-solid fa-dna"></i>
+                    </div>
+
+                    <span class="level-badge">
+                        A/L
+                    </span>
+
+                </div>
+
+
+                <div class="subject-card-content">
+
+                    <h3>
+                        Biology
+                    </h3>
+
+                    <p>
+                        Explore cells, genetics, evolution, human biology,
+                        plants, ecology and biological systems.
+                    </p>
+
+
+                    <div class="subject-meta">
+
+                        <span>
+                            <i class="fa-solid fa-file-lines"></i>
+                            Notes
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-file-pdf"></i>
+                            Papers
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-copy"></i>
+                            Models
+                        </span>
+
+                    </div>
+
+
+                    <a href="materials.html?subject=biology"
+                       class="subject-btn">
+
+                        View Subject
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= NO RESULTS ================= -->
+
+<section class="no-subject-results" id="noSubjectResults">
+
+    <div class="container">
+
+        <div class="no-results-box">
+
+            <div class="no-results-icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+
+            <h3>
+                No subjects found
+            </h3>
+
+            <p>
+                We couldn't find a subject matching your search.
+                Try another keyword.
+            </p>
+
+            <button id="resetSubjects" class="primary-btn">
+                Show All Subjects
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CTA ================= -->
+
+<section class="subjects-cta">
+
+    <div class="container">
+
+        <div class="cta-content">
+
+            <div class="cta-icon">
+                <i class="fa-solid fa-rocket"></i>
+            </div>
+
+            <div>
+
+                <span>
+                    Start your learning journey
+                </span>
+
+                <h2>
+                    Learn. Practice. Succeed.
+                </h2>
+
+                <p>
+                    Access notes, past papers and model papers
+                    for your subjects.
+                </p>
+
+            </div>
+
+            <a href="materials.html" class="cta-btn">
+                Explore Materials
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <div class="container footer-content">
+
+        <div class="footer-brand">
+
+            <a href="index.html" class="logo footer-logo">
+
+                <div class="logo-icon">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+
+                <span>Maths<span>World</span></span>
+
+            </a>
+
+            <p>
+                Learn. Practice. Succeed.
+            </p>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="subjects.html">
+                Subjects
+            </a>
+
+            <a href="materials.html">
+                Materials
+            </a>
+
+            <a href="model-papers.html">
+                Model Papers
+            </a>
+
+            <a href="index.html#contact">
+                Contact
+            </a>
+
+        </div>
+
+
+        <div class="footer-copy">
+
+            <p>
+                &copy; 2026 MathsWorld. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- Main JS -->
+<script src="/js/main.js"></script>
+
+<!-- Subjects JS -->
+<script src="/js/subject.js"></script>
+
+</body>
+</html>

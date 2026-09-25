@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Dashboard | MathsWorld</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="dashboard-wrapper">
+
+
+    <!-- =========================================
+         SIDEBAR
+    ========================================== -->
+
+    <aside class="dashboard-sidebar" id="dashboardSidebar">
+
+        <div class="sidebar-logo">
+
+            <a href="index.html">
+                <span class="logo-main">MATHS</span>
+                <span class="logo-world">WORLD</span>
+            </a>
+
+        </div>
+
+
+        <!-- Student Profile -->
+
+        <div class="sidebar-profile">
+
+            <div class="profile-avatar">
+                <i class="fa-solid fa-user"></i>
+            </div>
+
+            <div class="profile-info">
+
+                <h4>Student</h4>
+
+                <span>
+                    A/L Student
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- Navigation -->
+
+        <nav class="dashboard-nav">
+
+            <p class="nav-title">
+                MAIN MENU
+            </p>
+
+            <a href="/dashboard.html" class="dashboard-nav-link active">
+
+                <i class="fa-solid fa-chart-pie"></i>
+
+                <span>Dashboard</span>
+
+            </a>
+
+
+            <a href="/subject.html" class="dashboard-nav-link">
+
+                <i class="fa-solid fa-book-open"></i>
+
+                <span>My Subjects</span>
+
+            </a>
+
+
+            <a href="#" class="dashboard-nav-link">
+
+                <i class="fa-solid fa-book"></i>
+
+                <span>Notes</span>
+
+            </a>
+
+
+            <a href="/material.html" class="dashboard-nav-link">
+
+                <i class="fa-solid fa-folder-open"></i>
+
+                <span>Materials</span>
+
+            </a>
+
+
+            <a href="/past-paper.html" class="dashboard-nav-link">
+
+                <i class="fa-solid fa-file-pdf"></i>
+
+                <span>Past Papers</span>
+
+            </a>
+
+
+            <a href="/model-paper.html" class="dashboard-nav-link">
+
+                <i class="fa-solid fa-file-lines"></i>
+
+                <span>Model Papers</span>
+
+            </a>
+
+
+            <p class="nav-title second-title">
+                ACCOUNT
+            </p>
+
+
+            <a href="#" class="dashboard-nav-link">
+
+                <i class="fa-solid fa-user"></i>
+
+                <span>My Profile</span>
+
+            </a>
+
+
+            <a href="#" class="dashboard-nav-link">
+
+                <i class="fa-solid fa-gear"></i>
+
+                <span>Settings</span>
+
+            </a>
+
+        </nav>
+
+
+        <!-- Logout -->
+
+        <div class="sidebar-bottom">
+
+            <a href="/index.html" class="logout-link" id="logoutBtn">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                <span>Logout</span>
+
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =========================================
+         MAIN CONTENT
+    ========================================== -->
+
+    <main class="dashboard-main">
+
+
+        <!-- Top Header -->
+
+        <header class="dashboard-header">
+
+            <button
+                class="dashboard-menu-toggle"
+                id="dashboardMenuToggle"
+            >
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+
+            <div class="header-search">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="text"
+                    id="dashboardSearch"
+                    placeholder="Search learning resources..."
+                >
+
+            </div>
+
+
+            <div class="header-actions">
+
+                <button class="notification-btn" id="notificationBtn">
+
+                    <i class="fa-regular fa-bell"></i>
+
+                    <span class="notification-dot"></span>
+
+                </button>
+
+
+                <div class="header-user">
+
+                    <div class="header-avatar">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+
+                    <div>
+
+                        <strong>Student</strong>
+
+                        <span>A/L</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- Dashboard Content -->
+
+        <div class="dashboard-content">
+
+
+            <!-- =================================
+                 WELCOME
+            ================================== -->
+
+            <section class="welcome-section">
+
+                <div>
+
+                    <span class="welcome-label">
+                        STUDENT DASHBOARD
+                    </span>
+
+                    <h1>
+                        Welcome back,
+                        <span>Student!</span>
+                    </h1>
+
+                    <p>
+                        Continue learning and keep improving
+                        your knowledge every day.
+                    </p>
+
+                </div>
+
+
+                <div class="welcome-decoration">
+
+                    <i class="fa-solid fa-graduation-cap"></i>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================
+                 QUICK STATS
+            ================================== -->
+
+            <section class="dashboard-stats">
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon blue">
+
+                        <i class="fa-solid fa-book-open"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span class="stat-label">
+                            Subjects
+                        </span>
+
+                        <strong>04</strong>
+
+                        <small>
+                            Enrolled subjects
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon sky">
+
+                        <i class="fa-solid fa-file-lines"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span class="stat-label">
+                            Materials
+                        </span>
+
+                        <strong>28</strong>
+
+                        <small>
+                            Available resources
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon purple">
+
+                        <i class="fa-solid fa-file-pdf"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span class="stat-label">
+                            Papers
+                        </span>
+
+                        <strong>64</strong>
+
+                        <small>
+                            Practice papers
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon green">
+
+                        <i class="fa-solid fa-chart-line"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span class="stat-label">
+                            Progress
+                        </span>
+
+                        <strong>72%</strong>
+
+                        <small>
+                            Learning progress
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================
+                 MAIN GRID
+            ================================== -->
+
+            <section class="dashboard-grid">
+
+
+                <!-- LEFT -->
+
+                <div class="dashboard-left">
+
+
+                    <!-- Subjects -->
+
+                    <div class="dashboard-card">
+
+                        <div class="card-header">
+
+                            <div>
+
+                                <span class="section-label">
+                                    MY LEARNING
+                                </span>
+
+                                <h2>
+                                    My Subjects
+                                </h2>
+
+                            </div>
+
+                            <a href="subjects.html">
+                                View All
+                            </a>
+
+                        </div>
+
+
+                        <div class="subject-dashboard-grid">
+
+
+                            <a href="subjects.html"
+                               class="subject-mini-card mathematics">
+
+                                <div class="subject-icon">
+
+                                    <i class="fa-solid fa-square-root-variable"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <h3>
+                                        Combined Mathematics
+                                    </h3>
+
+                                    <span>
+                                        A/L
+                                    </span>
+
+                                </div>
+
+                                <i class="fa-solid fa-arrow-right"></i>
+
+                            </a>
+
+
+                            <a href="subjects.html"
+                               class="subject-mini-card physics">
+
+                                <div class="subject-icon">
+
+                                    <i class="fa-solid fa-atom"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <h3>
+                                        Physics
+                                    </h3>
+
+                                    <span>
+                                        A/L
+                                    </span>
+
+                                </div>
+
+                                <i class="fa-solid fa-arrow-right"></i>
+
+                            </a>
+
+
+                            <a href="subjects.html"
+                               class="subject-mini-card chemistry">
+
+                                <div class="subject-icon">
+
+                                    <i class="fa-solid fa-flask"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <h3>
+                                        Chemistry
+                                    </h3>
+
+                                    <span>
+                                        A/L
+                                    </span>
+
+                                </div>
+
+                                <i class="fa-solid fa-arrow-right"></i>
+
+                            </a>
+
+
+                            <a href="subjects.html"
+                               class="subject-mini-card biology">
+
+                                <div class="subject-icon">
+
+                                    <i class="fa-solid fa-dna"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <h3>
+                                        Biology
+                                    </h3>
+
+                                    <span>
+                                        A/L
+                                    </span>
+
+                                </div>
+
+                                <i class="fa-solid fa-arrow-right"></i>
+
+                            </a>
+
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Recent Materials -->
+
+                    <div class="dashboard-card">
+
+                        <div class="card-header">
+
+                            <div>
+
+                                <span class="section-label">
+                                    RESOURCES
+                                </span>
+
+                                <h2>
+                                    Recent Materials
+                                </h2>
+
+                            </div>
+
+                            <a href="materials.html">
+                                View All
+                            </a>
+
+                        </div>
+
+
+                        <div class="resource-list">
+
+
+                            <a href="materials.html"
+                               class="resource-item">
+
+                                <div class="resource-icon pdf">
+
+                                    <i class="fa-solid fa-file-pdf"></i>
+
+                                </div>
+
+                                <div class="resource-info">
+
+                                    <h3>
+                                        Trigonometry Notes
+                                    </h3>
+
+                                    <span>
+                                        Combined Mathematics • PDF
+                                    </span>
+
+                                </div>
+
+                                <span class="resource-date">
+                                    New
+                                </span>
+
+                                <i class="fa-solid fa-chevron-right"></i>
+
+                            </a>
+
+
+                            <a href="materials.html"
+                               class="resource-item">
+
+                                <div class="resource-icon notes">
+
+                                    <i class="fa-solid fa-book"></i>
+
+                                </div>
+
+                                <div class="resource-info">
+
+                                    <h3>
+                                        Mechanics Revision Notes
+                                    </h3>
+
+                                    <span>
+                                        Physics • PDF
+                                    </span>
+
+                                </div>
+
+                                <span class="resource-date">
+                                    2 days
+                                </span>
+
+                                <i class="fa-solid fa-chevron-right"></i>
+
+                            </a>
+
+
+                            <a href="materials.html"
+                               class="resource-item">
+
+                                <div class="resource-icon model">
+
+                                    <i class="fa-solid fa-file-lines"></i>
+
+                                </div>
+
+                                <div class="resource-info">
+
+                                    <h3>
+                                        Organic Chemistry Notes
+                                    </h3>
+
+                                    <span>
+                                        Chemistry • PDF
+                                    </span>
+
+                                </div>
+
+                                <span class="resource-date">
+                                    4 days
+                                </span>
+
+                                <i class="fa-solid fa-chevron-right"></i>
+
+                            </a>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- RIGHT -->
+
+                <div class="dashboard-right">
+
+
+                    <!-- Progress -->
+
+                    <div class="dashboard-card progress-card">
+
+                        <div class="card-header">
+
+                            <div>
+
+                                <span class="section-label">
+                                    YOUR PROGRESS
+                                </span>
+
+                                <h2>
+                                    Learning Progress
+                                </h2>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="progress-circle">
+
+                            <div class="progress-inner">
+
+                                <strong>
+                                    72%
+                                </strong>
+
+                                <span>
+                                    Completed
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <p class="progress-description">
+
+                            Keep studying consistently to
+                            improve your learning progress.
+
+                        </p>
+
+
+                        <div class="progress-details">
+
+                            <div>
+
+                                <span>
+                                    Notes Read
+                                </span>
+
+                                <strong>
+                                    18
+                                </strong>
+
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    Papers Practiced
+                                </span>
+
+                                <strong>
+                                    24
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Quick Actions -->
+
+                    <div class="dashboard-card">
+
+                        <div class="card-header">
+
+                            <div>
+
+                                <span class="section-label">
+                                    QUICK ACCESS
+                                </span>
+
+                                <h2>
+                                    Quick Actions
+                                </h2>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="quick-actions">
+
+
+                            <a href="materials.html"
+                               class="quick-action">
+
+                                <div>
+                                    <i class="fa-solid fa-folder-open"></i>
+                                </div>
+
+                                <span>
+                                    Materials
+                                </span>
+
+                            </a>
+
+
+                            <a href="past-papers.html"
+                               class="quick-action">
+
+                                <div>
+                                    <i class="fa-solid fa-file-pdf"></i>
+                                </div>
+
+                                <span>
+                                    Past Papers
+                                </span>
+
+                            </a>
+
+
+                            <a href="model-papers.html"
+                               class="quick-action">
+
+                                <div>
+                                    <i class="fa-solid fa-file-lines"></i>
+                                </div>
+
+                                <span>
+                                    Model Papers
+                                </span>
+
+                            </a>
+
+
+                            <a href="subjects.html"
+                               class="quick-action">
+
+                                <div>
+                                    <i class="fa-solid fa-book-open"></i>
+                                </div>
+
+                                <span>
+                                    Subjects
+                                </span>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Motivation -->
+
+                    <div class="motivation-card">
+
+                        <div class="motivation-icon">
+
+                            <i class="fa-solid fa-lightbulb"></i>
+
+                        </div>
+
+                        <div>
+
+                            <span>
+                                TODAY'S MOTIVATION
+                            </span>
+
+                            <p>
+                                Small progress every day
+                                leads to big achievements.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<!-- Mobile Overlay -->
+
+<div class="dashboard-overlay"
+     id="dashboardOverlay">
+</div>
+
+
+<script src="js/dashboard.js"></script>
+
+</body>
+
+</html>

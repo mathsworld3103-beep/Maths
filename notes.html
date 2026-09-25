@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Notes | MathsWorld</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+   
+
+    <!-- Notes CSS -->
+    <link rel="stylesheet" href="/css/notes.css">
+
+     <!-- Main CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+        <!-- Responsive CSS -->
+    <link rel="stylesheet" href="/css/responsive.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <div class="container navbar">
+
+            <!-- Logo -->
+
+            <a href="#" class="logo">
+                <span class="logo-icon">
+                    <i class="bi bi-mortarboard-fill"></i>
+                </span>
+
+                <span class="logo-text">
+                    Maths<span>World</span>
+                </span>
+            </a>
+
+
+            <!-- Desktop Menu -->
+
+            <nav class="nav-menu">
+
+                <a href="#home" class="active">Home</a>
+
+                <a href="#subjects">Subjects</a>
+
+                <a href="#materials">Notes</a>
+
+                <a href="#papers">Past Papers</a>
+
+                <a href="#about">About</a>
+
+                <a href="#contact">Contact</a>
+
+            </nav>
+
+
+            <!-- Login -->
+
+            <a href="#" class="login-btn">
+                <i class="bi bi-person"></i>
+                Login
+            </a>
+
+
+            <!-- Mobile Button -->
+
+            <button class="menu-btn" id="menuBtn">
+                <i class="bi bi-list"></i>
+            </button>
+
+        </div>
+
+
+        <!-- Mobile Menu -->
+
+        <div class="mobile-menu" id="mobileMenu">
+
+            <a href="#home">Home</a>
+
+            <a href="#subjects">Subjects</a>
+
+            <a href="#materials">Notes</a>
+
+            <a href="#papers">Past Papers</a>
+
+            <a href="#about">About</a>
+
+            <a href="#contact">Contact</a>
+
+            <a href="#" class="mobile-login">
+                <i class="bi bi-person"></i>
+                Login
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= NOTES HERO ================= -->
+
+    <section class="notes-hero">
+
+        <div class="container">
+
+            <div class="notes-hero-content">
+
+                <span class="section-badge">
+                    <i class="fa-solid fa-book-open"></i>
+                    Study Resources
+                </span>
+
+                <h1>
+                    Class <span>Notes</span>
+                </h1>
+
+                <p>
+                    Find useful notes and study materials for
+                    Grade 6–11 and Advanced Level students.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= NOTES SECTION ================= -->
+
+    <main class="notes-section">
+
+        <div class="container">
+
+
+            <!-- Search -->
+
+            <div class="notes-search-box">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="text"
+                    id="notesSearch"
+                    placeholder="Search notes, subjects, topics...">
+
+                <button id="clearSearch">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+
+            </div>
+
+
+            <!-- Filters -->
+
+            <div class="notes-filter-box">
+
+
+                <!-- Subject -->
+
+                <div class="filter-group">
+
+                    <label for="subjectFilter">
+                        <i class="fa-solid fa-book"></i>
+                        Subject
+                    </label>
+
+                    <select id="subjectFilter">
+
+                        <option value="all">
+                            All Subjects
+                        </option>
+
+                        <option value="combined mathematics">
+                            Combined Mathematics
+                        </option>
+
+                        <option value="physics">
+                            Physics
+                        </option>
+
+                        <option value="chemistry">
+                            Chemistry
+                        </option>
+
+                        <option value="biology">
+                            Biology
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Grade -->
+
+                <div class="filter-group">
+
+                    <label for="gradeFilter">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        Grade
+                    </label>
+
+                    <select id="gradeFilter">
+
+                        <option value="all">
+                            All Grades
+                        </option>
+
+                        <option value="grade 6">
+                            Grade 6
+                        </option>
+
+                        <option value="grade 7">
+                            Grade 7
+                        </option>
+
+                        <option value="grade 8">
+                            Grade 8
+                        </option>
+
+                        <option value="grade 9">
+                            Grade 9
+                        </option>
+
+                        <option value="grade 10">
+                            Grade 10
+                        </option>
+
+                        <option value="grade 11">
+                            Grade 11
+                        </option>
+
+                        <option value="a/l">
+                            A/L
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Year -->
+
+                <div class="filter-group">
+
+                    <label for="yearFilter">
+                        <i class="fa-regular fa-calendar"></i>
+                        Year
+                    </label>
+
+                    <select id="yearFilter">
+
+                        <option value="all">
+                            All Years
+                        </option>
+
+                        <option value="2026">2026</option>
+                        <option value="2025">2025</option>
+                        <option value="2024">2024</option>
+                        <option value="2023">2023</option>
+                        <option value="2022">2022</option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Sort -->
+
+                <div class="filter-group">
+
+                    <label for="sortFilter">
+                        <i class="fa-solid fa-arrow-down-wide-short"></i>
+                        Sort
+                    </label>
+
+                    <select id="sortFilter">
+
+                        <option value="newest">
+                            Newest First
+                        </option>
+
+                        <option value="oldest">
+                            Oldest First
+                        </option>
+
+                        <option value="az">
+                            A - Z
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Reset -->
+
+                <button class="reset-btn" id="resetFilters">
+
+                    <i class="fa-solid fa-rotate-right"></i>
+
+                    Reset
+
+                </button>
+
+            </div>
+
+
+            <!-- Results Header -->
+
+            <div class="notes-results-header">
+
+                <div>
+
+                    <h2>
+                        Available Notes
+                    </h2>
+
+                    <p id="resultCount">
+                        Showing 8 notes
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Notes Grid -->
+
+            <div class="notes-grid" id="notesGrid">
+
+
+                <!-- Note 1 -->
+
+                <article
+                    class="note-card"
+                    data-subject="combined mathematics"
+                    data-grade="a/l"
+                    data-year="2026"
+                    data-title="Differentiation Complete Notes">
+
+                    <div class="note-card-top">
+
+                        <div class="pdf-icon">
+                            <i class="fa-solid fa-file-pdf"></i>
+                        </div>
+
+                        <span class="note-year">
+                            2026
+                        </span>
+
+                    </div>
+
+                    <div class="note-content">
+
+                        <span class="note-subject">
+                            Combined Mathematics
+                        </span>
+
+                        <h3>
+                            Differentiation Complete Notes
+                        </h3>
+
+                        <p>
+                            Complete A/L differentiation notes
+                            with important formulas and examples.
+                        </p>
+
+                        <div class="note-meta">
+
+                            <span>
+                                <i class="fa-solid fa-graduation-cap"></i>
+                                A/L
+                            </span>
+
+                            <span>
+                                <i class="fa-regular fa-file-lines"></i>
+                                PDF
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="note-actions">
+
+                        <a
+                            href="pdf/math-integration.pdf"
+                            target="_blank"
+                            class="view-btn">
+
+                            <i class="fa-solid fa-eye"></i>
+                            View
+
+                        </a>
+
+                        <a
+                            href="pdf/math-integration.pdf"
+                            download
+                            class="download-btn">
+
+                            <i class="fa-solid fa-download"></i>
+                            Download
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Note 2 -->
+
+                <article
+                    class="note-card"
+                    data-subject="physics"
+                    data-grade="a/l"
+                    data-year="2025"
+                    data-title="Mechanics Complete Notes">
+
+                    <div class="note-card-top">
+
+                        <div class="pdf-icon">
+                            <i class="fa-solid fa-file-pdf"></i>
+                        </div>
+
+                        <span class="note-year">
+                            2025
+                        </span>
+
+                    </div>
+
+                    <div class="note-content">
+
+                        <span class="note-subject">
+                            Physics
+                        </span>
+
+                        <h3>
+                            Mechanics Complete Notes
+                        </h3>
+
+                        <p>
+                            Important mechanics theory,
+                            equations and worked examples.
+                        </p>
+
+                        <div class="note-meta">
+
+                            <span>
+                                <i class="fa-solid fa-graduation-cap"></i>
+                                A/L
+                            </span>
+
+                            <span>
+                                <i class="fa-regular fa-file-lines"></i>
+                                PDF
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="note-actions">
+
+                        <a
+                            href="pdf/physics-mechanics.pdf"
+                            target="_blank"
+                            class="view-btn">
+
+                            <i class="fa-solid fa-eye"></i>
+                            View
+
+                        </a>
+
+                        <a
+                            href="pdf/physics-mechanics.pdf"
+                            download
+                            class="download-btn">
+
+                            <i class="fa-solid fa-download"></i>
+                            Download
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Note 3 -->
+
+                <article
+                    class="note-card"
+                    data-subject="chemistry"
+                    data-grade="a/l"
+                    data-year="2025"
+                    data-title="Organic Chemistry Notes">
+
+                    <div class="note-card-top">
+
+                        <div class="pdf-icon">
+                            <i class="fa-solid fa-file-pdf"></i>
+                        </div>
+
+                        <span class="note-year">
+                            2025
+                        </span>
+
+                    </div>
+
+                    <div class="note-content">
+
+                        <span class="note-subject">
+                            Chemistry
+                        </span>
+
+                        <h3>
+                            Organic Chemistry Notes
+                        </h3>
+
+                        <p>
+                            Organic chemistry concepts,
+                            reactions and important points.
+                        </p>
+
+                        <div class="note-meta">
+
+                            <span>
+                                <i class="fa-solid fa-graduation-cap"></i>
+                                A/L
+                            </span>
+
+                            <span>
+                                <i class="fa-regular fa-file-lines"></i>
+                                PDF
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="note-actions">
+
+                        <a
+                            href="pdf/chemistry-model-2025.pdf"
+                            target="_blank"
+                            class="view-btn">
+
+                            <i class="fa-solid fa-eye"></i>
+                            View
+
+                        </a>
+
+                        <a
+                            href="pdf/chemistry-model-2025.pdf"
+                            download
+                            class="download-btn">
+
+                            <i class="fa-solid fa-download"></i>
+                            Download
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Note 4 -->
+
+                <article
+                    class="note-card"
+                    data-subject="biology"
+                    data-grade="a/l"
+                    data-year="2025"
+                    data-title="Human Biology Notes">
+
+                    <div class="note-card-top">
+
+                        <div class="pdf-icon">
+                            <i class="fa-solid fa-file-pdf"></i>
+                        </div>
+
+                        <span class="note-year">
+                            2025
+                        </span>
+
+                    </div>
+
+                    <div class="note-content">
+
+                        <span class="note-subject">
+                            Biology
+                        </span>
+
+                        <h3>
+                            Human Biology Notes
+                        </h3>
+
+                        <p>
+                            Human biology lessons with
+                            easy-to-understand explanations.
+                        </p>
+
+                        <div class="note-meta">
+
+                            <span>
+                                <i class="fa-solid fa-graduation-cap"></i>
+                                A/L
+                            </span>
+
+                            <span>
+                                <i class="fa-regular fa-file-lines"></i>
+                                PDF
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="note-actions">
+
+                        <a
+                            href="pdf/biology-human.pdf"
+                            target="_blank"
+                            class="view-btn">
+
+                            <i class="fa-solid fa-eye"></i>
+                            View
+
+                        </a>
+
+                        <a
+                            href="pdf/biology-human.pdf"
+                            download
+                            class="download-btn">
+
+                            <i class="fa-solid fa-download"></i>
+                            Download
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Note 5 -->
+
+                <article
+                    class="note-card"
+                    data-subject="combined mathematics"
+                    data-grade="grade 11"
+                    data-year="2025"
+                    data-title="Grade 11 Mathematics Algebra">
+
+                    <div class="note-card-top">
+
+                        <div class="pdf-icon">
+                            <i class="fa-solid fa-file-pdf"></i>
+                        </div>
+
+                        <span class="note-year">
+                            2025
+                        </span>
+
+                    </div>
+
+                    <div class="note-content">
+
+                        <span class="note-subject">
+                            Mathematics
+                        </span>
+
+                        <h3>
+                            Grade 11 Mathematics Algebra
+                        </h3>
+
+                        <p>
+                            Algebra notes for Grade 11
+                            students with examples.
+                        </p>
+
+                        <div class="note-meta">
+
+                            <span>
+                                <i class="fa-solid fa-graduation-cap"></i>
+                                Grade 11
+                            </span>
+
+                            <span>
+                                <i class="fa-regular fa-file-lines"></i>
+                                PDF
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="note-actions">
+
+                        <a
+                            href="pdf/maths-2025.pdf"
+                            target="_blank"
+                            class="view-btn">
+
+                            <i class="fa-solid fa-eye"></i>
+                            View
+
+                        </a>
+
+                        <a
+                            href="pdf/maths-2025.pdf"
+                            download
+                            class="download-btn">
+
+                            <i class="fa-solid fa-download"></i>
+                            Download
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Note 6 -->
+
+                <article
+                    class="note-card"
+                    data-subject="physics"
+                    data-grade="grade 10"
+                    data-year="2024"
+                    data-title="Physics Motion Notes">
+
+                    <div class="note-card-top">
+
+                        <div class="pdf-icon">
+                            <i class="fa-solid fa-file-pdf"></i>
+                        </div>
+
+                        <span class="note-year">
+                            2024
+                        </span>
+
+                    </div>
+
+                    <div class="note-content">
+
+                        <span class="note-subject">
+                            Physics
+                        </span>
+
+                        <h3>
+                            Physics Motion Notes
+                        </h3>
+
+                        <p>
+                            Basic motion concepts and
+                            important physics formulas.
+                        </p>
+
+                        <div class="note-meta">
+
+                            <span>
+                                <i class="fa-solid fa-graduation-cap"></i>
+                                Grade 10
+                            </span>
+
+                            <span>
+                                <i class="fa-regular fa-file-lines"></i>
+                                PDF
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="note-actions">
+
+                        <a
+                            href="pdf/physics-2025.pdf"
+                            target="_blank"
+                            class="view-btn">
+
+                            <i class="fa-solid fa-eye"></i>
+                            View
+
+                        </a>
+
+                        <a
+                            href="pdf/physics-2025.pdf"
+                            download
+                            class="download-btn">
+
+                            <i class="fa-solid fa-download"></i>
+                            Download
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Note 7 -->
+
+                <article
+                    class="note-card"
+                    data-subject="chemistry"
+                    data-grade="grade 11"
+                    data-year="2023"
+                    data-title="Chemical Reactions Notes">
+
+                    <div class="note-card-top">
+
+                        <div class="pdf-icon">
+                            <i class="fa-solid fa-file-pdf"></i>
+                        </div>
+
+                        <span class="note-year">
+                            2023
+                        </span>
+
+                    </div>
+
+                    <div class="note-content">
+
+                        <span class="note-subject">
+                            Chemistry
+                        </span>
+
+                        <h3>
+                            Chemical Reactions Notes
+                        </h3>
+
+                        <p>
+                            Important chemical reactions
+                            and concepts for students.
+                        </p>
+
+                        <div class="note-meta">
+
+                            <span>
+                                <i class="fa-solid fa-graduation-cap"></i>
+                                Grade 11
+                            </span>
+
+                            <span>
+                                <i class="fa-regular fa-file-lines"></i>
+                                PDF
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="note-actions">
+
+                        <a
+                            href="pdf/chemistry-2023.pdf"
+                            target="_blank"
+                            class="view-btn">
+
+                            <i class="fa-solid fa-eye"></i>
+                            View
+
+                        </a>
+
+                        <a
+                            href="pdf/chemistry-2023.pdf"
+                            download
+                            class="download-btn">
+
+                            <i class="fa-solid fa-download"></i>
+                            Download
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Note 8 -->
+
+                <article
+                    class="note-card"
+                    data-subject="biology"
+                    data-grade="grade 11"
+                    data-year="2025"
+                    data-title="Biology Model Notes">
+
+                    <div class="note-card-top">
+
+                        <div class="pdf-icon">
+                            <i class="fa-solid fa-file-pdf"></i>
+                        </div>
+
+                        <span class="note-year">
+                            2025
+                        </span>
+
+                    </div>
+
+                    <div class="note-content">
+
+                        <span class="note-subject">
+                            Biology
+                        </span>
+
+                        <h3>
+                            Biology Model Notes
+                        </h3>
+
+                        <p>
+                            Important biology concepts
+                            and revision notes.
+                        </p>
+
+                        <div class="note-meta">
+
+                            <span>
+                                <i class="fa-solid fa-graduation-cap"></i>
+                                Grade 11
+                            </span>
+
+                            <span>
+                                <i class="fa-regular fa-file-lines"></i>
+                                PDF
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="note-actions">
+
+                        <a
+                            href="pdf/biology-model-2025.pdf"
+                            target="_blank"
+                            class="view-btn">
+
+                            <i class="fa-solid fa-eye"></i>
+                            View
+
+                        </a>
+
+                        <a
+                            href="pdf/biology-model-2025.pdf"
+                            download
+                            class="download-btn">
+
+                            <i class="fa-solid fa-download"></i>
+                            Download
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+
+            <!-- No Results -->
+
+            <div class="no-results" id="noResults">
+
+                <div class="no-results-icon">
+                    <i class="fa-solid fa-file-circle-xmark"></i>
+                </div>
+
+                <h3>
+                    No Notes Found
+                </h3>
+
+                <p>
+                    Try changing your search or filters.
+                </p>
+
+                <button id="resetNoResults">
+                    Reset Filters
+                </button>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="footer-content">
+
+                <div class="footer-brand">
+
+                    <a href="index.html" class="logo">
+                        <div class="logo-icon">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+
+                        <span>Maths<span>World</span></span>
+                    </a>
+
+                    <p>
+                        Learn. Practice. Succeed.
+                    </p>
+
+                </div>
+
+
+                <div class="footer-links">
+
+                    <a href="index.html">
+                        Home
+                    </a>
+
+                    <a href="notes.html">
+                        Notes
+                    </a>
+
+                    <a href="materials.html">
+                        Past Papers
+                    </a>
+
+                    <a href="index.html#contact">
+                        Contact
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <p>
+                    © 2026 MathsWorld. All Rights Reserved.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JS -->
+
+    <script src="/js/main.js"></script>
+    <script src="/js/notes.js"></script>
+
+</body>
+
+</html>

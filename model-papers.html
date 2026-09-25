@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Model Papers | MathsWorld</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+        rel="stylesheet"
+    >
+
+ 
+    <link rel="stylesheet" href="css/model-papers.css">
+</head>
+
+<body>
+
+    <!-- ================================
+         NAVBAR
+    ================================= -->
+
+    <header class="site-header">
+
+        <nav class="navbar">
+
+            <a href="index.html" class="logo">
+                <span class="logo-main">Maths</span><span class="logo-blue">World</span>
+            </a>
+
+            <div class="nav-links">
+
+                <a href="index.html">Home</a>
+
+                <a href="subjects.html">Subjects</a>
+
+                <a href="materials.html">Notes</a>
+
+                <a href="past-papers.html">Past Papers</a>
+
+                <a href="model-papers.html" class="active">
+                    Model Papers
+                </a>
+
+                <a href="about.html">About</a>
+
+                <a href="contact.html">Contact</a>
+
+                <a href="user/login.html" class="login-btn">
+                    <i class="bi bi-person"></i>
+                    Login
+                </a>
+
+            </div>
+
+            <button class="menu-toggle" id="menuToggle">
+                <i class="bi bi-list"></i>
+            </button>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ================================
+         PAGE HERO
+    ================================= -->
+
+    <section class="model-hero">
+
+        <div class="hero-content">
+
+            <span class="hero-label">
+                <i class="bi bi-file-earmark-text"></i>
+                STUDY MATERIALS
+            </span>
+
+            <h1>
+                Model <span>Papers</span>
+            </h1>
+
+            <p>
+                Practice with quality model papers and improve
+                your exam preparation.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================================
+         MAIN CONTENT
+    ================================= -->
+
+    <main class="model-container">
+
+        <!-- SEARCH + FILTER -->
+
+        <section class="filter-section">
+
+            <div class="search-box">
+
+                <i class="bi bi-search"></i>
+
+                <input
+                    type="text"
+                    id="searchModel"
+                    placeholder="Search model papers..."
+                >
+
+            </div>
+
+
+            <div class="filters">
+
+                <select id="subjectFilter">
+
+                    <option value="">All Subjects</option>
+
+                    <option value="Combined Mathematics">
+                        Combined Mathematics
+                    </option>
+
+                    <option value="Physics">
+                        Physics
+                    </option>
+
+                    <option value="Chemistry">
+                        Chemistry
+                    </option>
+
+                    <option value="Biology">
+                        Biology
+                    </option>
+
+                    <option value="Mathematics">
+                        Mathematics
+                    </option>
+
+                    <option value="Science">
+                        Science
+                    </option>
+
+                    <option value="English">
+                        English
+                    </option>
+
+                    <option value="ICT">
+                        ICT
+                    </option>
+
+                </select>
+
+
+                <select id="levelFilter">
+
+                    <option value="">All Levels</option>
+
+                    <option value="Grade 6-11">
+                        Grade 6–11
+                    </option>
+
+                    <option value="A/L">
+                        A/L
+                    </option>
+
+                </select>
+
+
+                <select id="yearFilter">
+
+                    <option value="">All Years</option>
+
+                    <option value="2026">2026</option>
+                    <option value="2025">2025</option>
+                    <option value="2024">2024</option>
+                    <option value="2023">2023</option>
+
+                </select>
+
+
+                <select id="typeFilter">
+
+                    <option value="">All Types</option>
+
+                    <option value="Full Paper">
+                        Full Paper
+                    </option>
+
+                    <option value="Term Test">
+                        Term Test
+                    </option>
+
+                    <option value="Revision Paper">
+                        Revision Paper
+                    </option>
+
+                    <option value="Unit Test">
+                        Unit Test
+                    </option>
+
+                </select>
+
+            </div>
+
+        </section>
+
+
+        <!-- RESULT INFORMATION -->
+
+        <div class="result-header">
+
+            <div>
+                <h2>Available Model Papers</h2>
+
+                <p>
+                    <span id="resultCount">0</span>
+                    model papers available
+                </p>
+            </div>
+
+        </div>
+
+
+        <!-- LOADING -->
+
+        <div id="loading" class="loading-box">
+
+            <div class="spinner"></div>
+
+            <p>Loading model papers...</p>
+
+        </div>
+
+
+        <!-- ERROR -->
+
+        <div id="errorMessage" class="error-box">
+
+            <i class="bi bi-exclamation-circle"></i>
+
+            <p>
+                Unable to load model papers.
+                Please try again.
+            </p>
+
+            <button onclick="loadModelPapers()">
+                Try Again
+            </button>
+
+        </div>
+
+
+        <!-- EMPTY -->
+
+        <div id="emptyMessage" class="empty-box">
+
+            <i class="bi bi-file-earmark-x"></i>
+
+            <h3>No Model Papers Found</h3>
+
+            <p>
+                Try changing your search or filters.
+            </p>
+
+        </div>
+
+
+        <!-- MODEL PAPERS -->
+
+        <section
+            id="modelGrid"
+            class="model-grid"
+        ></section>
+
+    </main>
+
+
+    <!-- ================================
+         FOOTER
+    ================================= -->
+
+    <footer class="site-footer">
+
+        <div class="footer-content">
+
+            <div class="footer-brand">
+
+                <h2>
+                    Maths<span>World</span>
+                </h2>
+
+                <p>
+                    Learn • Practice • Succeed
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="index.html">Home</a>
+
+                <a href="subjects.html">Subjects</a>
+
+                <a href="materials.html">Notes</a>
+
+                <a href="past-papers.html">
+                    Past Papers
+                </a>
+
+                <a href="model-papers.html">
+                    Model Papers
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 MathsWorld. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="js/model-papers.js"></script>
+
+</body>
+
+</html>

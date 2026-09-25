@@ -1,0 +1,810 @@
+/* =====================================================
+   MATHSWORLD PAST PAPERS
+   ===================================================== */
+
+.papers-hero {
+    min-height: 340px;
+
+    padding: 150px 0 80px;
+
+    background:
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(56, 189, 248, 0.18),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            var(--navy),
+            var(--navy-light)
+        );
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.papers-hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 320px;
+    height: 320px;
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    border-radius: 50%;
+
+    right: -120px;
+    top: -120px;
+}
+
+.papers-hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 220px;
+    height: 220px;
+
+    border: 1px solid rgba(56,189,248,0.15);
+
+    border-radius: 50%;
+
+    left: -100px;
+    bottom: -120px;
+}
+
+.papers-hero-content {
+    position: relative;
+
+    z-index: 2;
+
+    text-align: center;
+
+    max-width: 760px;
+
+    margin: auto;
+}
+
+.papers-hero h1 {
+    color: var(--white);
+
+    font-size: clamp(42px, 6vw, 64px);
+
+    line-height: 1.1;
+
+    margin-bottom: 20px;
+
+    font-weight: 800;
+}
+
+.papers-hero h1 span {
+    color: var(--sky);
+}
+
+.papers-hero p {
+    color: rgba(255,255,255,0.72);
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    max-width: 620px;
+
+    margin: auto;
+}
+
+
+/* =====================================================
+   MAIN SECTION
+   ===================================================== */
+
+.papers-section {
+    padding: 80px 0 100px;
+
+    background: var(--light);
+}
+
+
+/* =====================================================
+   SEARCH
+   ===================================================== */
+
+.papers-search-box {
+    max-width: 850px;
+
+    margin: 0 auto 35px;
+
+    height: 64px;
+
+    display: flex;
+
+    align-items: center;
+
+    background: var(--white);
+
+    border: 1px solid var(--border);
+
+    border-radius: 14px;
+
+    padding: 0 20px;
+
+    box-shadow: var(--shadow);
+
+    transition: var(--transition);
+}
+
+.papers-search-box:focus-within {
+    border-color: var(--sky);
+
+    box-shadow:
+        0 10px 35px rgba(56,189,248,0.12);
+}
+
+.papers-search-box > i {
+    color: var(--sky-dark);
+
+    font-size: 19px;
+
+    margin-right: 14px;
+}
+
+.papers-search-box input {
+    flex: 1;
+
+    height: 100%;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    color: var(--navy);
+
+    font-family: inherit;
+
+    font-size: 15px;
+}
+
+.papers-search-box input::placeholder {
+    color: #94A3B8;
+}
+
+.papers-search-box button {
+    width: 34px;
+    height: 34px;
+
+    border: none;
+
+    background: transparent;
+
+    color: #94A3B8;
+
+    cursor: pointer;
+
+    border-radius: 50%;
+
+    transition: var(--transition);
+}
+
+.papers-search-box button:hover {
+    background: var(--light-blue);
+
+    color: var(--sky-dark);
+}
+
+
+/* =====================================================
+   FILTERS
+   ===================================================== */
+
+.papers-filter-box {
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr)
+        auto;
+
+    gap: 15px;
+
+    padding: 25px;
+
+    background: var(--white);
+
+    border: 1px solid var(--border);
+
+    border-radius: 16px;
+
+    margin-bottom: 50px;
+
+    box-shadow:
+        0 10px 30px rgba(7,26,51,0.05);
+}
+
+.filter-group {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 9px;
+}
+
+.filter-group label {
+    font-size: 13px;
+
+    font-weight: 700;
+
+    color: var(--navy);
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+}
+
+.filter-group label i {
+    color: var(--sky-dark);
+}
+
+.filter-group select {
+    height: 45px;
+
+    padding: 0 12px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 9px;
+
+    background: var(--white);
+
+    color: var(--text);
+
+    outline: none;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    transition: var(--transition);
+}
+
+.filter-group select:focus {
+    border-color: var(--sky);
+}
+
+.reset-btn {
+    align-self: end;
+
+    height: 45px;
+
+    padding: 0 18px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: var(--navy);
+
+    color: var(--white);
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    font-weight: 600;
+
+    transition: var(--transition);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+}
+
+.reset-btn:hover {
+    background: var(--sky-dark);
+
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   RESULTS HEADER
+   ===================================================== */
+
+.papers-results-header {
+    margin-bottom: 25px;
+}
+
+.papers-results-header h2 {
+    color: var(--navy);
+
+    font-size: 27px;
+
+    margin-bottom: 5px;
+}
+
+.papers-results-header p {
+    color: var(--text-light);
+
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   GRID
+   ===================================================== */
+
+.papers-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 22px;
+}
+
+
+/* =====================================================
+   CARD
+   ===================================================== */
+
+.paper-card {
+    background: var(--white);
+
+    border: 1px solid var(--border);
+
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    display: flex;
+
+    flex-direction: column;
+
+    min-height: 395px;
+
+    box-shadow:
+        0 8px 25px rgba(7,26,51,0.05);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.paper-card:hover {
+    transform: translateY(-7px);
+
+    border-color:
+        rgba(56,189,248,0.5);
+
+    box-shadow:
+        0 20px 45px rgba(7,26,51,0.12);
+}
+
+
+/* =====================================================
+   CARD TOP
+   ===================================================== */
+
+.paper-card-top {
+    min-height: 105px;
+
+    padding: 20px;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--navy),
+            var(--navy-light)
+        );
+}
+
+.paper-icon {
+    width: 54px;
+    height: 54px;
+
+    border-radius: 13px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        rgba(255,255,255,0.1);
+
+    color: var(--sky);
+
+    font-size: 25px;
+
+    border:
+        1px solid rgba(255,255,255,0.1);
+}
+
+.paper-year {
+    padding: 6px 11px;
+
+    border-radius: 20px;
+
+    background:
+        rgba(56,189,248,0.15);
+
+    color: var(--sky);
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   CARD CONTENT
+   ===================================================== */
+
+.paper-content {
+    padding: 22px 20px 15px;
+
+    flex: 1;
+}
+
+.paper-subject {
+    display: inline-block;
+
+    color: var(--sky-dark);
+
+    background: var(--sky-light);
+
+    padding: 5px 9px;
+
+    border-radius: 6px;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    margin-bottom: 12px;
+}
+
+.paper-content h3 {
+    font-size: 17px;
+
+    line-height: 1.45;
+
+    color: var(--navy);
+
+    margin-bottom: 10px;
+}
+
+.paper-content p {
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    color: var(--text-light);
+}
+
+
+/* =====================================================
+   META
+   ===================================================== */
+
+.paper-meta {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    margin-top: 18px;
+
+    padding-top: 14px;
+
+    border-top:
+        1px solid var(--border);
+}
+
+.paper-meta span {
+    color: var(--text-light);
+
+    font-size: 11px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+}
+
+.paper-meta i {
+    color: var(--sky-dark);
+}
+
+
+/* =====================================================
+   ACTIONS
+   ===================================================== */
+
+.paper-actions {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 9px;
+
+    padding: 0 20px 20px;
+}
+
+.paper-actions a {
+    min-height: 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    transition: var(--transition);
+}
+
+.view-paper {
+    border:
+        1px solid var(--border);
+
+    color: var(--navy);
+
+    background: var(--white);
+}
+
+.view-paper:hover {
+    background: var(--light-blue);
+
+    border-color: var(--sky);
+
+    color: var(--sky-dark);
+}
+
+.download-paper {
+    background: var(--navy);
+
+    color: var(--white);
+}
+
+.download-paper:hover {
+    background: var(--sky-dark);
+
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   HIDDEN CARD
+   ===================================================== */
+
+.paper-card.hide {
+    display: none;
+}
+
+.paper-card.show-animation {
+    animation:
+        paperFade 0.4s ease;
+}
+
+@keyframes paperFade {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+
+}
+
+
+/* =====================================================
+   NO RESULTS
+   ===================================================== */
+
+.no-results {
+    display: none;
+
+    text-align: center;
+
+    padding: 70px 20px;
+}
+
+.no-results.show {
+    display: block;
+}
+
+.no-results-icon {
+    width: 70px;
+    height: 70px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--sky-light);
+
+    color: var(--sky-dark);
+
+    font-size: 27px;
+}
+
+.no-results h3 {
+    color: var(--navy);
+
+    font-size: 22px;
+
+    margin-bottom: 8px;
+}
+
+.no-results p {
+    color: var(--text-light);
+
+    font-size: 14px;
+
+    margin-bottom: 20px;
+}
+
+.no-results button {
+    border: none;
+
+    background: var(--navy);
+
+    color: white;
+
+    padding: 11px 20px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    font-weight: 600;
+
+    transition: var(--transition);
+}
+
+.no-results button:hover {
+    background: var(--sky-dark);
+}
+
+
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+
+@media (max-width: 1200px) {
+
+    .papers-grid {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+    .papers-filter-box {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+}
+
+
+@media (max-width: 900px) {
+
+    .papers-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .papers-hero {
+        min-height: 300px;
+
+        padding:
+            120px 20px
+            60px;
+    }
+
+    .papers-hero h1 {
+        font-size: 42px;
+    }
+
+    .papers-hero p {
+        font-size: 14px;
+    }
+
+    .papers-section {
+        padding:
+            55px 0 70px;
+    }
+
+    .papers-search-box {
+        height: 58px;
+
+        padding: 0 15px;
+    }
+
+    .papers-filter-box {
+        grid-template-columns: 1fr;
+
+        padding: 18px;
+
+        gap: 14px;
+
+        margin-bottom: 35px;
+    }
+
+    .papers-grid {
+        grid-template-columns: 1fr;
+
+        gap: 17px;
+    }
+
+    .papers-results-header h2 {
+        font-size: 23px;
+    }
+
+}
+
+
+@media (max-width: 380px) {
+
+    .papers-hero h1 {
+        font-size: 36px;
+    }
+
+    .paper-actions {
+        grid-template-columns: 1fr;
+    }
+
+}

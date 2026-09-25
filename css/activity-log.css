@@ -1,0 +1,282 @@
+.activity-filters {
+
+    display: flex;
+
+    gap: 12px;
+
+    margin-bottom: 20px;
+
+    flex-wrap: wrap;
+
+}
+
+
+.activity-search {
+
+    position: relative;
+
+    flex: 1;
+
+    min-width: 220px;
+
+}
+
+
+.activity-search i {
+
+    position: absolute;
+
+    left: 14px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: #94a3b8;
+
+}
+
+
+.activity-search input {
+
+    width: 100%;
+
+    padding: 12px 15px 12px 40px;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 10px;
+
+    outline: none;
+
+}
+
+
+.activity-filters select {
+
+    padding: 12px 14px;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 10px;
+
+    background: #fff;
+
+    color: #334155;
+
+}
+
+
+.activity-table-container {
+
+    overflow-x: auto;
+
+    background: #fff;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 14px;
+
+}
+
+
+.activity-table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+    min-width: 950px;
+
+}
+
+
+.activity-table th {
+
+    padding: 14px;
+
+    text-align: left;
+
+    background: #f8fafc;
+
+    color: #64748b;
+
+    font-size: 11px;
+
+    text-transform: uppercase;
+
+}
+
+
+.activity-table td {
+
+    padding: 14px;
+
+    border-top: 1px solid #e2e8f0;
+
+    color: #334155;
+
+    font-size: 13px;
+
+}
+
+
+.activity-admin {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+}
+
+
+.activity-avatar {
+
+    width: 36px;
+
+    height: 36px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #e0f2fe;
+
+    color: #0284c7;
+
+    font-weight: 800;
+
+}
+
+
+.activity-admin strong {
+
+    display: block;
+
+    color: #0f172a;
+
+}
+
+
+.activity-admin span {
+
+    display: block;
+
+    margin-top: 2px;
+
+    color: #94a3b8;
+
+    font-size: 11px;
+
+}
+
+
+.activity-action {
+
+    display: inline-block;
+
+    padding: 5px 9px;
+
+    border-radius: 20px;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+}
+
+
+.activity-action.login {
+
+    background: #dcfce7;
+
+    color: #15803d;
+
+}
+
+
+.activity-action.create {
+
+    background: #dbeafe;
+
+    color: #1d4ed8;
+
+}
+
+
+.activity-action.update {
+
+    background: #fef3c7;
+
+    color: #b45309;
+
+}
+
+
+.activity-action.delete {
+
+    background: #fee2e2;
+
+    color: #b91c1c;
+
+}
+
+
+.activity-action.logout {
+
+    background: #f1f5f9;
+
+    color: #475569;
+
+}
+
+
+.activity-module {
+
+    font-weight: 700;
+
+    color: #0284c7;
+
+}
+
+
+.activity-empty {
+
+    text-align: center;
+
+    padding: 50px !important;
+
+}
+
+
+.activity-empty i {
+
+    font-size: 35px;
+
+    color: #94a3b8;
+
+}
+
+
+.activity-empty h3 {
+
+    margin: 12px 0 5px;
+
+    color: #334155;
+
+}
+
+
+.activity-empty p {
+
+    margin: 0;
+
+    color: #94a3b8;
+
+}

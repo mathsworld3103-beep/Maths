@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Activity Log | MathsWorld Admin</title>
+
+    <!-- Google Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+    <!-- Activity Log CSS -->
+    <link
+        rel="stylesheet"
+        href="css/activity-log.css"
+    >
+</head>
+
+<body>
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside class="admin-sidebar" id="adminSidebar">
+
+        <!-- Logo -->
+
+        <div class="sidebar-logo">
+
+            <div class="logo-icon">
+                <i class="fa-solid fa-calculator"></i>
+            </div>
+
+            <div class="logo-text">
+                <strong>Maths<span>World</span></strong>
+                <small>ADMIN PANEL</small>
+            </div>
+
+        </div>
+
+
+        <!-- Navigation -->
+
+        <nav class="sidebar-nav">
+
+            <div class="nav-section-title">
+                MAIN
+            </div>
+
+            <a
+                href="dashboard.html"
+                class="nav-item"
+            >
+                <i class="fa-solid fa-gauge-high"></i>
+                <span>Dashboard</span>
+            </a>
+
+
+            <a
+                href="students.html"
+                class="nav-item"
+            >
+                <i class="fa-solid fa-user-graduate"></i>
+                <span>Students</span>
+            </a>
+
+
+            <a
+                href="teachers.html"
+                class="nav-item"
+            >
+                <i class="fa-solid fa-chalkboard-user"></i>
+                <span>Teachers</span>
+            </a>
+
+
+            <a
+                href="subjects.html"
+                class="nav-item"
+            >
+                <i class="fa-solid fa-book-open"></i>
+                <span>Subjects</span>
+            </a>
+
+
+            <div class="nav-section-title">
+                CONTENT
+            </div>
+
+
+            <a
+                href="materials.html"
+                class="nav-item"
+            >
+                <i class="fa-solid fa-folder-open"></i>
+                <span>Materials</span>
+            </a>
+
+
+            <a
+                href="past-papers.html"
+                class="nav-item"
+            >
+                <i class="fa-solid fa-file-lines"></i>
+                <span>Past Papers</span>
+            </a>
+
+
+            <a
+                href="model-papers.html"
+                class="nav-item"
+            >
+                <i class="fa-solid fa-file-circle-check"></i>
+                <span>Model Papers</span>
+            </a>
+
+
+            <div class="nav-section-title">
+                MANAGEMENT
+            </div>
+
+
+            <a
+                href="messages.html"
+                class="nav-item"
+            >
+                <i class="fa-solid fa-envelope"></i>
+                <span>Messages</span>
+
+                <span class="nav-badge">
+                    3
+                </span>
+            </a>
+
+
+            <a
+                href="activity-log.html"
+                class="nav-item active"
+            >
+                <i class="fa-solid fa-clock-rotate-left"></i>
+                <span>Activity Log</span>
+            </a>
+
+
+            <a
+                href="settings.html"
+                class="nav-item"
+            >
+                <i class="fa-solid fa-gear"></i>
+                <span>Settings</span>
+            </a>
+
+        </nav>
+
+
+        <!-- Sidebar Bottom -->
+
+        <div class="sidebar-bottom">
+
+            <div class="admin-mini-profile">
+
+                <div class="mini-avatar">
+                    A
+                </div>
+
+                <div class="mini-profile-info">
+                    <strong>Administrator</strong>
+                    <span>Super Admin</span>
+                </div>
+
+            </div>
+
+
+            <button
+                class="logout-btn"
+                id="logoutBtn"
+            >
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span>Logout</span>
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- Mobile Overlay -->
+
+    <div
+        class="sidebar-overlay"
+        id="sidebarOverlay"
+    ></div>
+
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <main class="main-content">
+
+        <!-- Header -->
+
+        <header class="admin-header">
+
+            <div class="header-left">
+
+                <button
+                    class="mobile-menu-btn"
+                    id="mobileMenuBtn"
+                >
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <div class="header-page-title">
+
+                    <span>Admin Panel</span>
+
+                    <strong>Activity Log</strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="header-right">
+
+                <!-- Search -->
+
+                <div class="header-search">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input
+                        type="text"
+                        placeholder="Search..."
+                        id="headerSearch"
+                    >
+
+                </div>
+
+
+                <!-- Notifications -->
+
+                <button
+                    class="header-icon-btn"
+                    id="notificationBtn"
+                    title="Notifications"
+                >
+
+                    <i class="fa-regular fa-bell"></i>
+
+                    <span class="notification-dot"></span>
+
+                </button>
+
+
+                <!-- Profile -->
+
+                <button
+                    class="header-profile"
+                    id="profileBtn"
+                >
+
+                    <div class="header-avatar">
+                        A
+                    </div>
+
+                    <div class="header-profile-info">
+                        <strong>Administrator</strong>
+                        <span>Super Admin</span>
+                    </div>
+
+                    <i class="fa-solid fa-chevron-down"></i>
+
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <!-- =================================================
+             PAGE CONTENT
+        ================================================== -->
+
+        <section class="page-content">
+
+            <!-- Page Heading -->
+
+            <div class="page-top">
+
+                <div>
+
+                    <span class="page-label">
+                        SYSTEM MANAGEMENT
+                    </span>
+
+                    <h1>
+                        Activity Log
+                    </h1>
+
+                    <p>
+                        Monitor and review all administrator
+                        activities across the MathsWorld platform.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 STATISTICS
+            ================================================== -->
+
+            <div class="stats-grid">
+
+                <div class="stat-card">
+
+                    <div class="stat-icon blue">
+                        <i class="fa-solid fa-list-check"></i>
+                    </div>
+
+                    <div class="stat-content">
+
+                        <span>Total Activities</span>
+
+                        <strong id="totalActivities">
+                            10
+                        </strong>
+
+                        <small>
+                            All recorded actions
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon green">
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+
+                    <div class="stat-content">
+
+                        <span>Added</span>
+
+                        <strong id="addedActivities">
+                            3
+                        </strong>
+
+                        <small>
+                            New records
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon orange">
+                        <i class="fa-solid fa-pen"></i>
+                    </div>
+
+                    <div class="stat-content">
+
+                        <span>Updated</span>
+
+                        <strong id="updatedActivities">
+                            2
+                        </strong>
+
+                        <small>
+                            Modified records
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon red">
+                        <i class="fa-solid fa-trash"></i>
+                    </div>
+
+                    <div class="stat-content">
+
+                        <span>Deleted</span>
+
+                        <strong id="deletedActivities">
+                            2
+                        </strong>
+
+                        <small>
+                            Removed records
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 ACTIVITY CARD
+            ================================================== -->
+
+            <div class="content-card">
+
+                <!-- Card Header -->
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h2>
+                            Recent Activities
+                        </h2>
+
+                        <p>
+                            View administrator activity history.
+                        </p>
+
+                    </div>
+
+                    <div class="activity-count">
+                        <span id="resultCount">
+                            10 activities
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <!-- Toolbar -->
+
+                <div class="activity-toolbar">
+
+                    <!-- Search -->
+
+                    <div class="activity-search">
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                        <input
+                            type="text"
+                            id="activitySearch"
+                            placeholder="Search activities..."
+                        >
+
+                    </div>
+
+
+                    <!-- Action Filter -->
+
+                    <div class="filter-group">
+
+                        <label>
+                            Action
+                        </label>
+
+                        <select id="actionFilter">
+
+                            <option value="">
+                                All Actions
+                            </option>
+
+                            <option value="Added">
+                                Added
+                            </option>
+
+                            <option value="Updated">
+                                Updated
+                            </option>
+
+                            <option value="Deleted">
+                                Deleted
+                            </option>
+
+                            <option value="Uploaded">
+                                Uploaded
+                            </option>
+
+                            <option value="Login">
+                                Login
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- Date Filter -->
+
+                    <div class="filter-group">
+
+                        <label>
+                            Date
+                        </label>
+
+                        <select id="dateFilter">
+
+                            <option value="">
+                                All Dates
+                            </option>
+
+                            <option value="today">
+                                Today
+                            </option>
+
+                            <option value="week">
+                                Last 7 Days
+                            </option>
+
+                            <option value="month">
+                                Last 30 Days
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- Clear -->
+
+                    <button
+                        class="btn btn-secondary"
+                        id="clearFilters"
+                    >
+                        <i class="fa-solid fa-filter-circle-xmark"></i>
+                        Clear
+                    </button>
+
+                </div>
+
+
+                <!-- =================================================
+                     TABLE
+                ================================================== -->
+
+                <div class="table-wrapper">
+
+                    <table class="activity-table">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    ADMIN
+                                </th>
+
+                                <th>
+                                    ACTION
+                                </th>
+
+                                <th>
+                                    TARGET
+                                </th>
+
+                                <th>
+                                    DESCRIPTION
+                                </th>
+
+                                <th>
+                                    DATE & TIME
+                                </th>
+
+                                <th>
+                                    ACTION
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="activityTableBody">
+                            <!-- JavaScript -->
+                        </tbody>
+
+                    </table>
+
+
+                    <!-- Empty State -->
+
+                    <div
+                        class="empty-state"
+                        id="emptyState"
+                    >
+
+                        <div class="empty-icon">
+
+                            <i class="fa-solid fa-clock-rotate-left"></i>
+
+                        </div>
+
+                        <h3>
+                            No Activities Found
+                        </h3>
+
+                        <p>
+                            No activities match your
+                            current search or filters.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     PAGINATION
+                ================================================== -->
+
+                <div class="pagination-container">
+
+                    <div
+                        class="pagination-info"
+                        id="paginationInfo"
+                    >
+                        Showing 1-6 of 10 activities
+                    </div>
+
+                    <div
+                        class="pagination"
+                        id="pagination"
+                    >
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         VIEW ACTIVITY MODAL
+    ====================================================== -->
+
+    <div
+        class="modal-overlay"
+        id="activityViewModal"
+    >
+
+        <div class="modal">
+
+            <div class="modal-header">
+
+                <div>
+
+                    <span>
+                        ACTIVITY DETAILS
+                    </span>
+
+                    <h2>
+                        Activity Information
+                    </h2>
+
+                </div>
+
+                <button
+                    class="modal-close"
+                    data-close-modal
+                >
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+
+            </div>
+
+
+            <div class="modal-body">
+
+                <div class="activity-detail-header">
+
+                    <div class="activity-detail-icon">
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Administrator Activity
+                        </strong>
+
+                        <span>
+                            System activity record
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="detail-grid">
+
+                    <div class="detail-item">
+
+                        <span>
+                            Administrator
+                        </span>
+
+                        <strong id="viewAdmin">
+                            -
+                        </strong>
+
+                    </div>
+
+
+                    <div class="detail-item">
+
+                        <span>
+                            Action
+                        </span>
+
+                        <strong id="viewAction">
+                            -
+                        </strong>
+
+                    </div>
+
+
+                    <div class="detail-item">
+
+                        <span>
+                            Target
+                        </span>
+
+                        <strong id="viewTarget">
+                            -
+                        </strong>
+
+                    </div>
+
+
+                    <div class="detail-item">
+
+                        <span>
+                            IP Address
+                        </span>
+
+                        <strong id="viewIp">
+                            -
+                        </strong>
+
+                    </div>
+
+
+                    <div class="detail-item detail-full">
+
+                        <span>
+                            Date & Time
+                        </span>
+
+                        <strong id="viewTimestamp">
+                            -
+                        </strong>
+
+                    </div>
+
+
+                    <div class="detail-item detail-full">
+
+                        <span>
+                            Description
+                        </span>
+
+                        <div
+                            class="description-box"
+                            id="viewDescription"
+                        >
+                            -
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="modal-footer">
+
+                <button
+                    class="btn btn-secondary"
+                    data-close-modal
+                >
+                    Close
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         LOGOUT MODAL
+    ====================================================== -->
+
+    <div
+        class="modal-overlay"
+        id="logoutModal"
+    >
+
+        <div class="modal small-modal">
+
+            <div class="modal-header">
+
+                <h2>
+                    Logout
+                </h2>
+
+                <button
+                    class="modal-close"
+                    data-close-modal
+                >
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+
+            </div>
+
+
+            <div class="modal-body logout-content">
+
+                <div class="logout-icon">
+
+                    <i class="fa-solid fa-right-from-bracket"></i>
+
+                </div>
+
+                <h3>
+                    Are you sure?
+                </h3>
+
+                <p>
+                    You will be logged out of the
+                    MathsWorld Admin Panel.
+                </p>
+
+            </div>
+
+
+            <div class="modal-footer">
+
+                <button
+                    class="btn btn-secondary"
+                    data-close-modal
+                >
+                    Cancel
+                </button>
+
+                <button
+                    class="btn btn-danger"
+                    id="confirmLogout"
+                >
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    Logout
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         TOAST
+    ====================================================== -->
+
+    <div
+        class="toast"
+        id="toast"
+    >
+
+        <div class="toast-icon">
+
+            <i class="fa-solid fa-circle-check"></i>
+
+        </div>
+
+        <div class="toast-content">
+
+            <strong id="toastTitle">
+                Success
+            </strong>
+
+            <span id="toastMessage">
+                Operation completed successfully.
+            </span>
+
+        </div>
+
+        <button
+            class="toast-close"
+            onclick="this.parentElement.classList.remove('show')"
+        >
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+    </div>
+
+
+    <!-- JavaScript -->
+
+    <script src="js/activity-log.js"></script>
+
+</body>
+</html>

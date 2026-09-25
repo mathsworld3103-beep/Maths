@@ -1,0 +1,682 @@
+/* =========================================================
+   MATHSWORLD LOGIN PAGE
+   ========================================================= */
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   AUTH PAGE
+   ========================================================= */
+
+.auth-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    background:
+        linear-gradient(
+            135deg,
+            #071b3a 0%,
+            #0b315f 45%,
+            #168de2 100%
+        );
+    font-family: "Inter", sans-serif;
+}
+
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.auth-container {
+    width: 100%;
+    max-width: 480px;
+}
+
+
+/* =========================================================
+   AUTH CARD
+   ========================================================= */
+
+.auth-card {
+    width: 100%;
+    padding: 40px;
+    background: #ffffff;
+    border-radius: 22px;
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.25);
+
+    animation: authCardShow 0.5s ease;
+}
+
+
+@keyframes authCardShow {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.auth-card-header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+
+/* =========================================================
+   LOGIN ICON
+   ========================================================= */
+
+.auth-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    background:
+        linear-gradient(
+            135deg,
+            #071b3a,
+            #168de2
+        );
+
+    color: #ffffff;
+    font-size: 28px;
+    box-shadow:
+        0 10px 25px rgba(22, 141, 226, 0.25);
+}
+
+
+/* =========================================================
+   TITLE
+   ========================================================= */
+
+.auth-card-header h2 {
+    margin-bottom: 8px;
+    font-size: 28px;
+    font-weight: 800;
+    color: #071b3a;
+}
+
+
+/* =========================================================
+   SUBTITLE
+   ========================================================= */
+
+.auth-card-header p {
+    color: #667085;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   FORM GROUP
+   ========================================================= */
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+
+/* =========================================================
+   LABEL
+   ========================================================= */
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #344054;
+}
+
+
+/* =========================================================
+   INPUT BOX
+   ========================================================= */
+
+.input-box {
+    position: relative;
+    width: 100%;
+}
+
+
+/* =========================================================
+   LEFT ICON
+   ========================================================= */
+
+.input-box > i {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #98a2b3;
+    font-size: 16px;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+
+/* =========================================================
+   INPUT
+   ========================================================= */
+
+.input-box input {
+    width: 100%;
+    height: 52px;
+    padding: 0 48px;
+    border: 1px solid #d0d5dd;
+    border-radius: 11px;
+    outline: none;
+    background: #ffffff;
+    color: #101828;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    transition:
+        border-color 0.3s,
+        box-shadow 0.3s,
+        background 0.3s;
+}
+
+
+.input-box input::placeholder {
+    color: #98a2b3;
+}
+
+
+/* =========================================================
+   INPUT FOCUS
+   ========================================================= */
+
+.input-box input:focus {
+    border-color: #168de2;
+    box-shadow:
+        0 0 0 4px rgba(22, 141, 226, 0.12);
+    background: #ffffff;
+}
+
+
+.input-box:focus-within > i {
+    color: #168de2;
+}
+
+
+/* =========================================================
+   PASSWORD TOGGLE
+   ========================================================= */
+
+.password-toggle {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: transparent;
+    color: #98a2b3;
+    cursor: pointer;
+    border-radius: 7px;
+    transition: 0.3s;
+}
+
+
+.password-toggle:hover {
+    background: #eef7fd;
+    color: #168de2;
+}
+
+
+.password-toggle i {
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   REMEMBER ME
+   ========================================================= */
+
+.terms-check {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-bottom: 22px;
+    color: #667085;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+
+.terms-check input {
+    width: 16px;
+    height: 16px;
+    accent-color: #168de2;
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   LOGIN BUTTON
+   ========================================================= */
+
+.auth-btn {
+    width: 100%;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: none;
+    border-radius: 11px;
+    background:
+        linear-gradient(
+            135deg,
+            #071b3a,
+            #168de2
+        );
+
+    color: #ffffff;
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow:
+        0 8px 20px rgba(22, 141, 226, 0.25);
+
+    transition:
+        transform 0.3s,
+        box-shadow 0.3s,
+        opacity 0.3s;
+}
+
+
+.auth-btn:hover {
+    transform: translateY(-2px);
+    box-shadow:
+        0 12px 25px rgba(22, 141, 226, 0.35);
+}
+
+
+.auth-btn:active {
+    transform: translateY(0);
+}
+
+
+.auth-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+
+/* =========================================================
+   LOGIN MESSAGE
+   ========================================================= */
+
+.auth-message {
+    min-height: 20px;
+    margin-top: 15px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+
+/* SUCCESS */
+
+.auth-message.success {
+    color: #12b76a;
+}
+
+
+/* ERROR */
+
+.auth-message.error {
+    color: #d92d20;
+}
+
+
+/* =========================================================
+   DIVIDER
+   ========================================================= */
+
+.auth-divider {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 28px 0 20px;
+    color: #98a2b3;
+    font-size: 13px;
+    text-align: center;
+}
+
+
+.auth-divider::before,
+.auth-divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #eaecf0;
+}
+
+
+.auth-divider span {
+    white-space: nowrap;
+}
+
+.back a {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px;
+    color: #168de2;
+    text-decoration: underline;
+}
+
+.back a:hover{
+    color: #0e74bc;
+}
+
+
+/* =========================================================
+   REGISTER BUTTON
+   ========================================================= */
+
+.register-btn {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    border: 1px solid #168de2;
+    border-radius: 11px;
+    background: #ffffff;
+    color: #168de2;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    transition:
+        background 0.3s,
+        color 0.3s,
+        transform 0.3s;
+}
+
+
+.register-btn:hover {
+    background: #168de2;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+
+.register-btn i {
+    font-size: 15px;
+}
+
+/* =========================================================
+   SELECT / GRADE DROPDOWN
+   ========================================================= */
+
+.select-box {
+    position: relative;
+    width: 100%;
+}
+
+
+/* Graduation cap icon */
+
+.select-box > i {
+    position: absolute;
+
+    left: 16px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: #98a2b3;
+
+    font-size: 16px;
+
+    pointer-events: none;
+
+    z-index: 2;
+
+    transition: 0.3s;
+}
+
+
+/* Select */
+
+.select-box select {
+    width: 100%;
+
+    height: 52px;
+
+    padding: 0 42px 0 48px;
+
+    border: 1px solid #d0d5dd;
+
+    border-radius: 11px;
+
+    outline: none;
+
+    background-color: #ffffff;
+
+    color: #101828;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    appearance: none;
+
+    -webkit-appearance: none;
+
+    -moz-appearance: none;
+
+    transition:
+        border-color 0.3s,
+        box-shadow 0.3s,
+        background 0.3s;
+}
+
+
+/* Custom dropdown arrow */
+
+.select-box::after {
+    content: "\f078";
+
+    position: absolute;
+
+    right: 17px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    font-family: "Font Awesome 6 Free";
+
+    font-weight: 900;
+
+    color: #667085;
+
+    font-size: 12px;
+
+    pointer-events: none;
+
+    transition: 0.3s;
+}
+
+
+/* Placeholder */
+
+.select-box select:invalid {
+    color: #98a2b3;
+}
+
+
+/* Options */
+
+.select-box select option {
+    color: #101828;
+
+    background: #ffffff;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 14px;
+
+    padding: 10px;
+}
+
+
+/* Focus */
+
+.select-box select:focus {
+    border-color: #168de2;
+
+    box-shadow:
+        0 0 0 4px rgba(22, 141, 226, 0.12);
+}
+
+
+/* Change icon when focused */
+
+.select-box:focus-within > i {
+    color: #168de2;
+}
+
+
+/* Change arrow when focused */
+
+.select-box:focus-within::after {
+    color: #168de2;
+}
+
+
+/* Hover */
+
+.select-box:hover select {
+    border-color: #98a2b3;
+}
+
+
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .auth-page {
+        padding: 25px 15px;
+    }
+
+
+    .auth-card {
+        padding: 30px 22px;
+        border-radius: 18px;
+    }
+
+
+    .auth-card-header {
+        margin-bottom: 27px;
+    }
+
+
+    .auth-icon {
+        width: 62px;
+        height: 62px;
+        font-size: 24px;
+    }
+
+
+    .auth-card-header h2 {
+        font-size: 24px;
+    }
+
+
+    .auth-card-header p {
+        font-size: 13px;
+    }
+
+
+    .input-box input {
+        height: 50px;
+    }
+
+
+    .auth-btn {
+        height: 50px;
+    }
+
+
+    .register-btn {
+        height: 48px;
+    }
+
+    .select-box select {
+        height: 50px;
+
+        font-size: 14px;
+
+        padding-left: 46px;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL DEVICES
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+    .auth-page {
+        padding: 15px 10px;
+    }
+
+
+    .auth-card {
+        padding: 25px 18px;
+    }
+
+
+    .auth-card-header h2 {
+        font-size: 22px;
+    }
+
+}

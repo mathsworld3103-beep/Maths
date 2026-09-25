@@ -1,0 +1,835 @@
+/* =====================================================
+   MATHSWORLD NOTES PAGE
+   ===================================================== */
+
+.notes-hero {
+    min-height: 340px;
+    padding: 150px 0 80px;
+    background:
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(56, 189, 248, 0.18),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            var(--navy),
+            var(--navy-light)
+        );
+
+    position: relative;
+    overflow: hidden;
+}
+
+.notes-hero::before {
+    content: "";
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 50%;
+
+    right: -100px;
+    top: -100px;
+}
+
+.notes-hero::after {
+    content: "";
+    position: absolute;
+
+    width: 200px;
+    height: 200px;
+
+    border: 1px solid rgba(56, 189, 248, 0.15);
+
+    border-radius: 50%;
+
+    left: -80px;
+    bottom: -100px;
+}
+
+.notes-hero-content {
+    position: relative;
+    z-index: 2;
+
+    text-align: center;
+
+    max-width: 750px;
+
+    margin: auto;
+}
+
+.section-badge {
+    display: inline-flex;
+
+    align-items: center;
+    gap: 8px;
+
+    padding: 8px 16px;
+
+    border-radius: 30px;
+
+    background: rgba(56, 189, 248, 0.12);
+
+    border: 1px solid rgba(56, 189, 248, 0.25);
+
+    color: var(--sky);
+
+    font-size: 14px;
+    font-weight: 600;
+
+    margin-bottom: 20px;
+}
+
+.notes-hero h1 {
+    color: var(--white);
+
+    font-size: clamp(42px, 6vw, 64px);
+
+    line-height: 1.1;
+
+    margin-bottom: 20px;
+
+    font-weight: 800;
+}
+
+.notes-hero h1 span {
+    color: var(--sky);
+}
+
+.notes-hero p {
+    color: rgba(255, 255, 255, 0.72);
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    max-width: 620px;
+
+    margin: auto;
+}
+
+
+/* =====================================================
+   NOTES SECTION
+   ===================================================== */
+
+.notes-section {
+    padding: 80px 0 100px;
+
+    background: var(--light);
+}
+
+
+/* =====================================================
+   SEARCH
+   ===================================================== */
+
+.notes-search-box {
+    max-width: 850px;
+
+    margin: 0 auto 35px;
+
+    height: 64px;
+
+    display: flex;
+
+    align-items: center;
+
+    background: var(--white);
+
+    border: 1px solid var(--border);
+
+    border-radius: 14px;
+
+    padding: 0 20px;
+
+    box-shadow: var(--shadow);
+
+    transition: var(--transition);
+}
+
+.notes-search-box:focus-within {
+    border-color: var(--sky);
+
+    box-shadow:
+        0 10px 35px rgba(56, 189, 248, 0.12);
+}
+
+.notes-search-box > i {
+    color: var(--sky-dark);
+
+    font-size: 19px;
+
+    margin-right: 14px;
+}
+
+.notes-search-box input {
+    flex: 1;
+
+    height: 100%;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    font-family: inherit;
+
+    font-size: 15px;
+
+    color: var(--navy);
+}
+
+.notes-search-box input::placeholder {
+    color: #94A3B8;
+}
+
+.notes-search-box button {
+    width: 34px;
+    height: 34px;
+
+    border: none;
+
+    background: transparent;
+
+    color: #94A3B8;
+
+    cursor: pointer;
+
+    border-radius: 50%;
+
+    transition: var(--transition);
+}
+
+.notes-search-box button:hover {
+    background: var(--light-blue);
+
+    color: var(--sky-dark);
+}
+
+
+/* =====================================================
+   FILTER BOX
+   ===================================================== */
+
+.notes-filter-box {
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1fr
+        1fr
+        1fr
+        auto;
+
+    gap: 16px;
+
+    padding: 25px;
+
+    background: var(--white);
+
+    border: 1px solid var(--border);
+
+    border-radius: 16px;
+
+    margin-bottom: 50px;
+
+    box-shadow: 0 10px 30px rgba(7, 26, 51, 0.05);
+}
+
+.filter-group {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 9px;
+}
+
+.filter-group label {
+    font-size: 13px;
+
+    font-weight: 700;
+
+    color: var(--navy);
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+}
+
+.filter-group label i {
+    color: var(--sky-dark);
+}
+
+.filter-group select {
+    height: 45px;
+
+    padding: 0 13px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 9px;
+
+    background: var(--white);
+
+    color: var(--text);
+
+    outline: none;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    transition: var(--transition);
+}
+
+.filter-group select:focus {
+    border-color: var(--sky);
+}
+
+.reset-btn {
+    align-self: end;
+
+    height: 45px;
+
+    padding: 0 18px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: var(--navy);
+
+    color: var(--white);
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    font-weight: 600;
+
+    transition: var(--transition);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+}
+
+.reset-btn:hover {
+    background: var(--sky-dark);
+
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   RESULT HEADER
+   ===================================================== */
+
+.notes-results-header {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 25px;
+}
+
+.notes-results-header h2 {
+    color: var(--navy);
+
+    font-size: 27px;
+
+    margin-bottom: 5px;
+}
+
+.notes-results-header p {
+    color: var(--text-light);
+
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   NOTES GRID
+   ===================================================== */
+
+.notes-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 22px;
+}
+
+
+/* =====================================================
+   NOTE CARD
+   ===================================================== */
+
+.note-card {
+    background: var(--white);
+
+    border: 1px solid var(--border);
+
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    display: flex;
+
+    flex-direction: column;
+
+    min-height: 390px;
+
+    box-shadow:
+        0 8px 25px rgba(7, 26, 51, 0.05);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.note-card:hover {
+    transform: translateY(-7px);
+
+    border-color: rgba(56, 189, 248, 0.5);
+
+    box-shadow:
+        0 20px 45px rgba(7, 26, 51, 0.12);
+}
+
+
+/* =====================================================
+   CARD TOP
+   ===================================================== */
+
+.note-card-top {
+    min-height: 105px;
+
+    padding: 20px;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--navy),
+            var(--navy-light)
+        );
+}
+
+.pdf-icon {
+    width: 54px;
+    height: 54px;
+
+    border-radius: 13px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: rgba(255, 255, 255, 0.1);
+
+    color: var(--sky);
+
+    font-size: 25px;
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.note-year {
+    padding: 6px 11px;
+
+    border-radius: 20px;
+
+    background: rgba(56, 189, 248, 0.15);
+
+    color: var(--sky);
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   CARD CONTENT
+   ===================================================== */
+
+.note-content {
+    padding: 22px 20px 15px;
+
+    flex: 1;
+}
+
+.note-subject {
+    display: inline-block;
+
+    color: var(--sky-dark);
+
+    background: var(--sky-light);
+
+    padding: 5px 9px;
+
+    border-radius: 6px;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.3px;
+
+    margin-bottom: 12px;
+}
+
+.note-content h3 {
+    font-size: 17px;
+
+    line-height: 1.45;
+
+    color: var(--navy);
+
+    margin-bottom: 10px;
+}
+
+.note-content p {
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    color: var(--text-light);
+}
+
+.note-meta {
+    display: flex;
+
+    gap: 15px;
+
+    margin-top: 18px;
+
+    padding-top: 14px;
+
+    border-top: 1px solid var(--border);
+}
+
+.note-meta span {
+    color: var(--text-light);
+
+    font-size: 11px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+}
+
+.note-meta i {
+    color: var(--sky-dark);
+}
+
+
+/* =====================================================
+   CARD ACTIONS
+   ===================================================== */
+
+.note-actions {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 9px;
+
+    padding: 0 20px 20px;
+}
+
+.note-actions a {
+    min-height: 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    transition: var(--transition);
+}
+
+.view-btn {
+    border: 1px solid var(--border);
+
+    color: var(--navy);
+
+    background: var(--white);
+}
+
+.view-btn:hover {
+    background: var(--light-blue);
+
+    border-color: var(--sky);
+
+    color: var(--sky-dark);
+}
+
+.download-btn {
+    background: var(--navy);
+
+    color: var(--white);
+}
+
+.download-btn:hover {
+    background: var(--sky-dark);
+
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   NO RESULTS
+   ===================================================== */
+
+.no-results {
+    display: none;
+
+    text-align: center;
+
+    padding: 70px 20px;
+}
+
+.no-results.show {
+    display: block;
+}
+
+.no-results-icon {
+    width: 70px;
+    height: 70px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--sky-light);
+
+    color: var(--sky-dark);
+
+    font-size: 27px;
+}
+
+.no-results h3 {
+    color: var(--navy);
+
+    font-size: 22px;
+
+    margin-bottom: 8px;
+}
+
+.no-results p {
+    color: var(--text-light);
+
+    font-size: 14px;
+
+    margin-bottom: 20px;
+}
+
+.no-results button {
+    border: none;
+
+    background: var(--navy);
+
+    color: white;
+
+    padding: 11px 20px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    font-weight: 600;
+
+    transition: var(--transition);
+}
+
+.no-results button:hover {
+    background: var(--sky-dark);
+}
+
+
+/* =====================================================
+   CARD ANIMATION
+   ===================================================== */
+
+.note-card.hide {
+    display: none;
+}
+
+.note-card.show-animation {
+    animation: noteFade 0.4s ease;
+}
+
+@keyframes noteFade {
+
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+
+@media (max-width: 1100px) {
+
+    .notes-grid {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+    .notes-filter-box {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .reset-btn {
+        width: 100%;
+    }
+
+}
+
+
+@media (max-width: 800px) {
+
+    .notes-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .notes-hero {
+        padding: 130px 0 70px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .notes-hero {
+        min-height: 300px;
+
+        padding:
+            120px 20px
+            60px;
+    }
+
+    .notes-hero h1 {
+        font-size: 42px;
+    }
+
+    .notes-hero p {
+        font-size: 14px;
+    }
+
+    .notes-section {
+        padding: 55px 0 70px;
+    }
+
+    .notes-search-box {
+        height: 58px;
+
+        padding: 0 15px;
+
+        margin-bottom: 20px;
+    }
+
+    .notes-filter-box {
+        grid-template-columns: 1fr;
+
+        padding: 18px;
+
+        gap: 14px;
+
+        margin-bottom: 35px;
+    }
+
+    .notes-results-header h2 {
+        font-size: 23px;
+    }
+
+    .notes-grid {
+        grid-template-columns: 1fr;
+
+        gap: 17px;
+    }
+
+    .note-card {
+        min-height: auto;
+    }
+
+}
+
+
+@media (max-width: 380px) {
+
+    .notes-hero h1 {
+        font-size: 36px;
+    }
+
+    .notes-search-box input {
+        font-size: 13px;
+    }
+
+    .note-actions {
+        grid-template-columns: 1fr;
+    }
+
+}

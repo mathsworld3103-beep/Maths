@@ -1,0 +1,1231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MathsWorld | Subjects Management</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="/css/subject-management.css">
+</head>
+
+<body>
+
+<div class="admin-layout">
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar" id="sidebar">
+
+        <div class="sidebar-header">
+
+            <a href="index.html" class="logo">
+
+                <div class="logo-icon">
+                    <i class="fa-solid fa-calculator"></i>
+                </div>
+
+                <div>
+                    Maths<span>World</span>
+                    <small>ADMIN PANEL</small>
+                </div>
+
+            </a>
+
+            <button class="close-sidebar" id="closeSidebar">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+        </div>
+
+
+        <div class="admin-user">
+
+            <div class="admin-avatar">
+                <i class="fa-solid fa-user-shield"></i>
+            </div>
+
+            <div>
+                <strong>Administrator</strong>
+                <span>Super Admin</span>
+            </div>
+
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+            <p>MAIN MENU</p>
+
+            <a href="admin-dashboard.html">
+                <i class="fa-solid fa-chart-pie"></i>
+                Dashboard
+            </a>
+
+            <a href="students-management.html">
+                <i class="fa-solid fa-users"></i>
+                Students
+                <b>128</b>
+            </a>
+
+            <a href="subjects-management.html" class="active">
+                <i class="fa-solid fa-book-open"></i>
+                Subjects
+            </a>
+
+            <a href="materials.html">
+                <i class="fa-solid fa-file-lines"></i>
+                Materials
+            </a>
+
+            <a href="past-papers.html">
+                <i class="fa-solid fa-file-pdf"></i>
+                Past Papers
+            </a>
+
+            <a href="model-papers.html">
+                <i class="fa-solid fa-copy"></i>
+                Model Papers
+            </a>
+
+            <p>SYSTEM</p>
+
+            <a href="#">
+                <i class="fa-solid fa-clock-rotate-left"></i>
+                Activity
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-gear"></i>
+                Settings
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <a href="index.html">
+                <i class="fa-solid fa-globe"></i>
+                View Website
+            </a>
+
+            <a href="login.html" class="logout">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Logout
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ================= OVERLAY ================= -->
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="main-content">
+
+        <!-- Header -->
+
+        <header class="top-header">
+
+            <div class="header-left">
+
+                <button class="menu-btn" id="menuBtn">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <div>
+                    <h1>Subjects</h1>
+                    <p>Manage MathsWorld subjects and courses</p>
+                </div>
+
+            </div>
+
+
+            <div class="header-right">
+
+                <button class="notification-btn">
+                    <i class="fa-regular fa-bell"></i>
+                    <span></span>
+                </button>
+
+                <div class="header-user">
+
+                    <div class="header-avatar">
+                        <i class="fa-solid fa-user-shield"></i>
+                    </div>
+
+                    <div>
+                        <strong>Administrator</strong>
+                        <small>Super Admin</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================= CONTENT ================= -->
+
+        <section class="content">
+
+            <!-- Page Heading -->
+
+            <div class="page-heading">
+
+                <div>
+
+                    <span class="page-label">
+                        <i class="fa-solid fa-book-open"></i>
+                        SUBJECT MANAGEMENT
+                    </span>
+
+                    <h2>All Subjects</h2>
+
+                    <p>
+                        Create and manage subjects available on MathsWorld.
+                    </p>
+
+                </div>
+
+
+                <button class="add-subject-btn" id="addSubjectBtn">
+
+                    <i class="fa-solid fa-plus"></i>
+
+                    Add Subject
+
+                </button>
+
+            </div>
+
+
+            <!-- ================= STATISTICS ================= -->
+
+            <div class="subject-stats">
+
+                <div class="stat-card">
+
+                    <div class="stat-icon blue">
+                        <i class="fa-solid fa-book-open"></i>
+                    </div>
+
+                    <div>
+                        <span>Total Subjects</span>
+                        <strong>12</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon green">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+
+                    <div>
+                        <span>Active Subjects</span>
+                        <strong>10</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon purple">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+
+                    <div>
+                        <span>A/L Subjects</span>
+                        <strong>4</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon orange">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+
+                    <div>
+                        <span>Total Enrollments</span>
+                        <strong>386</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= TOOLBAR ================= -->
+
+            <div class="subjects-toolbar">
+
+                <div class="search-box">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input
+                        type="text"
+                        id="subjectSearch"
+                        placeholder="Search subjects..."
+                    >
+
+                </div>
+
+
+                <div class="filters">
+
+                    <select id="levelFilter">
+
+                        <option value="all">
+                            All Levels
+                        </option>
+
+                        <option value="school">
+                            Grade 6–11
+                        </option>
+
+                        <option value="al">
+                            A/L
+                        </option>
+
+                    </select>
+
+
+                    <select id="statusFilter">
+
+                        <option value="all">
+                            All Status
+                        </option>
+
+                        <option value="active">
+                            Active
+                        </option>
+
+                        <option value="inactive">
+                            Inactive
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= SUBJECT GRID ================= -->
+
+            <div class="subjects-grid" id="subjectsGrid">
+
+
+                <!-- Combined Mathematics -->
+
+                <article
+                    class="subject-card"
+                    data-name="Combined Mathematics"
+                    data-level="al"
+                    data-status="active"
+                >
+
+                    <div class="subject-top mathematics">
+
+                        <div class="subject-icon">
+                            <i class="fa-solid fa-calculator"></i>
+                        </div>
+
+                        <span class="subject-status active">
+                            Active
+                        </span>
+
+                    </div>
+
+
+                    <div class="subject-body">
+
+                        <span class="subject-level">
+                            A/L
+                        </span>
+
+                        <h3>Combined Mathematics</h3>
+
+                        <p>
+                            Advanced mathematics, calculus,
+                            algebra and applied mathematics.
+                        </p>
+
+
+                        <div class="teacher">
+
+                            <div class="teacher-avatar">
+                                JA
+                            </div>
+
+                            <div>
+                                <span>Teacher</span>
+                                <strong>J. Abishek</strong>
+                            </div>
+
+                        </div>
+
+
+                        <div class="subject-meta">
+
+                            <div>
+                                <i class="fa-solid fa-users"></i>
+                                <span>128 Students</span>
+                            </div>
+
+                            <div>
+                                <i class="fa-solid fa-file-lines"></i>
+                                <span>68 Materials</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="subject-actions">
+
+                        <button
+                            class="view-subject"
+                            title="View"
+                        >
+                            <i class="fa-regular fa-eye"></i>
+                            View
+                        </button>
+
+                        <button
+                            class="edit-subject"
+                            title="Edit"
+                        >
+                            <i class="fa-solid fa-pen"></i>
+                            Edit
+                        </button>
+
+                        <button
+                            class="delete-subject"
+                            title="Delete"
+                        >
+                            <i class="fa-solid fa-trash"></i>
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Physics -->
+
+                <article
+                    class="subject-card"
+                    data-name="Physics"
+                    data-level="al"
+                    data-status="active"
+                >
+
+                    <div class="subject-top physics">
+
+                        <div class="subject-icon">
+                            <i class="fa-solid fa-atom"></i>
+                        </div>
+
+                        <span class="subject-status active">
+                            Active
+                        </span>
+
+                    </div>
+
+
+                    <div class="subject-body">
+
+                        <span class="subject-level">
+                            A/L
+                        </span>
+
+                        <h3>Physics</h3>
+
+                        <p>
+                            Mechanics, waves, electricity,
+                            thermal physics and modern physics.
+                        </p>
+
+
+                        <div class="teacher">
+
+                            <div class="teacher-avatar blue">
+                                PS
+                            </div>
+
+                            <div>
+                                <span>Teacher</span>
+                                <strong>Physics Department</strong>
+                            </div>
+
+                        </div>
+
+
+                        <div class="subject-meta">
+
+                            <div>
+                                <i class="fa-solid fa-users"></i>
+                                <span>96 Students</span>
+                            </div>
+
+                            <div>
+                                <i class="fa-solid fa-file-lines"></i>
+                                <span>52 Materials</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="subject-actions">
+
+                        <button class="view-subject">
+                            <i class="fa-regular fa-eye"></i>
+                            View
+                        </button>
+
+                        <button class="edit-subject">
+                            <i class="fa-solid fa-pen"></i>
+                            Edit
+                        </button>
+
+                        <button class="delete-subject">
+                            <i class="fa-solid fa-trash"></i>
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Chemistry -->
+
+                <article
+                    class="subject-card"
+                    data-name="Chemistry"
+                    data-level="al"
+                    data-status="active"
+                >
+
+                    <div class="subject-top chemistry">
+
+                        <div class="subject-icon">
+                            <i class="fa-solid fa-flask"></i>
+                        </div>
+
+                        <span class="subject-status active">
+                            Active
+                        </span>
+
+                    </div>
+
+
+                    <div class="subject-body">
+
+                        <span class="subject-level">
+                            A/L
+                        </span>
+
+                        <h3>Chemistry</h3>
+
+                        <p>
+                            Organic chemistry, inorganic chemistry,
+                            physical chemistry and practical work.
+                        </p>
+
+
+                        <div class="teacher">
+
+                            <div class="teacher-avatar orange">
+                                CH
+                            </div>
+
+                            <div>
+                                <span>Teacher</span>
+                                <strong>Chemistry Department</strong>
+                            </div>
+
+                        </div>
+
+
+                        <div class="subject-meta">
+
+                            <div>
+                                <i class="fa-solid fa-users"></i>
+                                <span>82 Students</span>
+                            </div>
+
+                            <div>
+                                <i class="fa-solid fa-file-lines"></i>
+                                <span>44 Materials</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="subject-actions">
+
+                        <button class="view-subject">
+                            <i class="fa-regular fa-eye"></i>
+                            View
+                        </button>
+
+                        <button class="edit-subject">
+                            <i class="fa-solid fa-pen"></i>
+                            Edit
+                        </button>
+
+                        <button class="delete-subject">
+                            <i class="fa-solid fa-trash"></i>
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Biology -->
+
+                <article
+                    class="subject-card"
+                    data-name="Biology"
+                    data-level="al"
+                    data-status="active"
+                >
+
+                    <div class="subject-top biology">
+
+                        <div class="subject-icon">
+                            <i class="fa-solid fa-dna"></i>
+                        </div>
+
+                        <span class="subject-status active">
+                            Active
+                        </span>
+
+                    </div>
+
+
+                    <div class="subject-body">
+
+                        <span class="subject-level">
+                            A/L
+                        </span>
+
+                        <h3>Biology</h3>
+
+                        <p>
+                            Cell biology, genetics, ecology,
+                            human biology and plant science.
+                        </p>
+
+
+                        <div class="teacher">
+
+                            <div class="teacher-avatar green">
+                                BI
+                            </div>
+
+                            <div>
+                                <span>Teacher</span>
+                                <strong>Biology Department</strong>
+                            </div>
+
+                        </div>
+
+
+                        <div class="subject-meta">
+
+                            <div>
+                                <i class="fa-solid fa-users"></i>
+                                <span>80 Students</span>
+                            </div>
+
+                            <div>
+                                <i class="fa-solid fa-file-lines"></i>
+                                <span>47 Materials</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="subject-actions">
+
+                        <button class="view-subject">
+                            <i class="fa-regular fa-eye"></i>
+                            View
+                        </button>
+
+                        <button class="edit-subject">
+                            <i class="fa-solid fa-pen"></i>
+                            Edit
+                        </button>
+
+                        <button class="delete-subject">
+                            <i class="fa-solid fa-trash"></i>
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Grade 11 Mathematics -->
+
+                <article
+                    class="subject-card"
+                    data-name="Mathematics"
+                    data-level="school"
+                    data-status="active"
+                >
+
+                    <div class="subject-top school-math">
+
+                        <div class="subject-icon">
+                            <i class="fa-solid fa-square-root-variable"></i>
+                        </div>
+
+                        <span class="subject-status active">
+                            Active
+                        </span>
+
+                    </div>
+
+
+                    <div class="subject-body">
+
+                        <span class="subject-level">
+                            Grade 6–11
+                        </span>
+
+                        <h3>Mathematics</h3>
+
+                        <p>
+                            School mathematics including algebra,
+                            geometry and statistics.
+                        </p>
+
+
+                        <div class="teacher">
+
+                            <div class="teacher-avatar">
+                                MW
+                            </div>
+
+                            <div>
+                                <span>Teacher</span>
+                                <strong>MathsWorld Team</strong>
+                            </div>
+
+                        </div>
+
+
+                        <div class="subject-meta">
+
+                            <div>
+                                <i class="fa-solid fa-users"></i>
+                                <span>156 Students</span>
+                            </div>
+
+                            <div>
+                                <i class="fa-solid fa-file-lines"></i>
+                                <span>82 Materials</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="subject-actions">
+
+                        <button class="view-subject">
+                            <i class="fa-regular fa-eye"></i>
+                            View
+                        </button>
+
+                        <button class="edit-subject">
+                            <i class="fa-solid fa-pen"></i>
+                            Edit
+                        </button>
+
+                        <button class="delete-subject">
+                            <i class="fa-solid fa-trash"></i>
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Science -->
+
+                <article
+                    class="subject-card"
+                    data-name="Science"
+                    data-level="school"
+                    data-status="active"
+                >
+
+                    <div class="subject-top science">
+
+                        <div class="subject-icon">
+                            <i class="fa-solid fa-microscope"></i>
+                        </div>
+
+                        <span class="subject-status active">
+                            Active
+                        </span>
+
+                    </div>
+
+
+                    <div class="subject-body">
+
+                        <span class="subject-level">
+                            Grade 6–11
+                        </span>
+
+                        <h3>Science</h3>
+
+                        <p>
+                            School science lessons, experiments,
+                            revision notes and model papers.
+                        </p>
+
+
+                        <div class="teacher">
+
+                            <div class="teacher-avatar green">
+                                SC
+                            </div>
+
+                            <div>
+                                <span>Teacher</span>
+                                <strong>Science Department</strong>
+                            </div>
+
+                        </div>
+
+
+                        <div class="subject-meta">
+
+                            <div>
+                                <i class="fa-solid fa-users"></i>
+                                <span>74 Students</span>
+                            </div>
+
+                            <div>
+                                <i class="fa-solid fa-file-lines"></i>
+                                <span>39 Materials</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="subject-actions">
+
+                        <button class="view-subject">
+                            <i class="fa-regular fa-eye"></i>
+                            View
+                        </button>
+
+                        <button class="edit-subject">
+                            <i class="fa-solid fa-pen"></i>
+                            Edit
+                        </button>
+
+                        <button class="delete-subject">
+                            <i class="fa-solid fa-trash"></i>
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- English -->
+
+                <article
+                    class="subject-card"
+                    data-name="English"
+                    data-level="school"
+                    data-status="inactive"
+                >
+
+                    <div class="subject-top english">
+
+                        <div class="subject-icon">
+                            <i class="fa-solid fa-language"></i>
+                        </div>
+
+                        <span class="subject-status inactive">
+                            Inactive
+                        </span>
+
+                    </div>
+
+
+                    <div class="subject-body">
+
+                        <span class="subject-level">
+                            Grade 6–11
+                        </span>
+
+                        <h3>English</h3>
+
+                        <p>
+                            Grammar, vocabulary, writing,
+                            reading and examination practice.
+                        </p>
+
+
+                        <div class="teacher">
+
+                            <div class="teacher-avatar purple">
+                                EN
+                            </div>
+
+                            <div>
+                                <span>Teacher</span>
+                                <strong>English Department</strong>
+                            </div>
+
+                        </div>
+
+
+                        <div class="subject-meta">
+
+                            <div>
+                                <i class="fa-solid fa-users"></i>
+                                <span>42 Students</span>
+                            </div>
+
+                            <div>
+                                <i class="fa-solid fa-file-lines"></i>
+                                <span>24 Materials</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="subject-actions">
+
+                        <button class="view-subject">
+                            <i class="fa-regular fa-eye"></i>
+                            View
+                        </button>
+
+                        <button class="edit-subject">
+                            <i class="fa-solid fa-pen"></i>
+                            Edit
+                        </button>
+
+                        <button class="delete-subject">
+                            <i class="fa-solid fa-trash"></i>
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ICT -->
+
+                <article
+                    class="subject-card"
+                    data-name="ICT"
+                    data-level="school"
+                    data-status="active"
+                >
+
+                    <div class="subject-top ict">
+
+                        <div class="subject-icon">
+                            <i class="fa-solid fa-computer"></i>
+                        </div>
+
+                        <span class="subject-status active">
+                            Active
+                        </span>
+
+                    </div>
+
+
+                    <div class="subject-body">
+
+                        <span class="subject-level">
+                            Grade 6–11
+                        </span>
+
+                        <h3>ICT</h3>
+
+                        <p>
+                            Information technology, programming,
+                            databases and computer fundamentals.
+                        </p>
+
+
+                        <div class="teacher">
+
+                            <div class="teacher-avatar blue">
+                                IT
+                            </div>
+
+                            <div>
+                                <span>Teacher</span>
+                                <strong>ICT Department</strong>
+                            </div>
+
+                        </div>
+
+
+                        <div class="subject-meta">
+
+                            <div>
+                                <i class="fa-solid fa-users"></i>
+                                <span>38 Students</span>
+                            </div>
+
+                            <div>
+                                <i class="fa-solid fa-file-lines"></i>
+                                <span>18 Materials</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="subject-actions">
+
+                        <button class="view-subject">
+                            <i class="fa-regular fa-eye"></i>
+                            View
+                        </button>
+
+                        <button class="edit-subject">
+                            <i class="fa-solid fa-pen"></i>
+                            Edit
+                        </button>
+
+                        <button class="delete-subject">
+                            <i class="fa-solid fa-trash"></i>
+                        </button>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <!-- No Results -->
+
+            <div class="no-results" id="noResults">
+
+                <i class="fa-solid fa-book-open"></i>
+
+                <h3>No subjects found</h3>
+
+                <p>
+                    Try changing your search or filter.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<!-- ================= ADD SUBJECT MODAL ================= -->
+
+<div class="modal-overlay" id="subjectModal">
+
+    <div class="modal">
+
+        <div class="modal-header">
+
+            <div>
+                <h3>Add New Subject</h3>
+                <p>Create a new MathsWorld subject</p>
+            </div>
+
+            <button id="closeModal">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+        </div>
+
+
+        <form id="subjectForm">
+
+            <div class="form-group">
+
+                <label>Subject Name</label>
+
+                <input
+                    type="text"
+                    id="subjectName"
+                    placeholder="e.g. Combined Mathematics"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label>Education Level</label>
+
+                    <select id="subjectLevel" required>
+
+                        <option value="">
+                            Select Level
+                        </option>
+
+                        <option value="school">
+                            Grade 6–11
+                        </option>
+
+                        <option value="al">
+                            A/L
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>Status</label>
+
+                    <select id="subjectStatus">
+
+                        <option value="active">
+                            Active
+                        </option>
+
+                        <option value="inactive">
+                            Inactive
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Teacher / Department</label>
+
+                <input
+                    type="text"
+                    id="subjectTeacher"
+                    placeholder="Enter teacher name"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Description</label>
+
+                <textarea
+                    id="subjectDescription"
+                    rows="4"
+                    placeholder="Enter subject description..."
+                ></textarea>
+
+            </div>
+
+
+            <div class="modal-actions">
+
+                <button
+                    type="button"
+                    class="cancel-btn"
+                    id="cancelModal"
+                >
+                    Cancel
+                </button>
+
+                <button
+                    type="submit"
+                    class="save-btn"
+                >
+                    <i class="fa-solid fa-plus"></i>
+                    Add Subject
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<!-- ================= TOAST ================= -->
+
+<div class="toast" id="toast">
+
+    <i class="fa-solid fa-circle-check"></i>
+
+    <span id="toastText">
+        Action completed
+    </span>
+
+</div>
+
+
+<script src="/js/subject-management.js"></script>
+
+</body>
+</html>

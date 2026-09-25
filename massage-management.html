@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Messages | MathsWorld Admin</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <link rel="stylesheet" href="/css/massage-management.css">
+</head>
+
+<body>
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="admin-sidebar" id="adminSidebar">
+
+        <div class="sidebar-logo">
+            <div class="logo-icon">
+                <i class="fa-solid fa-calculator"></i>
+            </div>
+
+            <div>
+                <h2>MathsWorld</h2>
+                <span>Admin Panel</span>
+            </div>
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+            <a href="dashboard.html" class="nav-item">
+                <i class="fa-solid fa-gauge-high"></i>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="students.html" class="nav-item">
+                <i class="fa-solid fa-user-graduate"></i>
+                <span>Students</span>
+            </a>
+
+            <a href="teachers.html" class="nav-item">
+                <i class="fa-solid fa-chalkboard-user"></i>
+                <span>Teachers</span>
+            </a>
+
+            <a href="subjects.html" class="nav-item">
+                <i class="fa-solid fa-book"></i>
+                <span>Subjects</span>
+            </a>
+
+            <a href="materials.html" class="nav-item">
+                <i class="fa-solid fa-folder-open"></i>
+                <span>Materials</span>
+            </a>
+
+            <a href="past-papers.html" class="nav-item">
+                <i class="fa-solid fa-file-lines"></i>
+                <span>Past Papers</span>
+            </a>
+
+            <a href="model-papers.html" class="nav-item">
+                <i class="fa-solid fa-file-circle-check"></i>
+                <span>Model Papers</span>
+            </a>
+
+            <a href="messages.html" class="nav-item active">
+                <i class="fa-solid fa-envelope"></i>
+                <span>Messages</span>
+                <span class="nav-badge">4</span>
+            </a>
+
+            <a href="activity-log.html" class="nav-item">
+                <i class="fa-solid fa-clock-rotate-left"></i>
+                <span>Activity Log</span>
+            </a>
+
+            <a href="settings.html" class="nav-item">
+                <i class="fa-solid fa-gear"></i>
+                <span>Settings</span>
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <div class="admin-profile-mini">
+                <div class="admin-avatar">
+                    A
+                </div>
+
+                <div>
+                    <strong>Admin</strong>
+                    <span>Administrator</span>
+                </div>
+            </div>
+
+            <button class="logout-btn" id="logoutBtn">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span>Logout</span>
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ================= MOBILE OVERLAY ================= -->
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="main-content">
+
+        <!-- HEADER -->
+
+        <header class="admin-header">
+
+            <div class="header-left">
+
+                <button
+                    class="mobile-menu-btn"
+                    id="mobileMenuBtn"
+                    aria-label="Open menu"
+                >
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <div class="page-heading">
+
+                    <span>Communication</span>
+
+                    <h1>Messages</h1>
+
+                </div>
+
+            </div>
+
+
+            <div class="header-right">
+
+                <button
+                    class="header-icon-btn"
+                    id="notificationBtn"
+                    title="Notifications"
+                >
+                    <i class="fa-regular fa-bell"></i>
+                    <span class="notification-dot"></span>
+                </button>
+
+
+                <button
+                    class="header-profile"
+                    id="profileBtn"
+                >
+                    <div class="header-avatar">
+                        A
+                    </div>
+
+                    <div class="header-profile-info">
+                        <strong>Admin</strong>
+                        <span>Administrator</span>
+                    </div>
+
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================= PAGE ================= -->
+
+        <section class="page-content">
+
+            <div class="page-top">
+
+                <div>
+                    <h2>Student Messages</h2>
+
+                    <p>
+                        Manage enquiries and messages received from students.
+                    </p>
+                </div>
+
+                <button
+                    class="btn btn-primary"
+                    id="composeMessageBtn"
+                >
+                    <i class="fa-solid fa-pen-to-square"></i>
+                    Compose Message
+                </button>
+
+            </div>
+
+
+            <!-- ================= STATS ================= -->
+
+            <div class="stats-grid">
+
+                <div class="stat-card">
+
+                    <div class="stat-icon blue">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+
+                    <div>
+                        <span>Total Messages</span>
+                        <strong id="totalMessages">0</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon orange">
+                        <i class="fa-solid fa-envelope-open"></i>
+                    </div>
+
+                    <div>
+                        <span>Unread</span>
+                        <strong id="unreadMessages">0</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon green">
+                        <i class="fa-solid fa-reply"></i>
+                    </div>
+
+                    <div>
+                        <span>Replied</span>
+                        <strong id="repliedMessages">0</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon purple">
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+
+                    <div>
+                        <span>Important</span>
+                        <strong id="importantMessages">0</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= MESSAGE CARD ================= -->
+
+            <div class="content-card">
+
+                <!-- TOOLBAR -->
+
+                <div class="message-toolbar">
+
+                    <div class="search-box">
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                        <input
+                            type="text"
+                            id="messageSearch"
+                            placeholder="Search messages..."
+                        >
+
+                    </div>
+
+
+                    <div class="filter-group">
+
+                        <select id="messageStatusFilter">
+
+                            <option value="">All Status</option>
+                            <option value="Unread">Unread</option>
+                            <option value="Read">Read</option>
+                            <option value="Replied">Replied</option>
+
+                        </select>
+
+
+                        <select id="messagePriorityFilter">
+
+                            <option value="">All Priority</option>
+                            <option value="Important">Important</option>
+                            <option value="Normal">Normal</option>
+
+                        </select>
+
+
+                        <button
+                            class="btn btn-secondary"
+                            id="clearMessageFilters"
+                        >
+                            <i class="fa-solid fa-filter-circle-xmark"></i>
+                            Clear
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- TABLE INFO -->
+
+                <div class="table-info">
+
+                    <span id="resultCount">
+                        0 messages
+                    </span>
+
+                    <button
+                        class="bulk-btn"
+                        id="markReadBtn"
+                    >
+                        <i class="fa-solid fa-envelope-open"></i>
+                        Mark Read
+                    </button>
+
+                    <button
+                        class="bulk-btn danger"
+                        id="deleteSelectedBtn"
+                    >
+                        <i class="fa-solid fa-trash"></i>
+                        Delete
+                    </button>
+
+                </div>
+
+
+                <!-- TABLE -->
+
+                <div class="table-wrapper">
+
+                    <table class="messages-table">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    <input
+                                        type="checkbox"
+                                        id="selectAll"
+                                    >
+                                </th>
+
+                                <th>Sender</th>
+
+                                <th>Subject</th>
+
+                                <th>Category</th>
+
+                                <th>Date</th>
+
+                                <th>Status</th>
+
+                                <th>Priority</th>
+
+                                <th>Actions</th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="messagesTableBody"></tbody>
+
+                    </table>
+
+                </div>
+
+
+                <!-- EMPTY -->
+
+                <div
+                    class="empty-state"
+                    id="emptyState"
+                    style="display:none;"
+                >
+
+                    <div class="empty-icon">
+                        <i class="fa-regular fa-envelope-open"></i>
+                    </div>
+
+                    <h3>No messages found</h3>
+
+                    <p>
+                        Try changing your search or filters.
+                    </p>
+
+                </div>
+
+
+                <!-- PAGINATION -->
+
+                <div class="pagination-container">
+
+                    <span id="paginationInfo">
+                        Showing 0 messages
+                    </span>
+
+                    <div
+                        class="pagination"
+                        id="pagination"
+                    ></div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= VIEW MESSAGE MODAL ================= -->
+
+    <div
+        class="modal-overlay"
+        id="viewMessageModal"
+    >
+
+        <div class="modal message-view-modal">
+
+            <div class="modal-header">
+
+                <div>
+
+                    <span>Message</span>
+
+                    <h3 id="viewMessageSubject">
+                        Message Subject
+                    </h3>
+
+                </div>
+
+                <button
+                    class="modal-close"
+                    data-close-modal
+                >
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+
+            </div>
+
+
+            <div class="message-details">
+
+                <div class="sender-profile">
+
+                    <div
+                        class="sender-avatar"
+                        id="viewSenderAvatar"
+                    >
+                        A
+                    </div>
+
+                    <div>
+
+                        <strong id="viewSenderName">
+                            Student Name
+                        </strong>
+
+                        <span id="viewSenderEmail">
+                            student@example.com
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="message-meta">
+
+                    <span>
+                        <i class="fa-regular fa-calendar"></i>
+                        <strong id="viewMessageDate">
+                            -
+                        </strong>
+                    </span>
+
+                    <span>
+                        <i class="fa-solid fa-tag"></i>
+                        <strong id="viewMessageCategory">
+                            -
+                        </strong>
+                    </span>
+
+                </div>
+
+
+                <div class="message-body">
+
+                    <p id="viewMessageBody">
+                        Message content.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="modal-footer">
+
+                <button
+                    class="btn btn-secondary"
+                    data-close-modal
+                >
+                    Close
+                </button>
+
+                <button
+                    class="btn btn-primary"
+                    id="replyMessageBtn"
+                >
+                    <i class="fa-solid fa-reply"></i>
+                    Reply
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= COMPOSE MODAL ================= -->
+
+    <div
+        class="modal-overlay"
+        id="composeMessageModal"
+    >
+
+        <div class="modal">
+
+            <div class="modal-header">
+
+                <div>
+
+                    <span>Communication</span>
+
+                    <h3>Compose Message</h3>
+
+                </div>
+
+                <button
+                    class="modal-close"
+                    data-close-modal
+                >
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+
+            </div>
+
+
+            <form id="composeMessageForm">
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+
+                        <label for="messageRecipient">
+                            Recipient
+                        </label>
+
+                        <select id="messageRecipient" required>
+
+                            <option value="">
+                                Select recipient
+                            </option>
+
+                            <option value="All Students">
+                                All Students
+                            </option>
+
+                            <option value="Grade 6-11">
+                                Grade 6-11 Students
+                            </option>
+
+                            <option value="A/L Students">
+                                A/L Students
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="messageCategory">
+                            Category
+                        </label>
+
+                        <select id="messageCategory" required>
+
+                            <option value="">
+                                Select category
+                            </option>
+
+                            <option value="Announcement">
+                                Announcement
+                            </option>
+
+                            <option value="Class">
+                                Class
+                            </option>
+
+                            <option value="Exam">
+                                Exam
+                            </option>
+
+                            <option value="General">
+                                General
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group form-full">
+
+                        <label for="composeSubject">
+                            Subject
+                        </label>
+
+                        <input
+                            type="text"
+                            id="composeSubject"
+                            placeholder="Enter message subject"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group form-full">
+
+                        <label for="composeBody">
+                            Message
+                        </label>
+
+                        <textarea
+                            id="composeBody"
+                            rows="6"
+                            placeholder="Write your message..."
+                            required
+                        ></textarea>
+
+                    </div>
+
+                </div>
+
+
+                <div class="modal-footer">
+
+                    <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-close-modal
+                    >
+                        Cancel
+                    </button>
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary"
+                    >
+                        <i class="fa-solid fa-paper-plane"></i>
+                        Send Message
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= DELETE MODAL ================= -->
+
+    <div
+        class="modal-overlay"
+        id="deleteMessageModal"
+    >
+
+        <div class="modal small-modal">
+
+            <div class="delete-icon">
+                <i class="fa-solid fa-trash"></i>
+            </div>
+
+            <h3>Delete Message?</h3>
+
+            <p>
+                Are you sure you want to delete this message?
+                This action cannot be undone.
+            </p>
+
+            <div class="modal-footer">
+
+                <button
+                    class="btn btn-secondary"
+                    data-close-modal
+                >
+                    Cancel
+                </button>
+
+                <button
+                    class="btn btn-danger"
+                    id="confirmDeleteMessage"
+                >
+                    Delete
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= LOGOUT MODAL ================= -->
+
+    <div
+        class="modal-overlay"
+        id="logoutModal"
+    >
+
+        <div class="modal small-modal">
+
+            <div class="logout-icon">
+                <i class="fa-solid fa-right-from-bracket"></i>
+            </div>
+
+            <h3>Logout?</h3>
+
+            <p>
+                Are you sure you want to logout from the admin panel?
+            </p>
+
+            <div class="modal-footer">
+
+                <button
+                    class="btn btn-secondary"
+                    data-close-modal
+                >
+                    Cancel
+                </button>
+
+                <button
+                    class="btn btn-danger"
+                    id="confirmLogout"
+                >
+                    Logout
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= TOAST ================= -->
+
+    <div class="toast" id="toast">
+
+        <div class="toast-icon">
+            <i class="fa-solid fa-circle-check"></i>
+        </div>
+
+        <div>
+
+            <strong id="toastTitle">
+                Success
+            </strong>
+
+            <p id="toastMessage">
+                Operation completed successfully.
+            </p>
+
+        </div>
+
+        <button id="closeToast">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+    </div>
+
+
+    <script src="/js/massage-management.js"></script>
+
+</body>
+</html>

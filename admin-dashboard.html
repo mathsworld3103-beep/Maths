@@ -1,0 +1,1192 @@
+<?php
+
+require_once "auth-check.php";
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MathsWorld Admin Dashboard</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- Dashboard CSS -->
+    <link rel="stylesheet" href="/css/admin-dashboard.css">
+</head>
+
+<body>
+
+<!-- =========================================
+     ADMIN SIDEBAR
+========================================= -->
+
+<aside class="admin-sidebar" id="adminSidebar">
+
+    <div class="sidebar-logo">
+        <div class="logo-icon">
+            <i class="fa-solid fa-calculator"></i>
+        </div>
+
+        <div class="logo-text">
+            <h2>MATHS<span>WORLD</span></h2>
+            <p>ADMIN PANEL</p>
+        </div>
+    </div>
+
+
+    <!-- Navigation -->
+
+    <nav class="sidebar-nav">
+
+        <div class="nav-title">
+            MAIN MENU
+        </div>
+
+        <a href="/admin-dashboard.html" class="nav-link active">
+            <i class="fa-solid fa-gauge-high"></i>
+            <span>Dashboard</span>
+        </a>
+
+        <a href="/student-management.html" class="nav-link">
+            <i class="fa-solid fa-user-graduate"></i>
+            <span>Students</span>
+        </a>
+
+        <a href="/teachers-management.html" class="nav-link">
+            <i class="fa-solid fa-chalkboard-user"></i>
+            <span>Teachers</span>
+        </a>
+
+        <a href="/subject-management.html" class="nav-link">
+            <i class="fa-solid fa-book-open"></i>
+            <span>Subjects</span>
+        </a>
+
+
+        <div class="nav-title">
+            CONTENT
+        </div>
+
+        <a href="/material-management.html" class="nav-link">
+            <i class="fa-solid fa-folder-open"></i>
+            <span>Materials</span>
+        </a>
+
+        <a href="/past-papers-management.html" class="nav-link">
+            <i class="fa-solid fa-file-lines"></i>
+            <span>Past Papers</span>
+        </a>
+
+        <a href="/model-papers-managemnet.html" class="nav-link">
+            <i class="fa-solid fa-file-circle-check"></i>
+            <span>Model Papers</span>
+        </a>
+
+
+        <div class="nav-title">
+            MANAGEMENT
+        </div>
+
+        <a href="/massage-management.html" class="nav-link">
+            <i class="fa-solid fa-envelope"></i>
+            <span>Messages</span>
+            <span class="nav-badge">5</span>
+        </a>
+
+        <a href="activity-log.html" class="nav-link">
+            <i class="fa-solid fa-clock-rotate-left"></i>
+            <span>Activity Log</span>
+        </a>
+
+        <a href="/settings.html" class="nav-link">
+            <i class="fa-solid fa-gear"></i>
+            <span>Settings</span>
+        </a>
+
+    </nav>
+
+
+    <!-- Sidebar Bottom -->
+
+    <div class="sidebar-bottom">
+
+        <div class="admin-mini-profile">
+
+            <div class="mini-avatar">
+                <span>JA</span>
+            </div>
+
+            <div class="mini-info">
+                <strong>J. Abishek</strong>
+                <small>Administrator</small>
+            </div>
+
+        </div>
+
+        <button class="sidebar-logout" id="sidebarLogout">
+            <i class="fa-solid fa-right-from-bracket"></i>
+        </button>
+
+    </div>
+
+</aside>
+
+
+<!-- =========================================
+     MAIN CONTENT
+========================================= -->
+
+<main class="admin-main">
+
+    <!-- HEADER -->
+
+    <header class="admin-header">
+
+        <div class="header-left">
+
+            <button
+                class="mobile-menu-btn"
+                id="mobileMenuBtn"
+                aria-label="Open menu"
+            >
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <div>
+                <h1>Dashboard</h1>
+                <p>Welcome back, Admin 👋</p>
+            </div>
+
+        </div>
+
+
+        <div class="header-right">
+
+            <!-- Search -->
+
+            <button class="header-icon-btn" id="headerSearchBtn">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+
+
+            <!-- Notifications -->
+
+            <button class="header-icon-btn notification-btn" id="notificationBtn">
+
+                <i class="fa-regular fa-bell"></i>
+
+                <span class="notification-dot"></span>
+
+            </button>
+
+
+            <!-- Profile -->
+
+            <div class="header-profile">
+
+                <div class="header-avatar">
+                    JA
+                </div>
+
+                <div class="header-profile-info">
+                    <strong>J. Abishek</strong>
+                    <span>Administrator</span>
+                </div>
+
+                <i class="fa-solid fa-chevron-down profile-arrow"></i>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================
+         DASHBOARD CONTENT
+    ====================================== -->
+
+    <section class="dashboard-content">
+
+
+        <!-- Welcome Banner -->
+
+        <div class="welcome-banner">
+
+            <div class="welcome-content">
+
+                <span class="welcome-label">
+                    MATHSWORLD ADMINISTRATION
+                </span>
+
+                <h2>
+                    Manage your education platform
+                </h2>
+
+                <p>
+                    Monitor students, teachers, learning materials,
+                    papers and website activity from one place.
+                </p>
+
+                <a href="settings.html" class="welcome-btn">
+                    <i class="fa-solid fa-gear"></i>
+                    Website Settings
+                </a>
+
+            </div>
+
+
+            <div class="welcome-illustration">
+
+                <div class="illustration-circle circle-one"></div>
+                <div class="illustration-circle circle-two"></div>
+
+                <i class="fa-solid fa-graduation-cap"></i>
+
+            </div>
+
+        </div>
+
+
+        <!-- =====================================
+             STATISTICS
+        ====================================== -->
+
+        <div class="stats-grid">
+
+
+            <!-- Students -->
+
+            <div class="stat-card">
+
+                <div class="stat-card-top">
+
+                    <div class="stat-icon students-icon">
+                        <i class="fa-solid fa-user-graduate"></i>
+                    </div>
+
+                    <span class="stat-growth positive">
+                        <i class="fa-solid fa-arrow-up"></i>
+                        12.5%
+                    </span>
+
+                </div>
+
+                <div class="stat-number" data-count="1250">
+                    0
+                </div>
+
+                <div class="stat-title">
+                    Total Students
+                </div>
+
+                <div class="stat-footer">
+                    <span>Compared to last month</span>
+                </div>
+
+            </div>
+
+
+            <!-- Teachers -->
+
+            <div class="stat-card">
+
+                <div class="stat-card-top">
+
+                    <div class="stat-icon teachers-icon">
+                        <i class="fa-solid fa-chalkboard-user"></i>
+                    </div>
+
+                    <span class="stat-growth positive">
+                        <i class="fa-solid fa-arrow-up"></i>
+                        8.2%
+                    </span>
+
+                </div>
+
+                <div class="stat-number" data-count="48">
+                    0
+                </div>
+
+                <div class="stat-title">
+                    Total Teachers
+                </div>
+
+                <div class="stat-footer">
+                    <span>Active teaching staff</span>
+                </div>
+
+            </div>
+
+
+            <!-- Materials -->
+
+            <div class="stat-card">
+
+                <div class="stat-card-top">
+
+                    <div class="stat-icon materials-icon">
+                        <i class="fa-solid fa-folder-open"></i>
+                    </div>
+
+                    <span class="stat-growth positive">
+                        <i class="fa-solid fa-arrow-up"></i>
+                        15.7%
+                    </span>
+
+                </div>
+
+                <div class="stat-number" data-count="326">
+                    0
+                </div>
+
+                <div class="stat-title">
+                    Learning Materials
+                </div>
+
+                <div class="stat-footer">
+                    <span>Available resources</span>
+                </div>
+
+            </div>
+
+
+            <!-- Papers -->
+
+            <div class="stat-card">
+
+                <div class="stat-card-top">
+
+                    <div class="stat-icon papers-icon">
+                        <i class="fa-solid fa-file-lines"></i>
+                    </div>
+
+                    <span class="stat-growth positive">
+                        <i class="fa-solid fa-arrow-up"></i>
+                        10.4%
+                    </span>
+
+                </div>
+
+                <div class="stat-number" data-count="184">
+                    0
+                </div>
+
+                <div class="stat-title">
+                    Papers
+                </div>
+
+                <div class="stat-footer">
+                    <span>Past & model papers</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =====================================
+             QUICK ACTIONS
+        ====================================== -->
+
+        <section class="section-block">
+
+            <div class="section-heading">
+
+                <div>
+                    <h2>Quick Actions</h2>
+                    <p>Frequently used administration tools</p>
+                </div>
+
+            </div>
+
+
+            <div class="quick-actions">
+
+
+                <a href="students.html?action=add" class="quick-action">
+
+                    <div class="quick-action-icon">
+                        <i class="fa-solid fa-user-plus"></i>
+                    </div>
+
+                    <div>
+                        <strong>Add Student</strong>
+                        <span>Create a new student account</span>
+                    </div>
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+
+                <a href="teachers.html?action=add" class="quick-action">
+
+                    <div class="quick-action-icon">
+                        <i class="fa-solid fa-person-chalkboard"></i>
+                    </div>
+
+                    <div>
+                        <strong>Add Teacher</strong>
+                        <span>Add a new teacher</span>
+                    </div>
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+
+                <a href="materials.html?action=add" class="quick-action">
+
+                    <div class="quick-action-icon">
+                        <i class="fa-solid fa-cloud-arrow-up"></i>
+                    </div>
+
+                    <div>
+                        <strong>Upload Material</strong>
+                        <span>Add learning resources</span>
+                    </div>
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+
+                <a href="subjects.html?action=add" class="quick-action">
+
+                    <div class="quick-action-icon">
+                        <i class="fa-solid fa-book-medical"></i>
+                    </div>
+
+                    <div>
+                        <strong>Add Subject</strong>
+                        <span>Create a new subject</span>
+                    </div>
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             ANALYTICS + RECENT ACTIVITY
+        ====================================== -->
+
+        <div class="dashboard-two-column">
+
+
+            <!-- Analytics -->
+
+            <section class="dashboard-card analytics-card">
+
+                <div class="card-header">
+
+                    <div>
+                        <h3>Student Overview</h3>
+                        <p>Student registrations over time</p>
+                    </div>
+
+                    <select id="chartPeriod">
+                        <option value="7">Last 7 Days</option>
+                        <option value="30" selected>Last 30 Days</option>
+                        <option value="90">Last 3 Months</option>
+                    </select>
+
+                </div>
+
+
+                <div class="chart-wrapper">
+
+                    <div class="chart-y-axis">
+                        <span>100</span>
+                        <span>80</span>
+                        <span>60</span>
+                        <span>40</span>
+                        <span>20</span>
+                        <span>0</span>
+                    </div>
+
+                    <div class="chart-area">
+
+                        <div class="chart-grid">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+
+                        <svg
+                            class="student-chart"
+                            viewBox="0 0 700 280"
+                            preserveAspectRatio="none"
+                        >
+
+                            <defs>
+
+                                <linearGradient
+                                    id="chartGradient"
+                                    x1="0"
+                                    y1="0"
+                                    x2="0"
+                                    y2="1"
+                                >
+                                    <stop
+                                        offset="0%"
+                                        stop-opacity="0.30"
+                                    />
+
+                                    <stop
+                                        offset="100%"
+                                        stop-opacity="0"
+                                    />
+
+                                </linearGradient>
+
+                            </defs>
+
+
+                            <path
+                                class="chart-area-fill"
+                                d="
+                                M0,220
+                                C70,200 80,180 140,190
+                                C200,200 210,145 280,155
+                                C340,165 360,115 420,125
+                                C480,135 500,80 560,100
+                                C620,120 640,55 700,70
+                                L700,280
+                                L0,280 Z
+                                "
+                            ></path>
+
+
+                            <path
+                                class="chart-line"
+                                d="
+                                M0,220
+                                C70,200 80,180 140,190
+                                C200,200 210,145 280,155
+                                C340,165 360,115 420,125
+                                C480,135 500,80 560,100
+                                C620,120 640,55 700,70
+                                "
+                            ></path>
+
+                        </svg>
+
+
+                        <div class="chart-x-axis">
+                            <span>Week 1</span>
+                            <span>Week 2</span>
+                            <span>Week 3</span>
+                            <span>Week 4</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Recent Activity -->
+
+            <section class="dashboard-card activity-card">
+
+                <div class="card-header">
+
+                    <div>
+                        <h3>Recent Activity</h3>
+                        <p>Latest admin activities</p>
+                    </div>
+
+                    <a href="activity-log.html">
+                        View All
+                    </a>
+
+                </div>
+
+
+                <div class="activity-list">
+
+
+                    <div class="activity-item">
+
+                        <div class="activity-icon upload">
+                            <i class="fa-solid fa-cloud-arrow-up"></i>
+                        </div>
+
+                        <div class="activity-info">
+
+                            <strong>
+                                New material uploaded
+                            </strong>
+
+                            <span>
+                                A/L Mathematics — Calculus Notes
+                            </span>
+
+                            <small>
+                                10 minutes ago
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="activity-item">
+
+                        <div class="activity-icon student">
+                            <i class="fa-solid fa-user-plus"></i>
+                        </div>
+
+                        <div class="activity-info">
+
+                            <strong>
+                                New student registered
+                            </strong>
+
+                            <span>
+                                Student account created
+                            </span>
+
+                            <small>
+                                35 minutes ago
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="activity-item">
+
+                        <div class="activity-icon paper">
+                            <i class="fa-solid fa-file-circle-check"></i>
+                        </div>
+
+                        <div class="activity-info">
+
+                            <strong>
+                                Model paper added
+                            </strong>
+
+                            <span>
+                                Grade 11 Mathematics
+                            </span>
+
+                            <small>
+                                1 hour ago
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="activity-item">
+
+                        <div class="activity-icon teacher">
+                            <i class="fa-solid fa-chalkboard-user"></i>
+                        </div>
+
+                        <div class="activity-info">
+
+                            <strong>
+                                Teacher profile updated
+                            </strong>
+
+                            <span>
+                                Teacher information modified
+                            </span>
+
+                            <small>
+                                2 hours ago
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="activity-item">
+
+                        <div class="activity-icon login">
+                            <i class="fa-solid fa-right-to-bracket"></i>
+                        </div>
+
+                        <div class="activity-info">
+
+                            <strong>
+                                Admin login
+                            </strong>
+
+                            <span>
+                                Administrator signed in
+                            </span>
+
+                            <small>
+                                3 hours ago
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+
+        <!-- =====================================
+             RECENT STUDENTS
+        ====================================== -->
+
+        <section class="dashboard-card students-card">
+
+            <div class="card-header">
+
+                <div>
+                    <h3>Recent Students</h3>
+                    <p>Latest student registrations</p>
+                </div>
+
+                <a href="students.html">
+                    View All Students
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+
+            <div class="table-container">
+
+                <table class="students-table">
+
+                    <thead>
+
+                        <tr>
+                            <th>Student</th>
+                            <th>Email</th>
+                            <th>Grade</th>
+                            <th>Registered</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>
+                                <div class="student-profile">
+
+                                    <div class="student-avatar avatar-one">
+                                        AK
+                                    </div>
+
+                                    <div>
+                                        <strong>
+                                            A. Kumar
+                                        </strong>
+
+                                        <span>
+                                            Student #1001
+                                        </span>
+                                    </div>
+
+                                </div>
+                            </td>
+
+                            <td>
+                                akumar@example.com
+                            </td>
+
+                            <td>
+                                <span class="grade-badge">
+                                    Grade 11
+                                </span>
+                            </td>
+
+                            <td>
+                                Today, 10:32 AM
+                            </td>
+
+                            <td>
+                                <span class="status active">
+                                    Active
+                                </span>
+                            </td>
+
+                            <td>
+                                <button
+                                    class="table-action"
+                                    title="View student"
+                                >
+                                    <i class="fa-regular fa-eye"></i>
+                                </button>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                <div class="student-profile">
+
+                                    <div class="student-avatar avatar-two">
+                                        NS
+                                    </div>
+
+                                    <div>
+                                        <strong>
+                                            N. Sahan
+                                        </strong>
+
+                                        <span>
+                                            Student #1002
+                                        </span>
+                                    </div>
+
+                                </div>
+                            </td>
+
+                            <td>
+                                nsahan@example.com
+                            </td>
+
+                            <td>
+                                <span class="grade-badge">
+                                    A/L
+                                </span>
+                            </td>
+
+                            <td>
+                                Today, 09:18 AM
+                            </td>
+
+                            <td>
+                                <span class="status active">
+                                    Active
+                                </span>
+                            </td>
+
+                            <td>
+                                <button
+                                    class="table-action"
+                                    title="View student"
+                                >
+                                    <i class="fa-regular fa-eye"></i>
+                                </button>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                <div class="student-profile">
+
+                                    <div class="student-avatar avatar-three">
+                                        RF
+                                    </div>
+
+                                    <div>
+                                        <strong>
+                                            R. Fathima
+                                        </strong>
+
+                                        <span>
+                                            Student #1003
+                                        </span>
+                                    </div>
+
+                                </div>
+                            </td>
+
+                            <td>
+                                rfathima@example.com
+                            </td>
+
+                            <td>
+                                <span class="grade-badge">
+                                    Grade 10
+                                </span>
+                            </td>
+
+                            <td>
+                                Yesterday, 04:25 PM
+                            </td>
+
+                            <td>
+                                <span class="status active">
+                                    Active
+                                </span>
+                            </td>
+
+                            <td>
+                                <button
+                                    class="table-action"
+                                    title="View student"
+                                >
+                                    <i class="fa-regular fa-eye"></i>
+                                </button>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                <div class="student-profile">
+
+                                    <div class="student-avatar avatar-four">
+                                        MP
+                                    </div>
+
+                                    <div>
+                                        <strong>
+                                            M. Praveen
+                                        </strong>
+
+                                        <span>
+                                            Student #1004
+                                        </span>
+                                    </div>
+
+                                </div>
+                            </td>
+
+                            <td>
+                                mpraveen@example.com
+                            </td>
+
+                            <td>
+                                <span class="grade-badge">
+                                    Grade 8
+                                </span>
+                            </td>
+
+                            <td>
+                                Yesterday, 02:10 PM
+                            </td>
+
+                            <td>
+                                <span class="status pending">
+                                    Pending
+                                </span>
+                            </td>
+
+                            <td>
+                                <button
+                                    class="table-action"
+                                    title="View student"
+                                >
+                                    <i class="fa-regular fa-eye"></i>
+                                </button>
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+    </section>
+
+</main>
+
+
+<!-- =========================================
+     MOBILE OVERLAY
+========================================= -->
+
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+
+<!-- =========================================
+     NOTIFICATION PANEL
+========================================= -->
+
+<div class="notification-panel" id="notificationPanel">
+
+    <div class="notification-header">
+
+        <div>
+            <h3>Notifications</h3>
+            <span>3 new notifications</span>
+        </div>
+
+        <button id="closeNotifications">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+    </div>
+
+
+    <div class="notification-list">
+
+        <div class="notification-item">
+
+            <div class="notification-icon student">
+                <i class="fa-solid fa-user-plus"></i>
+            </div>
+
+            <div>
+                <strong>New student</strong>
+                <p>A new student registered.</p>
+                <small>15 minutes ago</small>
+            </div>
+
+        </div>
+
+
+        <div class="notification-item">
+
+            <div class="notification-icon material">
+                <i class="fa-solid fa-file-arrow-up"></i>
+            </div>
+
+            <div>
+                <strong>Material uploaded</strong>
+                <p>New mathematics material added.</p>
+                <small>1 hour ago</small>
+            </div>
+
+        </div>
+
+
+        <div class="notification-item">
+
+            <div class="notification-icon message">
+                <i class="fa-solid fa-envelope"></i>
+            </div>
+
+            <div>
+                <strong>New message</strong>
+                <p>You received a contact enquiry.</p>
+                <small>2 hours ago</small>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="notification-footer">
+        <a href="messages.html">
+            View all notifications
+        </a>
+    </div>
+
+</div>
+
+
+<!-- =========================================
+     LOGOUT MODAL
+========================================= -->
+
+<div class="modal-overlay" id="logoutModal">
+
+    <div class="logout-modal">
+
+        <div class="logout-icon">
+            <i class="fa-solid fa-right-from-bracket"></i>
+        </div>
+
+        <h3>Logout?</h3>
+
+        <p>
+            Are you sure you want to logout from the
+            MathsWorld admin panel?
+        </p>
+
+        <div class="logout-actions">
+
+            <button
+                class="cancel-btn"
+                id="cancelLogout"
+            >
+                Cancel
+            </button>
+
+            <button
+                class="confirm-logout-btn"
+                id="confirmLogout"
+            >
+                Logout
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================
+     TOAST
+========================================= -->
+
+<div class="toast" id="toast">
+
+    <div class="toast-icon">
+        <i class="fa-solid fa-check"></i>
+    </div>
+
+    <div class="toast-content">
+
+        <strong id="toastTitle">
+            Success
+        </strong>
+
+        <p id="toastMessage">
+            Action completed successfully.
+        </p>
+
+    </div>
+
+    <button id="closeToast">
+        <i class="fa-solid fa-xmark"></i>
+    </button>
+
+</div>
+
+
+<!-- Dashboard JS -->
+<script src="/js/admin-dashboard.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Study Materials | MathsWorld</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/material.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <div class="container navbar">
+
+            <a href="index.html" class="logo">
+
+                <span class="logo-icon">
+                    <i class="bi bi-mortarboard-fill"></i>
+                </span>
+
+                <span class="logo-text">
+                    Maths<span>World</span>
+                </span>
+
+            </a>
+
+
+            <nav class="nav-menu">
+
+                <a href="index.html">Home</a>
+
+                <a href="#" class="active">Materials</a>
+
+                <a href="#">Notes</a>
+
+                <a href="#">Past Papers</a>
+
+                <a href="#">Subjects</a>
+
+                <a href="#">Contact</a>
+
+            </nav>
+
+
+            <a href="#" class="login-btn">
+
+                <i class="bi bi-person"></i>
+
+                Login
+
+            </a>
+
+
+            <button class="menu-btn" id="menuBtn">
+
+                <i class="bi bi-list"></i>
+
+            </button>
+
+        </div>
+
+
+        <!-- Mobile Menu -->
+
+        <div class="mobile-menu" id="mobileMenu">
+
+            <a href="index.html">Home</a>
+
+            <a href="#">Materials</a>
+
+            <a href="#">Notes</a>
+
+            <a href="#">Past Papers</a>
+
+            <a href="#">Subjects</a>
+
+            <a href="#">Contact</a>
+
+            <a href="#" class="mobile-login">
+
+                <i class="bi bi-person"></i>
+
+                Login
+
+            </a>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ================= PAGE HERO ================= -->
+
+    <section class="materials-hero">
+
+        <div class="container">
+
+            <div class="materials-hero-content">
+
+                <span class="page-label">
+
+                    <i class="bi bi-folder2-open"></i>
+
+                    MATHSWORLD RESOURCES
+
+                </span>
+
+
+                <h1>
+
+                    Study <span>Materials</span>
+
+                </h1>
+
+
+                <p>
+
+                    Find notes, past papers, model papers and
+                    other useful educational resources.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= MATERIALS ================= -->
+
+    <main class="materials-page">
+
+        <div class="container">
+
+
+            <!-- Search -->
+
+            <div class="material-search">
+
+                <i class="bi bi-search"></i>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search notes, past papers, subjects..."
+                >
+
+                <button id="clearSearch">
+
+                    <i class="bi bi-x-lg"></i>
+
+                </button>
+
+            </div>
+
+
+
+            <!-- Filters -->
+
+            <div class="material-filters">
+
+
+                <div class="filter-group">
+
+                    <label for="subjectFilter">
+
+                        <i class="bi bi-book"></i>
+
+                        Subject
+
+                    </label>
+
+
+                    <select id="subjectFilter">
+
+                        <option value="all">
+                            All Subjects
+                        </option>
+
+                        <option value="mathematics">
+                            Combined Mathematics
+                        </option>
+
+                        <option value="physics">
+                            Physics
+                        </option>
+
+                        <option value="chemistry">
+                            Chemistry
+                        </option>
+
+                        <option value="biology">
+                            Biology
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <div class="filter-group">
+
+                    <label for="yearFilter">
+
+                        <i class="bi bi-calendar3"></i>
+
+                        Year
+
+                    </label>
+
+
+                    <select id="yearFilter">
+
+                        <option value="all">
+                            All Years
+                        </option>
+
+                        <option value="2026">2026</option>
+
+                        <option value="2025">2025</option>
+
+                        <option value="2024">2024</option>
+
+                        <option value="2023">2023</option>
+
+                        <option value="2022">2022</option>
+
+                    </select>
+
+                </div>
+
+
+
+                <div class="filter-group">
+
+                    <label for="typeFilter">
+
+                        <i class="bi bi-file-earmark"></i>
+
+                        Type
+
+                    </label>
+
+
+                    <select id="typeFilter">
+
+                        <option value="all">
+                            All Materials
+                        </option>
+
+                        <option value="notes">
+                            Notes
+                        </option>
+
+                        <option value="past-paper">
+                            Past Papers
+                        </option>
+
+                        <option value="model-paper">
+                            Model Papers
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <button class="reset-btn" id="resetFilters">
+
+                    <i class="bi bi-arrow-counterclockwise"></i>
+
+                    Reset
+
+                </button>
+
+            </div>
+
+
+
+            <!-- Results header -->
+
+            <div class="results-header">
+
+                <div>
+
+                    <h2>
+                        Available Materials
+                    </h2>
+
+                    <p id="resultCount">
+                        Showing 8 materials
+                    </p>
+
+                </div>
+
+
+                <div class="sort-box">
+
+                    <i class="bi bi-sort-down"></i>
+
+                    <select id="sortFilter">
+
+                        <option value="newest">
+                            Newest First
+                        </option>
+
+                        <option value="oldest">
+                            Oldest First
+                        </option>
+
+                        <option value="az">
+                            A - Z
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================= PDF GRID ================= -->
+
+            <div class="materials-grid" id="materialsGrid">
+
+
+                <!-- Card 1 -->
+
+                <article
+                    class="pdf-card"
+                    data-subject="mathematics"
+                    data-year="2026"
+                    data-type="notes"
+                    data-title="A/L Combined Mathematics Integration Notes"
+                >
+
+                    <div class="pdf-top">
+
+                        <div class="pdf-icon">
+
+                            <i class="bi bi-file-earmark-pdf-fill"></i>
+
+                        </div>
+
+                        <span class="material-type">
+                            Notes
+                        </span>
+
+                    </div>
+
+
+                    <div class="pdf-content">
+
+                        <h3>
+                            A/L Combined Mathematics
+                            Integration Notes
+                        </h3>
+
+                        <p>
+                            Complete revision notes covering
+                            integration concepts and examples.
+                        </p>
+
+
+                        <div class="pdf-meta">
+
+                            <span>
+                                <i class="bi bi-book"></i>
+                                Mathematics
+                            </span>
+
+                            <span>
+                                <i class="bi bi-calendar3"></i>
+                                2026
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="pdf-actions">
+
+                        <a
+                            href="pdf/math-integration.pdf"
+                            target="_blank"
+                            class="view-btn"
+                        >
+
+                            <i class="bi bi-eye"></i>
+
+                            View
+
+                        </a>
+
+
+                        <a
+                            href="pdf/math-integration.pdf"
+                            download
+                            class="download-btn"
+                        >
+
+                            <i class="bi bi-download"></i>
+
+                            Download
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- Card 2 -->
+
+                <article
+                    class="pdf-card"
+                    data-subject="physics"
+                    data-year="2025"
+                    data-type="past-paper"
+                    data-title="A/L Physics 2025 Past Paper"
+                >
+
+                    <div class="pdf-top">
+
+                        <div class="pdf-icon">
+
+                            <i class="bi bi-file-earmark-pdf-fill"></i>
+
+                        </div>
+
+                        <span class="material-type">
+                            Past Paper
+                        </span>
+
+                    </div>
+
+
+                    <div class="pdf-content">
+
+                        <h3>
+                            A/L Physics 2025
+                            Past Paper
+                        </h3>
+
+                        <p>
+                            Advanced Level Physics
+                            examination paper.
+                        </p>
+
+
+                        <div class="pdf-meta">
+
+                            <span>
+                                <i class="bi bi-lightning-charge"></i>
+                                Physics
+                            </span>
+
+                            <span>
+                                <i class="bi bi-calendar3"></i>
+                                2025
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="pdf-actions">
+
+                        <a href="pdf/physics-2025.pdf"
+                            target="_blank"
+                            class="view-btn">
+
+                            <i class="bi bi-eye"></i>
+
+                            View
+
+                        </a>
+
+
+                        <a href="pdf/physics-2025.pdf"
+                            download
+                            class="download-btn">
+
+                            <i class="bi bi-download"></i>
+
+                            Download
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- Card 3 -->
+
+                <article
+                    class="pdf-card"
+                    data-subject="chemistry"
+                    data-year="2025"
+                    data-type="model-paper"
+                    data-title="A/L Chemistry Model Paper 2025"
+                >
+
+                    <div class="pdf-top">
+
+                        <div class="pdf-icon">
+
+                            <i class="bi bi-file-earmark-pdf-fill"></i>
+
+                        </div>
+
+                        <span class="material-type">
+                            Model Paper
+                        </span>
+
+                    </div>
+
+
+                    <div class="pdf-content">
+
+                        <h3>
+                            A/L Chemistry
+                            Model Paper 2025
+                        </h3>
+
+                        <p>
+                            Practice model paper for
+                            Advanced Level Chemistry.
+                        </p>
+
+
+                        <div class="pdf-meta">
+
+                            <span>
+                                <i class="bi bi-flask"></i>
+                                Chemistry
+                            </span>
+
+                            <span>
+                                <i class="bi bi-calendar3"></i>
+                                2025
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="pdf-actions">
+
+                        <a href="pdf/chemistry-model-2025.pdf"
+                            target="_blank"
+                            class="view-btn">
+
+                            <i class="bi bi-eye"></i>
+
+                            View
+
+                        </a>
+
+
+                        <a href="pdf/chemistry-model-2025.pdf"
+                            download
+                            class="download-btn">
+
+                            <i class="bi bi-download"></i>
+
+                            Download
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- Card 4 -->
+
+                <article
+                    class="pdf-card"
+                    data-subject="biology"
+                    data-year="2024"
+                    data-type="notes"
+                    data-title="A/L Biology Human Biology Notes"
+                >
+
+                    <div class="pdf-top">
+
+                        <div class="pdf-icon">
+
+                            <i class="bi bi-file-earmark-pdf-fill"></i>
+
+                        </div>
+
+                        <span class="material-type">
+                            Notes
+                        </span>
+
+                    </div>
+
+
+                    <div class="pdf-content">
+
+                        <h3>
+                            A/L Biology
+                            Human Biology Notes
+                        </h3>
+
+                        <p>
+                            Revision notes for important
+                            Human Biology topics.
+                        </p>
+
+
+                        <div class="pdf-meta">
+
+                            <span>
+                                <i class="bi bi-virus"></i>
+                                Biology
+                            </span>
+
+                            <span>
+                                <i class="bi bi-calendar3"></i>
+                                2024
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="pdf-actions">
+
+                        <a href="pdf/biology-human.pdf"
+                            target="_blank"
+                            class="view-btn">
+
+                            <i class="bi bi-eye"></i>
+
+                            View
+
+                        </a>
+
+
+                        <a href="pdf/biology-human.pdf"
+                            download
+                            class="download-btn">
+
+                            <i class="bi bi-download"></i>
+
+                            Download
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- Card 5 -->
+
+                <article
+                    class="pdf-card"
+                    data-subject="mathematics"
+                    data-year="2025"
+                    data-type="past-paper"
+                    data-title="A/L Combined Mathematics 2025 Paper"
+                >
+
+                    <div class="pdf-top">
+
+                        <div class="pdf-icon">
+
+                            <i class="bi bi-file-earmark-pdf-fill"></i>
+
+                        </div>
+
+                        <span class="material-type">
+                            Past Paper
+                        </span>
+
+                    </div>
+
+
+                    <div class="pdf-content">
+
+                        <h3>
+                            A/L Combined Mathematics
+                            2025 Paper
+                        </h3>
+
+                        <p>
+                            Previous examination paper
+                            for Mathematics students.
+                        </p>
+
+
+                        <div class="pdf-meta">
+
+                            <span>
+                                <i class="bi bi-calculator"></i>
+                                Mathematics
+                            </span>
+
+                            <span>
+                                <i class="bi bi-calendar3"></i>
+                                2025
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="pdf-actions">
+
+                        <a href="pdf/maths-2025.pdf"
+                            target="_blank"
+                            class="view-btn">
+
+                            <i class="bi bi-eye"></i>
+
+                            View
+
+                        </a>
+
+
+                        <a href="pdf/maths-2025.pdf"
+                            download
+                            class="download-btn">
+
+                            <i class="bi bi-download"></i>
+
+                            Download
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- Card 6 -->
+
+                <article
+                    class="pdf-card"
+                    data-subject="physics"
+                    data-year="2024"
+                    data-type="notes"
+                    data-title="A/L Physics Mechanics Notes"
+                >
+
+                    <div class="pdf-top">
+
+                        <div class="pdf-icon">
+
+                            <i class="bi bi-file-earmark-pdf-fill"></i>
+
+                        </div>
+
+                        <span class="material-type">
+                            Notes
+                        </span>
+
+                    </div>
+
+
+                    <div class="pdf-content">
+
+                        <h3>
+                            A/L Physics
+                            Mechanics Notes
+                        </h3>
+
+                        <p>
+                            Important concepts and
+                            revision notes for Mechanics.
+                        </p>
+
+
+                        <div class="pdf-meta">
+
+                            <span>
+                                <i class="bi bi-lightning-charge"></i>
+                                Physics
+                            </span>
+
+                            <span>
+                                <i class="bi bi-calendar3"></i>
+                                2024
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="pdf-actions">
+
+                        <a href="pdf/physics-mechanics.pdf"
+                            target="_blank"
+                            class="view-btn">
+
+                            <i class="bi bi-eye"></i>
+
+                            View
+
+                        </a>
+
+
+                        <a href="pdf/physics-mechanics.pdf"
+                            download
+                            class="download-btn">
+
+                            <i class="bi bi-download"></i>
+
+                            Download
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- Card 7 -->
+
+                <article
+                    class="pdf-card"
+                    data-subject="chemistry"
+                    data-year="2023"
+                    data-type="past-paper"
+                    data-title="A/L Chemistry 2023 Past Paper"
+                >
+
+                    <div class="pdf-top">
+
+                        <div class="pdf-icon">
+
+                            <i class="bi bi-file-earmark-pdf-fill"></i>
+
+                        </div>
+
+                        <span class="material-type">
+                            Past Paper
+                        </span>
+
+                    </div>
+
+
+                    <div class="pdf-content">
+
+                        <h3>
+                            A/L Chemistry
+                            2023 Past Paper
+                        </h3>
+
+                        <p>
+                            Previous examination paper
+                            for Chemistry students.
+                        </p>
+
+
+                        <div class="pdf-meta">
+
+                            <span>
+                                <i class="bi bi-flask"></i>
+                                Chemistry
+                            </span>
+
+                            <span>
+                                <i class="bi bi-calendar3"></i>
+                                2023
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="pdf-actions">
+
+                        <a href="pdf/chemistry-2023.pdf"
+                            target="_blank"
+                            class="view-btn">
+
+                            <i class="bi bi-eye"></i>
+
+                            View
+
+                        </a>
+
+
+                        <a href="pdf/chemistry-2023.pdf"
+                            download
+                            class="download-btn">
+
+                            <i class="bi bi-download"></i>
+
+                            Download
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- Card 8 -->
+
+                <article
+                    class="pdf-card"
+                    data-subject="biology"
+                    data-year="2025"
+                    data-type="model-paper"
+                    data-title="A/L Biology Model Paper 2025"
+                >
+
+                    <div class="pdf-top">
+
+                        <div class="pdf-icon">
+
+                            <i class="bi bi-file-earmark-pdf-fill"></i>
+
+                        </div>
+
+                        <span class="material-type">
+                            Model Paper
+                        </span>
+
+                    </div>
+
+
+                    <div class="pdf-content">
+
+                        <h3>
+                            A/L Biology
+                            Model Paper 2025
+                        </h3>
+
+                        <p>
+                            Practice model paper for
+                            Biology examination preparation.
+                        </p>
+
+
+                        <div class="pdf-meta">
+
+                            <span>
+                                <i class="bi bi-virus"></i>
+                                Biology
+                            </span>
+
+                            <span>
+                                <i class="bi bi-calendar3"></i>
+                                2025
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="pdf-actions">
+
+                        <a href="pdf/biology-model-2025.pdf"
+                            target="_blank"
+                            class="view-btn">
+
+                            <i class="bi bi-eye"></i>
+
+                            View
+
+                        </a>
+
+
+                        <a href="pdf/biology-model-2025.pdf"
+                            download
+                            class="download-btn">
+
+                            <i class="bi bi-download"></i>
+
+                            Download
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+
+            <!-- No Results -->
+
+            <div class="no-results" id="noResults">
+
+                <div class="no-results-icon">
+
+                    <i class="bi bi-search"></i>
+
+                </div>
+
+                <h3>
+                    No Materials Found
+                </h3>
+
+                <p>
+                    Try changing your search or filters.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </main>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="container footer-container">
+
+            <div class="footer-brand">
+
+                <a href="index.html" class="logo">
+
+                    <span class="logo-icon">
+                        <i class="bi bi-mortarboard-fill"></i>
+                    </span>
+
+                    <span class="logo-text">
+                        Maths<span>World</span>
+                    </span>
+
+                </a>
+
+                <p>
+                    Learn • Practice • Succeed
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="index.html">Home</a>
+
+                <a href="#">Subjects</a>
+
+                <a href="#">Notes</a>
+
+                <a href="#">Past Papers</a>
+
+                <a href="#">Contact</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 MathsWorld. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="/js/material.js"></script>
+    <script src="/js/material.js"></script>
+
+</body>
+
+</html>

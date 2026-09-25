@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Profile | MathsWorld</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/profile.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="profile-layout">
+
+    <!-- =========================================
+         SIDEBAR
+    ========================================== -->
+
+    <aside class="profile-sidebar" id="profileSidebar">
+
+        <div class="profile-logo">
+
+            <a href="index.html">
+
+                <span>MATHS</span>
+                <strong>WORLD</strong>
+
+            </a>
+
+        </div>
+
+
+        <div class="profile-sidebar-user">
+
+            <div class="sidebar-avatar">
+
+                <i class="fa-solid fa-user"></i>
+
+            </div>
+
+            <div>
+
+                <strong>Student</strong>
+
+                <span>A/L Student</span>
+
+            </div>
+
+        </div>
+
+
+        <nav class="profile-navigation">
+
+            <span class="profile-nav-title">
+                MAIN MENU
+            </span>
+
+            <a href="dashboard.html">
+
+                <i class="fa-solid fa-chart-pie"></i>
+
+                Dashboard
+
+            </a>
+
+
+            <a href="subjects.html">
+
+                <i class="fa-solid fa-book-open"></i>
+
+                My Subjects
+
+            </a>
+
+
+            <a href="notes.html">
+
+                <i class="fa-solid fa-book"></i>
+
+                Notes
+
+            </a>
+
+
+            <a href="materials.html">
+
+                <i class="fa-solid fa-folder-open"></i>
+
+                Materials
+
+            </a>
+
+
+            <a href="past-papers.html">
+
+                <i class="fa-solid fa-file-pdf"></i>
+
+                Past Papers
+
+            </a>
+
+
+            <a href="model-papers.html">
+
+                <i class="fa-solid fa-file-lines"></i>
+
+                Model Papers
+
+            </a>
+
+
+            <span class="profile-nav-title account-title">
+                ACCOUNT
+            </span>
+
+
+            <a href="profile.html" class="active">
+
+                <i class="fa-solid fa-user"></i>
+
+                My Profile
+
+            </a>
+
+
+            <a href="#settings">
+
+                <i class="fa-solid fa-gear"></i>
+
+                Settings
+
+            </a>
+
+        </nav>
+
+
+        <div class="profile-sidebar-bottom">
+
+            <a href="index.html" id="profileLogout">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                Logout
+
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =========================================
+         MAIN
+    ========================================== -->
+
+    <main class="profile-main">
+
+
+        <!-- HEADER -->
+
+        <header class="profile-header">
+
+            <button
+                class="profile-menu-btn"
+                id="profileMenuBtn"
+            >
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+
+            <div>
+
+                <span class="page-label">
+                    ACCOUNT
+                </span>
+
+                <h1>
+                    My Profile
+                </h1>
+
+            </div>
+
+
+            <a href="dashboard.html"
+               class="back-dashboard">
+
+                <i class="fa-solid fa-arrow-left"></i>
+
+                Dashboard
+
+            </a>
+
+        </header>
+
+
+        <!-- CONTENT -->
+
+        <div class="profile-content">
+
+
+            <!-- =====================================
+                 PROFILE OVERVIEW
+            ====================================== -->
+
+            <section class="profile-overview">
+
+                <div class="profile-cover">
+
+                    <div class="cover-decoration decoration-one"></div>
+
+                    <div class="cover-decoration decoration-two"></div>
+
+                </div>
+
+
+                <div class="profile-overview-content">
+
+
+                    <div class="large-avatar">
+
+                        <i class="fa-solid fa-user"></i>
+
+                        <button
+                            class="avatar-edit"
+                            id="avatarEdit"
+                            title="Change profile photo"
+                        >
+
+                            <i class="fa-solid fa-camera"></i>
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="profile-main-info">
+
+                        <h2>
+                            Student
+                        </h2>
+
+                        <p>
+                            <i class="fa-solid fa-graduation-cap"></i>
+                            A/L Student
+                        </p>
+
+                        <span>
+                            MathsWorld Student
+                        </span>
+
+                    </div>
+
+
+                    <div class="profile-status">
+
+                        <span class="status-dot"></span>
+
+                        Active Student
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =====================================
+                 INFORMATION GRID
+            ====================================== -->
+
+            <section class="profile-grid">
+
+
+                <!-- PERSONAL INFORMATION -->
+
+                <div class="profile-card">
+
+                    <div class="profile-card-header">
+
+                        <div>
+
+                            <span class="card-label">
+                                ACCOUNT
+                            </span>
+
+                            <h2>
+                                Personal Information
+                            </h2>
+
+                        </div>
+
+                        <button
+                            class="edit-button"
+                            id="editProfileBtn"
+                        >
+
+                            <i class="fa-solid fa-pen"></i>
+
+                            Edit
+
+                        </button>
+
+                    </div>
+
+
+                    <form id="profileForm">
+
+
+                        <div class="profile-form-grid">
+
+
+                            <div class="profile-field">
+
+                                <label>
+                                    Full Name
+                                </label>
+
+                                <div class="profile-input">
+
+                                    <i class="fa-regular fa-user"></i>
+
+                                    <input
+                                        type="text"
+                                        id="profileName"
+                                        value="Student"
+                                        disabled
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="profile-field">
+
+                                <label>
+                                    Email Address
+                                </label>
+
+                                <div class="profile-input">
+
+                                    <i class="fa-regular fa-envelope"></i>
+
+                                    <input
+                                        type="email"
+                                        id="profileEmail"
+                                        value="student@example.com"
+                                        disabled
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="profile-field">
+
+                                <label>
+                                    Phone Number
+                                </label>
+
+                                <div class="profile-input">
+
+                                    <i class="fa-solid fa-phone"></i>
+
+                                    <input
+                                        type="tel"
+                                        id="profilePhone"
+                                        value="077 000 0000"
+                                        disabled
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="profile-field">
+
+                                <label>
+                                    Grade
+                                </label>
+
+                                <div class="profile-input">
+
+                                    <i class="fa-solid fa-graduation-cap"></i>
+
+                                    <select id="profileGrade" disabled>
+
+                                        <option>
+                                            Grade 10
+                                        </option>
+
+                                        <option>
+                                            Grade 11
+                                        </option>
+
+                                        <option selected>
+                                            A/L
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+
+                        <div class="form-actions"
+                             id="profileActions">
+
+                            <button
+                                type="button"
+                                class="cancel-btn"
+                                id="cancelProfile"
+                            >
+                                Cancel
+                            </button>
+
+                            <button
+                                type="submit"
+                                class="save-btn"
+                            >
+
+                                <i class="fa-solid fa-check"></i>
+
+                                Save Changes
+
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+
+                <!-- ENROLLED SUBJECTS -->
+
+                <div class="profile-card">
+
+                    <div class="profile-card-header">
+
+                        <div>
+
+                            <span class="card-label">
+                                LEARNING
+                            </span>
+
+                            <h2>
+                                My Subjects
+                            </h2>
+
+                        </div>
+
+                        <a href="subjects.html"
+                           class="view-link">
+
+                            View All
+
+                        </a>
+
+                    </div>
+
+
+                    <div class="profile-subject-list">
+
+
+                        <div class="profile-subject">
+
+                            <div class="subject-small-icon math">
+
+                                <i class="fa-solid fa-square-root-variable"></i>
+
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Combined Mathematics
+                                </strong>
+
+                                <span>
+                                    A/L
+                                </span>
+
+                            </div>
+
+                            <i class="fa-solid fa-check-circle subject-check"></i>
+
+                        </div>
+
+
+                        <div class="profile-subject">
+
+                            <div class="subject-small-icon physics">
+
+                                <i class="fa-solid fa-atom"></i>
+
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Physics
+                                </strong>
+
+                                <span>
+                                    A/L
+                                </span>
+
+                            </div>
+
+                            <i class="fa-solid fa-check-circle subject-check"></i>
+
+                        </div>
+
+
+                        <div class="profile-subject">
+
+                            <div class="subject-small-icon chemistry">
+
+                                <i class="fa-solid fa-flask"></i>
+
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Chemistry
+                                </strong>
+
+                                <span>
+                                    A/L
+                                </span>
+
+                            </div>
+
+                            <i class="fa-solid fa-check-circle subject-check"></i>
+
+                        </div>
+
+
+                        <div class="profile-subject">
+
+                            <div class="subject-small-icon biology">
+
+                                <i class="fa-solid fa-dna"></i>
+
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Biology
+                                </strong>
+
+                                <span>
+                                    A/L
+                                </span>
+
+                            </div>
+
+                            <i class="fa-solid fa-check-circle subject-check"></i>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+            </section>
+
+
+            <!-- =====================================
+                 SETTINGS
+            ====================================== -->
+
+            <section class="profile-card settings-card"
+                     id="settings">
+
+                <div class="profile-card-header">
+
+                    <div>
+
+                        <span class="card-label">
+                            PREFERENCES
+                        </span>
+
+                        <h2>
+                            Account Settings
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="settings-list">
+
+
+                    <div class="setting-item">
+
+                        <div class="setting-icon">
+
+                            <i class="fa-regular fa-bell"></i>
+
+                        </div>
+
+                        <div class="setting-info">
+
+                            <strong>
+                                Notifications
+                            </strong>
+
+                            <span>
+                                Receive updates about new learning materials.
+                            </span>
+
+                        </div>
+
+                        <label class="switch">
+
+                            <input
+                                type="checkbox"
+                                id="notificationSetting"
+                                checked
+                            >
+
+                            <span class="slider"></span>
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="setting-item">
+
+                        <div class="setting-icon">
+
+                            <i class="fa-solid fa-envelope"></i>
+
+                        </div>
+
+                        <div class="setting-info">
+
+                            <strong>
+                                Email Updates
+                            </strong>
+
+                            <span>
+                                Receive important MathsWorld announcements.
+                            </span>
+
+                        </div>
+
+                        <label class="switch">
+
+                            <input
+                                type="checkbox"
+                                id="emailSetting"
+                                checked
+                            >
+
+                            <span class="slider"></span>
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="setting-item">
+
+                        <div class="setting-icon">
+
+                            <i class="fa-solid fa-lock"></i>
+
+                        </div>
+
+                        <div class="setting-info">
+
+                            <strong>
+                                Password
+                            </strong>
+
+                            <span>
+                                Update your account password.
+                            </span>
+
+                        </div>
+
+                        <button
+                            class="settings-action"
+                            id="changePasswordBtn"
+                        >
+
+                            Change
+
+                            <i class="fa-solid fa-chevron-right"></i>
+
+                        </button>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+            <!-- =====================================
+                 DANGER ZONE
+            ====================================== -->
+
+            <section class="danger-card">
+
+                <div>
+
+                    <span>
+                        ACCOUNT MANAGEMENT
+                    </span>
+
+                    <h3>
+                        Delete Account
+                    </h3>
+
+                    <p>
+                        This option will permanently remove your
+                        student account and associated data.
+                    </p>
+
+                </div>
+
+
+                <button id="deleteAccountBtn">
+
+                    <i class="fa-regular fa-trash-can"></i>
+
+                    Delete Account
+
+                </button>
+
+            </section>
+
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<!-- MOBILE OVERLAY -->
+
+<div class="profile-overlay"
+     id="profileOverlay">
+</div>
+
+
+<!-- CHANGE PASSWORD MODAL -->
+
+<div class="password-modal"
+     id="passwordModal">
+
+    <div class="password-modal-box">
+
+        <button
+            class="modal-close"
+            id="modalClose"
+        >
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+
+        <div class="modal-icon">
+
+            <i class="fa-solid fa-lock"></i>
+
+        </div>
+
+
+        <h2>
+            Change Password
+        </h2>
+
+        <p>
+            Update your MathsWorld account password.
+        </p>
+
+
+        <form id="passwordForm">
+
+            <div class="profile-field">
+
+                <label>
+                    Current Password
+                </label>
+
+                <div class="profile-input">
+
+                    <i class="fa-solid fa-lock"></i>
+
+                    <input
+                        type="password"
+                        id="currentPassword"
+                        required
+                    >
+
+                </div>
+
+            </div>
+
+
+            <div class="profile-field">
+
+                <label>
+                    New Password
+                </label>
+
+                <div class="profile-input">
+
+                    <i class="fa-solid fa-key"></i>
+
+                    <input
+                        type="password"
+                        id="newPassword"
+                        required
+                    >
+
+                </div>
+
+            </div>
+
+
+            <div class="profile-field">
+
+                <label>
+                    Confirm New Password
+                </label>
+
+                <div class="profile-input">
+
+                    <i class="fa-solid fa-key"></i>
+
+                    <input
+                        type="password"
+                        id="confirmNewPassword"
+                        required
+                    >
+
+                </div>
+
+            </div>
+
+
+            <div
+                class="password-message"
+                id="passwordMessage">
+            </div>
+
+
+            <button
+                type="submit"
+                class="save-btn modal-save"
+            >
+
+                Update Password
+
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<script src="js/profile.js"></script>
+
+</body>
+
+</html>

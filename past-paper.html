@@ -1,0 +1,1401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Past Papers | MathsWorld</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- Past Papers CSS -->
+    <link rel="stylesheet" href="css/past-papers.css">
+
+</head>
+
+<body>
+
+
+    <!-- =================================================
+         HEADER
+    ================================================== -->
+
+    <header class="header">
+
+        <div class="container nav-container">
+
+
+            <!-- Logo -->
+
+            <a href="index.html" class="logo">
+
+                <div class="logo-icon">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+
+                <span>
+                    Maths<span>World</span>
+                </span>
+
+            </a>
+
+
+            <!-- Desktop Navigation -->
+
+            <nav class="navbar">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="index.html#subjects">
+                    Subjects
+                </a>
+
+                <a href="notes.html">
+                    Notes
+                </a>
+
+                <a href="past-papers.html" class="active">
+                    Past Papers
+                </a>
+
+                <a href="index.html#about">
+                    About
+                </a>
+
+                <a href="index.html#contact">
+                    Contact
+                </a>
+
+            </nav>
+
+
+            <!-- Login -->
+
+            <a href="#" class="nav-login">
+
+                <i class="fa-solid fa-user"></i>
+
+                Login
+
+            </a>
+
+
+            <!-- Mobile Button -->
+
+            <button
+                class="menu-btn"
+                id="menuBtn">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+        </div>
+
+
+        <!-- Mobile Menu -->
+
+        <div
+            class="mobile-menu"
+            id="mobileMenu">
+
+            <a href="index.html">
+
+                <i class="fa-solid fa-house"></i>
+
+                Home
+
+            </a>
+
+            <a href="index.html#subjects">
+
+                <i class="fa-solid fa-book"></i>
+
+                Subjects
+
+            </a>
+
+            <a href="notes.html">
+
+                <i class="fa-solid fa-file-lines"></i>
+
+                Notes
+
+            </a>
+
+            <a
+                href="past-papers.html"
+                class="active">
+
+                <i class="fa-solid fa-file-pdf"></i>
+
+                Past Papers
+
+            </a>
+
+            <a href="index.html#about">
+
+                <i class="fa-solid fa-circle-info"></i>
+
+                About
+
+            </a>
+
+            <a href="index.html#contact">
+
+                <i class="fa-solid fa-envelope"></i>
+
+                Contact
+
+            </a>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =================================================
+         HERO
+    ================================================== -->
+
+    <section class="papers-hero">
+
+        <div class="container">
+
+            <div class="papers-hero-content">
+
+                <span class="section-badge">
+
+                    <i class="fa-solid fa-file-pdf"></i>
+
+                    Examination Resources
+
+                </span>
+
+
+                <h1>
+
+                    Past <span>Papers</span>
+
+                </h1>
+
+
+                <p>
+
+                    Practice previous examination papers
+                    and improve your confidence before exams.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         PAST PAPERS SECTION
+    ================================================== -->
+
+    <main class="papers-section">
+
+        <div class="container">
+
+
+            <!-- Search -->
+
+            <div class="papers-search-box">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="text"
+                    id="paperSearch"
+                    placeholder="Search papers, subjects, years...">
+
+                <button id="clearSearch">
+
+                    <i class="fa-solid fa-xmark"></i>
+
+                </button>
+
+            </div>
+
+
+
+            <!-- FILTERS -->
+
+            <div class="papers-filter-box">
+
+
+                <!-- Grade -->
+
+                <div class="filter-group">
+
+                    <label for="gradeFilter">
+
+                        <i class="fa-solid fa-graduation-cap"></i>
+
+                        Grade
+
+                    </label>
+
+                    <select id="gradeFilter">
+
+                        <option value="all">
+                            All Grades
+                        </option>
+
+                        <option value="grade 6">
+                            Grade 6
+                        </option>
+
+                        <option value="grade 7">
+                            Grade 7
+                        </option>
+
+                        <option value="grade 8">
+                            Grade 8
+                        </option>
+
+                        <option value="grade 9">
+                            Grade 9
+                        </option>
+
+                        <option value="grade 10">
+                            Grade 10
+                        </option>
+
+                        <option value="grade 11">
+                            Grade 11
+                        </option>
+
+                        <option value="a/l">
+                            A/L
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- Subject -->
+
+                <div class="filter-group">
+
+                    <label for="subjectFilter">
+
+                        <i class="fa-solid fa-book"></i>
+
+                        Subject
+
+                    </label>
+
+                    <select id="subjectFilter">
+
+                        <option value="all">
+                            All Subjects
+                        </option>
+
+                        <option value="combined mathematics">
+                            Combined Mathematics
+                        </option>
+
+                        <option value="physics">
+                            Physics
+                        </option>
+
+                        <option value="chemistry">
+                            Chemistry
+                        </option>
+
+                        <option value="biology">
+                            Biology
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- Year -->
+
+                <div class="filter-group">
+
+                    <label for="yearFilter">
+
+                        <i class="fa-regular fa-calendar"></i>
+
+                        Year
+
+                    </label>
+
+                    <select id="yearFilter">
+
+                        <option value="all">
+                            All Years
+                        </option>
+
+                        <option value="2026">
+                            2026
+                        </option>
+
+                        <option value="2025">
+                            2025
+                        </option>
+
+                        <option value="2024">
+                            2024
+                        </option>
+
+                        <option value="2023">
+                            2023
+                        </option>
+
+                        <option value="2022">
+                            2022
+                        </option>
+
+                        <option value="2021">
+                            2021
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- Paper Type -->
+
+                <div class="filter-group">
+
+                    <label for="typeFilter">
+
+                        <i class="fa-solid fa-layer-group"></i>
+
+                        Paper Type
+
+                    </label>
+
+                    <select id="typeFilter">
+
+                        <option value="all">
+                            All Papers
+                        </option>
+
+                        <option value="school">
+                            School Paper
+                        </option>
+
+                        <option value="term">
+                            Term Test
+                        </option>
+
+                        <option value="model">
+                            Model Paper
+                        </option>
+
+                        <option value="exam">
+                            Examination Paper
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- Sort -->
+
+                <div class="filter-group">
+
+                    <label for="sortFilter">
+
+                        <i class="fa-solid fa-arrow-down-wide-short"></i>
+
+                        Sort
+
+                    </label>
+
+                    <select id="sortFilter">
+
+                        <option value="newest">
+                            Newest First
+                        </option>
+
+                        <option value="oldest">
+                            Oldest First
+                        </option>
+
+                        <option value="az">
+                            A - Z
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- Reset -->
+
+                <button
+                    class="reset-btn"
+                    id="resetFilters">
+
+                    <i class="fa-solid fa-rotate-right"></i>
+
+                    Reset
+
+                </button>
+
+            </div>
+
+
+
+            <!-- RESULTS -->
+
+            <div class="papers-results-header">
+
+                <div>
+
+                    <h2>
+                        Past Papers
+                    </h2>
+
+                    <p id="resultCount">
+                        Showing 8 papers
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PAPER GRID -->
+
+            <div
+                class="papers-grid"
+                id="papersGrid">
+
+
+                <!-- =================================================
+                     PAPER 1
+                ================================================== -->
+
+                <article
+                    class="paper-card"
+                    data-grade="a/l"
+                    data-subject="combined mathematics"
+                    data-year="2025"
+                    data-type="examination"
+                    data-title="A/L Combined Mathematics 2025 Paper">
+
+                    <div class="paper-card-top">
+
+                        <div class="paper-icon">
+
+                            <i class="fa-solid fa-file-pdf"></i>
+
+                        </div>
+
+                        <span class="paper-year">
+                            2025
+                        </span>
+
+                    </div>
+
+
+                    <div class="paper-content">
+
+                        <span class="paper-subject">
+                            Combined Mathematics
+                        </span>
+
+                        <h3>
+                            A/L Combined Mathematics
+                            2025 Paper
+                        </h3>
+
+                        <p>
+                            Previous examination paper
+                            for A/L Combined Mathematics.
+                        </p>
+
+
+                        <div class="paper-meta">
+
+                            <span>
+
+                                <i class="fa-solid fa-graduation-cap"></i>
+
+                                A/L
+
+                            </span>
+
+                            <span>
+
+                                <i class="fa-solid fa-file"></i>
+
+                                Examination
+
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="paper-actions">
+
+                        <a
+                            href="pdf/math-integration.pdf"
+                            target="_blank"
+                            class="view-paper">
+
+                            <i class="fa-solid fa-eye"></i>
+
+                            View
+
+                        </a>
+
+                        <a
+                            href="pdf/math-integration.pdf"
+                            download
+                            class="download-paper">
+
+                            <i class="fa-solid fa-download"></i>
+
+                            Download
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =================================================
+                     PAPER 2
+                ================================================== -->
+
+                <article
+                    class="paper-card"
+                    data-grade="a/l"
+                    data-subject="physics"
+                    data-year="2025"
+                    data-type="examination"
+                    data-title="A/L Physics 2025 Paper">
+
+                    <div class="paper-card-top">
+
+                        <div class="paper-icon">
+
+                            <i class="fa-solid fa-file-pdf"></i>
+
+                        </div>
+
+                        <span class="paper-year">
+                            2025
+                        </span>
+
+                    </div>
+
+
+                    <div class="paper-content">
+
+                        <span class="paper-subject">
+                            Physics
+                        </span>
+
+                        <h3>
+                            A/L Physics
+                            2025 Paper
+                        </h3>
+
+                        <p>
+                            Previous examination paper
+                            for A/L Physics students.
+                        </p>
+
+
+                        <div class="paper-meta">
+
+                            <span>
+
+                                <i class="fa-solid fa-graduation-cap"></i>
+
+                                A/L
+
+                            </span>
+
+                            <span>
+
+                                <i class="fa-solid fa-file"></i>
+
+                                Examination
+
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="paper-actions">
+
+                        <a
+                            href="pdf/physics-2025.pdf"
+                            target="_blank"
+                            class="view-paper">
+
+                            <i class="fa-solid fa-eye"></i>
+
+                            View
+
+                        </a>
+
+                        <a
+                            href="pdf/physics-2025.pdf"
+                            download
+                            class="download-paper">
+
+                            <i class="fa-solid fa-download"></i>
+
+                            Download
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =================================================
+                     PAPER 3
+                ================================================== -->
+
+                <article
+                    class="paper-card"
+                    data-grade="a/l"
+                    data-subject="chemistry"
+                    data-year="2024"
+                    data-type="model"
+                    data-title="A/L Chemistry Model Paper 2024">
+
+                    <div class="paper-card-top">
+
+                        <div class="paper-icon">
+
+                            <i class="fa-solid fa-file-pdf"></i>
+
+                        </div>
+
+                        <span class="paper-year">
+                            2024
+                        </span>
+
+                    </div>
+
+
+                    <div class="paper-content">
+
+                        <span class="paper-subject">
+                            Chemistry
+                        </span>
+
+                        <h3>
+                            A/L Chemistry
+                            Model Paper 2024
+                        </h3>
+
+                        <p>
+                            Model examination paper
+                            for chemistry revision.
+                        </p>
+
+
+                        <div class="paper-meta">
+
+                            <span>
+
+                                <i class="fa-solid fa-graduation-cap"></i>
+
+                                A/L
+
+                            </span>
+
+                            <span>
+
+                                <i class="fa-solid fa-file"></i>
+
+                                Model Paper
+
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="paper-actions">
+
+                        <a
+                            href="pdf/chemistry-model-2025.pdf"
+                            target="_blank"
+                            class="view-paper">
+
+                            <i class="fa-solid fa-eye"></i>
+
+                            View
+
+                        </a>
+
+                        <a
+                            href="pdf/chemistry-model-2025.pdf"
+                            download
+                            class="download-paper">
+
+                            <i class="fa-solid fa-download"></i>
+
+                            Download
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =================================================
+                     PAPER 4
+                ================================================== -->
+
+                <article
+                    class="paper-card"
+                    data-grade="a/l"
+                    data-subject="biology"
+                    data-year="2025"
+                    data-type="model"
+                    data-title="A/L Biology Model Paper 2025">
+
+                    <div class="paper-card-top">
+
+                        <div class="paper-icon">
+
+                            <i class="fa-solid fa-file-pdf"></i>
+
+                        </div>
+
+                        <span class="paper-year">
+                            2025
+                        </span>
+
+                    </div>
+
+
+                    <div class="paper-content">
+
+                        <span class="paper-subject">
+                            Biology
+                        </span>
+
+                        <h3>
+                            A/L Biology
+                            Model Paper 2025
+                        </h3>
+
+                        <p>
+                            Biology model paper for
+                            examination preparation.
+                        </p>
+
+
+                        <div class="paper-meta">
+
+                            <span>
+
+                                <i class="fa-solid fa-graduation-cap"></i>
+
+                                A/L
+
+                            </span>
+
+                            <span>
+
+                                <i class="fa-solid fa-file"></i>
+
+                                Model Paper
+
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="paper-actions">
+
+                        <a
+                            href="pdf/biology-model-2025.pdf"
+                            target="_blank"
+                            class="view-paper">
+
+                            <i class="fa-solid fa-eye"></i>
+
+                            View
+
+                        </a>
+
+                        <a
+                            href="pdf/biology-model-2025.pdf"
+                            download
+                            class="download-paper">
+
+                            <i class="fa-solid fa-download"></i>
+
+                            Download
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =================================================
+                     PAPER 5
+                ================================================== -->
+
+                <article
+                    class="paper-card"
+                    data-grade="grade 11"
+                    data-subject="combined mathematics"
+                    data-year="2025"
+                    data-type="term"
+                    data-title="Grade 11 Mathematics Term Test 2025">
+
+                    <div class="paper-card-top">
+
+                        <div class="paper-icon">
+
+                            <i class="fa-solid fa-file-pdf"></i>
+
+                        </div>
+
+                        <span class="paper-year">
+                            2025
+                        </span>
+
+                    </div>
+
+
+                    <div class="paper-content">
+
+                        <span class="paper-subject">
+                            Mathematics
+                        </span>
+
+                        <h3>
+                            Grade 11 Mathematics
+                            Term Test 2025
+                        </h3>
+
+                        <p>
+                            Grade 11 mathematics
+                            term test paper.
+                        </p>
+
+
+                        <div class="paper-meta">
+
+                            <span>
+
+                                <i class="fa-solid fa-graduation-cap"></i>
+
+                                Grade 11
+
+                            </span>
+
+                            <span>
+
+                                <i class="fa-solid fa-file"></i>
+
+                                Term Test
+
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="paper-actions">
+
+                        <a
+                            href="pdf/maths-2025.pdf"
+                            target="_blank"
+                            class="view-paper">
+
+                            <i class="fa-solid fa-eye"></i>
+
+                            View
+
+                        </a>
+
+                        <a
+                            href="pdf/maths-2025.pdf"
+                            download
+                            class="download-paper">
+
+                            <i class="fa-solid fa-download"></i>
+
+                            Download
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =================================================
+                     PAPER 6
+                ================================================== -->
+
+                <article
+                    class="paper-card"
+                    data-grade="grade 10"
+                    data-subject="physics"
+                    data-year="2024"
+                    data-type="school"
+                    data-title="Grade 10 Physics School Paper 2024">
+
+                    <div class="paper-card-top">
+
+                        <div class="paper-icon">
+
+                            <i class="fa-solid fa-file-pdf"></i>
+
+                        </div>
+
+                        <span class="paper-year">
+                            2024
+                        </span>
+
+                    </div>
+
+
+                    <div class="paper-content">
+
+                        <span class="paper-subject">
+                            Physics
+                        </span>
+
+                        <h3>
+                            Grade 10 Physics
+                            School Paper 2024
+                        </h3>
+
+                        <p>
+                            Grade 10 physics school
+                            examination paper.
+                        </p>
+
+
+                        <div class="paper-meta">
+
+                            <span>
+
+                                <i class="fa-solid fa-graduation-cap"></i>
+
+                                Grade 10
+
+                            </span>
+
+                            <span>
+
+                                <i class="fa-solid fa-file"></i>
+
+                                School Paper
+
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="paper-actions">
+
+                        <a
+                            href="pdf/physics-2025.pdf"
+                            target="_blank"
+                            class="view-paper">
+
+                            <i class="fa-solid fa-eye"></i>
+
+                            View
+
+                        </a>
+
+                        <a
+                            href="pdf/physics-2025.pdf"
+                            download
+                            class="download-paper">
+
+                            <i class="fa-solid fa-download"></i>
+
+                            Download
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =================================================
+                     PAPER 7
+                ================================================== -->
+
+                <article
+                    class="paper-card"
+                    data-grade="grade 11"
+                    data-subject="chemistry"
+                    data-year="2023"
+                    data-type="term"
+                    data-title="Grade 11 Chemistry Term Test 2023">
+
+                    <div class="paper-card-top">
+
+                        <div class="paper-icon">
+
+                            <i class="fa-solid fa-file-pdf"></i>
+
+                        </div>
+
+                        <span class="paper-year">
+                            2023
+                        </span>
+
+                    </div>
+
+
+                    <div class="paper-content">
+
+                        <span class="paper-subject">
+                            Chemistry
+                        </span>
+
+                        <h3>
+                            Grade 11 Chemistry
+                            Term Test 2023
+                        </h3>
+
+                        <p>
+                            Chemistry term test paper
+                            for Grade 11 students.
+                        </p>
+
+
+                        <div class="paper-meta">
+
+                            <span>
+
+                                <i class="fa-solid fa-graduation-cap"></i>
+
+                                Grade 11
+
+                            </span>
+
+                            <span>
+
+                                <i class="fa-solid fa-file"></i>
+
+                                Term Test
+
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="paper-actions">
+
+                        <a
+                            href="pdf/chemistry-2023.pdf"
+                            target="_blank"
+                            class="view-paper">
+
+                            <i class="fa-solid fa-eye"></i>
+
+                            View
+
+                        </a>
+
+                        <a
+                            href="pdf/chemistry-2023.pdf"
+                            download
+                            class="download-paper">
+
+                            <i class="fa-solid fa-download"></i>
+
+                            Download
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =================================================
+                     PAPER 8
+                ================================================== -->
+
+                <article
+                    class="paper-card"
+                    data-grade="grade 11"
+                    data-subject="biology"
+                    data-year="2025"
+                    data-type="school"
+                    data-title="Grade 11 Biology School Paper 2025">
+
+                    <div class="paper-card-top">
+
+                        <div class="paper-icon">
+
+                            <i class="fa-solid fa-file-pdf"></i>
+
+                        </div>
+
+                        <span class="paper-year">
+                            2025
+                        </span>
+
+                    </div>
+
+
+                    <div class="paper-content">
+
+                        <span class="paper-subject">
+                            Biology
+                        </span>
+
+                        <h3>
+                            Grade 11 Biology
+                            School Paper 2025
+                        </h3>
+
+                        <p>
+                            Biology school paper for
+                            Grade 11 revision.
+                        </p>
+
+
+                        <div class="paper-meta">
+
+                            <span>
+
+                                <i class="fa-solid fa-graduation-cap"></i>
+
+                                Grade 11
+
+                            </span>
+
+                            <span>
+
+                                <i class="fa-solid fa-file"></i>
+
+                                School Paper
+
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="paper-actions">
+
+                        <a
+                            href="pdf/biology-model-2025.pdf"
+                            target="_blank"
+                            class="view-paper">
+
+                            <i class="fa-solid fa-eye"></i>
+
+                            View
+
+                        </a>
+
+                        <a
+                            href="pdf/biology-model-2025.pdf"
+                            download
+                            class="download-paper">
+
+                            <i class="fa-solid fa-download"></i>
+
+                            Download
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+
+
+            <!-- NO RESULTS -->
+
+            <div
+                class="no-results"
+                id="noResults">
+
+                <div class="no-results-icon">
+
+                    <i class="fa-solid fa-file-circle-xmark"></i>
+
+                </div>
+
+                <h3>
+                    No Papers Found
+                </h3>
+
+                <p>
+                    Try changing your search or filters.
+                </p>
+
+                <button id="resetNoResults">
+
+                    Reset Filters
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =================================================
+         FOOTER
+    ================================================== -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="footer-content">
+
+
+                <div class="footer-brand">
+
+                    <a href="index.html" class="logo">
+
+                        <div class="logo-icon">
+
+                            <i class="fa-solid fa-graduation-cap"></i>
+
+                        </div>
+
+                        <span>
+                            Maths<span>World</span>
+                        </span>
+
+                    </a>
+
+                    <p>
+                        Learn. Practice. Succeed.
+                    </p>
+
+                </div>
+
+
+                <div class="footer-links">
+
+                    <a href="index.html">
+                        Home
+                    </a>
+
+                    <a href="notes.html">
+                        Notes
+                    </a>
+
+                    <a href="past-papers.html">
+                        Past Papers
+                    </a>
+
+                    <a href="index.html#contact">
+                        Contact
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <p>
+                    © 2026 MathsWorld. All Rights Reserved.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- JavaScript -->
+
+    <script src="js/main.js"></script>
+
+    <script src="js/past-papers.js"></script>
+
+</body>
+
+</html>

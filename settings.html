@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Settings | MathsWorld Admin</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- Settings CSS -->
+    <link rel="stylesheet" href="css/settings.css">
+</head>
+
+<body>
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="admin-sidebar" id="adminSidebar">
+
+        <div class="sidebar-logo">
+
+            <div class="logo-icon">
+                <i class="fa-solid fa-calculator"></i>
+            </div>
+
+            <div class="logo-text">
+                <h2>Maths<span>World</span></h2>
+                <small>ADMIN PANEL</small>
+            </div>
+
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+            <a href="dashboard.html">
+                <i class="fa-solid fa-chart-line"></i>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="students.html">
+                <i class="fa-solid fa-user-graduate"></i>
+                <span>Students</span>
+            </a>
+
+            <a href="teachers.html">
+                <i class="fa-solid fa-chalkboard-user"></i>
+                <span>Teachers</span>
+            </a>
+
+            <a href="subjects.html">
+                <i class="fa-solid fa-book-open"></i>
+                <span>Subjects</span>
+            </a>
+
+            <a href="materials.html">
+                <i class="fa-solid fa-file-pdf"></i>
+                <span>Materials</span>
+            </a>
+
+            <a href="past-papers.html">
+                <i class="fa-solid fa-file-lines"></i>
+                <span>Past Papers</span>
+            </a>
+
+            <a href="model-papers.html">
+                <i class="fa-solid fa-folder-open"></i>
+                <span>Model Papers</span>
+            </a>
+
+            <a href="messages.html">
+                <i class="fa-solid fa-envelope"></i>
+                <span>Messages</span>
+            </a>
+
+            <a href="activity-log.html">
+                <i class="fa-solid fa-clock-rotate-left"></i>
+                <span>Activity Log</span>
+            </a>
+
+            <a href="settings.html" class="active">
+                <i class="fa-solid fa-gear"></i>
+                <span>Settings</span>
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <div class="admin-profile">
+
+                <div class="profile-avatar">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+
+                <div>
+                    <strong>Administrator</strong>
+                    <small>Super Admin</small>
+                </div>
+
+            </div>
+
+
+            <button class="logout-btn" id="logoutBtn">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                Logout
+
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="admin-main">
+
+        <!-- HEADER -->
+
+        <header class="admin-header">
+
+            <div class="header-left">
+
+                <button
+                    class="mobile-menu-btn"
+                    id="mobileMenuBtn"
+                >
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+
+                <div>
+
+                    <h1>Settings</h1>
+
+                    <p>
+                        Manage your MathsWorld website and administrator account.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="header-right">
+
+                <button
+                    class="notification-btn"
+                    id="notificationBtn"
+                >
+
+                    <i class="fa-regular fa-bell"></i>
+
+                    <span class="notification-dot"></span>
+
+                </button>
+
+
+                <div class="header-profile">
+
+                    <div class="header-avatar">
+                        A
+                    </div>
+
+                    <div>
+
+                        <strong>Administrator</strong>
+
+                        <span>Super Admin</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================= SETTINGS CONTENT ================= -->
+
+        <section class="settings-page">
+
+            <!-- SETTINGS NAVIGATION -->
+
+            <div class="settings-layout">
+
+                <aside class="settings-menu">
+
+                    <button
+                        class="settings-menu-item active"
+                        data-section="profile"
+                    >
+
+                        <i class="fa-solid fa-user"></i>
+
+                        <div>
+                            <strong>Profile</strong>
+                            <span>Administrator account</span>
+                        </div>
+
+                    </button>
+
+
+                    <button
+                        class="settings-menu-item"
+                        data-section="website"
+                    >
+
+                        <i class="fa-solid fa-globe"></i>
+
+                        <div>
+                            <strong>Website</strong>
+                            <span>Website configuration</span>
+                        </div>
+
+                    </button>
+
+
+                    <button
+                        class="settings-menu-item"
+                        data-section="branding"
+                    >
+
+                        <i class="fa-solid fa-palette"></i>
+
+                        <div>
+                            <strong>Branding</strong>
+                            <span>Logo and colors</span>
+                        </div>
+
+                    </button>
+
+
+                    <button
+                        class="settings-menu-item"
+                        data-section="security"
+                    >
+
+                        <i class="fa-solid fa-shield-halved"></i>
+
+                        <div>
+                            <strong>Security</strong>
+                            <span>Password and account</span>
+                        </div>
+
+                    </button>
+
+
+                    <button
+                        class="settings-menu-item"
+                        data-section="notifications"
+                    >
+
+                        <i class="fa-regular fa-bell"></i>
+
+                        <div>
+                            <strong>Notifications</strong>
+                            <span>Notification preferences</span>
+                        </div>
+
+                    </button>
+
+                </aside>
+
+
+                <!-- SETTINGS CONTENT -->
+
+                <div class="settings-content">
+
+
+                    <!-- ================= PROFILE ================= -->
+
+                    <section
+                        class="settings-section active"
+                        id="profile"
+                    >
+
+                        <div class="section-heading">
+
+                            <div>
+
+                                <span class="section-label">
+                                    ACCOUNT
+                                </span>
+
+                                <h2>Profile Settings</h2>
+
+                                <p>
+                                    Manage your administrator profile information.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="settings-card">
+
+                            <div class="profile-cover">
+
+                                <div class="large-profile-avatar">
+                                    A
+                                </div>
+
+                                <div>
+
+                                    <h3>Administrator</h3>
+
+                                    <p>Super Administrator</p>
+
+                                </div>
+
+                                <button
+                                    class="secondary-btn"
+                                    id="changeAvatarBtn"
+                                >
+
+                                    <i class="fa-solid fa-camera"></i>
+
+                                    Change Photo
+
+                                </button>
+
+                            </div>
+
+
+                            <div class="form-grid">
+
+                                <div class="form-group">
+
+                                    <label>
+                                        First Name
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="firstName"
+                                        value="Administrator"
+                                    >
+
+                                </div>
+
+
+                                <div class="form-group">
+
+                                    <label>
+                                        Last Name
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="lastName"
+                                        value=""
+                                        placeholder="Last name"
+                                    >
+
+                                </div>
+
+
+                                <div class="form-group">
+
+                                    <label>
+                                        Email Address
+                                    </label>
+
+                                    <input
+                                        type="email"
+                                        id="adminEmail"
+                                        value="admin@mathsworld.lk"
+                                    >
+
+                                </div>
+
+
+                                <div class="form-group">
+
+                                    <label>
+                                        Phone Number
+                                    </label>
+
+                                    <input
+                                        type="tel"
+                                        id="adminPhone"
+                                        value="0771055842"
+                                    >
+
+                                </div>
+
+
+                                <div class="form-group full-width">
+
+                                    <label>
+                                        Role
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        value="Super Administrator"
+                                        disabled
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="card-footer">
+
+                                <button
+                                    class="save-btn"
+                                    id="saveProfileBtn"
+                                >
+
+                                    <i class="fa-solid fa-floppy-disk"></i>
+
+                                    Save Changes
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- ================= WEBSITE ================= -->
+
+                    <section
+                        class="settings-section"
+                        id="website"
+                    >
+
+                        <div class="section-heading">
+
+                            <div>
+
+                                <span class="section-label">
+                                    WEBSITE
+                                </span>
+
+                                <h2>Website Settings</h2>
+
+                                <p>
+                                    Configure your MathsWorld website information.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="settings-card">
+
+                            <div class="form-grid">
+
+                                <div class="form-group full-width">
+
+                                    <label>
+                                        Website Name
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="websiteName"
+                                        value="MathsWorld"
+                                    >
+
+                                </div>
+
+
+                                <div class="form-group full-width">
+
+                                    <label>
+                                        Website Tagline
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="websiteTagline"
+                                        value="Learn. Practice. Achieve."
+                                    >
+
+                                </div>
+
+
+                                <div class="form-group">
+
+                                    <label>
+                                        Contact Email
+                                    </label>
+
+                                    <input
+                                        type="email"
+                                        id="contactEmail"
+                                        value="info@mathsworld.lk"
+                                    >
+
+                                </div>
+
+
+                                <div class="form-group">
+
+                                    <label>
+                                        Contact Phone
+                                    </label>
+
+                                    <input
+                                        type="tel"
+                                        id="contactPhone"
+                                        value="0771055842"
+                                    >
+
+                                </div>
+
+
+                                <div class="form-group full-width">
+
+                                    <label>
+                                        Website Description
+                                    </label>
+
+                                    <textarea
+                                        id="websiteDescription"
+                                        rows="5"
+                                    >MathsWorld is an educational platform providing study materials, past papers, model papers and learning resources for students.</textarea>
+
+                                </div>
+
+
+                                <div class="form-group">
+
+                                    <label>
+                                        Default Language
+                                    </label>
+
+                                    <select id="defaultLanguage">
+
+                                        <option value="english">
+                                            English
+                                        </option>
+
+                                        <option value="tamil">
+                                            Tamil
+                                        </option>
+
+                                        <option value="sinhala">
+                                            Sinhala
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+
+                                <div class="form-group">
+
+                                    <label>
+                                        Website Status
+                                    </label>
+
+                                    <select id="websiteStatus">
+
+                                        <option value="online">
+                                            Online
+                                        </option>
+
+                                        <option value="maintenance">
+                                            Maintenance Mode
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="card-footer">
+
+                                <button
+                                    class="save-btn"
+                                    id="saveWebsiteBtn"
+                                >
+
+                                    <i class="fa-solid fa-floppy-disk"></i>
+
+                                    Save Website Settings
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- ================= BRANDING ================= -->
+
+                    <section
+                        class="settings-section"
+                        id="branding"
+                    >
+
+                        <div class="section-heading">
+
+                            <div>
+
+                                <span class="section-label">
+                                    BRANDING
+                                </span>
+
+                                <h2>MathsWorld Branding</h2>
+
+                                <p>
+                                    Customize your website identity and colors.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="settings-card">
+
+                            <div class="branding-preview">
+
+                                <div class="preview-logo">
+                                    <div>
+                                        <i class="fa-solid fa-calculator"></i>
+                                    </div>
+
+                                    <strong>
+                                        MATHS<span>WORLD</span>
+                                    </strong>
+                                </div>
+
+                                <p>
+                                    Live branding preview
+                                </p>
+
+                            </div>
+
+
+                            <div class="form-grid">
+
+                                <div class="form-group">
+
+                                    <label>
+                                        Primary Color
+                                    </label>
+
+                                    <div class="color-input">
+
+                                        <input
+                                            type="color"
+                                            id="primaryColor"
+                                            value="#071B3A"
+                                        >
+
+                                        <input
+                                            type="text"
+                                            id="primaryColorText"
+                                            value="#071B3A"
+                                        >
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="form-group">
+
+                                    <label>
+                                        Secondary Color
+                                    </label>
+
+                                    <div class="color-input">
+
+                                        <input
+                                            type="color"
+                                            id="secondaryColor"
+                                            value="#38BDF8"
+                                        >
+
+                                        <input
+                                            type="text"
+                                            id="secondaryColorText"
+                                            value="#38BDF8"
+                                        >
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="form-group full-width">
+
+                                    <label>
+                                        Website Logo
+                                    </label>
+
+                                    <div class="upload-box">
+
+                                        <i class="fa-solid fa-cloud-arrow-up"></i>
+
+                                        <strong>
+                                            Upload Logo
+                                        </strong>
+
+                                        <span>
+                                            PNG, JPG or SVG
+                                        </span>
+
+                                        <input
+                                            type="file"
+                                            id="logoUpload"
+                                            accept=".png,.jpg,.jpeg,.svg"
+                                        >
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="card-footer">
+
+                                <button
+                                    class="save-btn"
+                                    id="saveBrandingBtn"
+                                >
+
+                                    <i class="fa-solid fa-floppy-disk"></i>
+
+                                    Save Branding
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- ================= SECURITY ================= -->
+
+                    <section
+                        class="settings-section"
+                        id="security"
+                    >
+
+                        <div class="section-heading">
+
+                            <div>
+
+                                <span class="section-label">
+                                    SECURITY
+                                </span>
+
+                                <h2>Security Settings</h2>
+
+                                <p>
+                                    Protect your administrator account.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="settings-card">
+
+                            <div class="security-status">
+
+                                <div class="security-icon">
+                                    <i class="fa-solid fa-shield-check"></i>
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        Account Security
+                                    </strong>
+
+                                    <span>
+                                        Your administrator account is protected.
+                                    </span>
+
+                                </div>
+
+                                <span class="secure-badge">
+                                    Secure
+                                </span>
+
+                            </div>
+
+
+                            <div class="form-grid">
+
+                                <div class="form-group full-width">
+
+                                    <label>
+                                        Current Password
+                                    </label>
+
+                                    <div class="password-field">
+
+                                        <input
+                                            type="password"
+                                            id="currentPassword"
+                                            placeholder="Enter current password"
+                                        >
+
+                                        <button
+                                            type="button"
+                                            class="password-toggle"
+                                            data-target="currentPassword"
+                                        >
+                                            <i class="fa-regular fa-eye"></i>
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="form-group">
+
+                                    <label>
+                                        New Password
+                                    </label>
+
+                                    <div class="password-field">
+
+                                        <input
+                                            type="password"
+                                            id="newPassword"
+                                            placeholder="Enter new password"
+                                        >
+
+                                        <button
+                                            type="button"
+                                            class="password-toggle"
+                                            data-target="newPassword"
+                                        >
+                                            <i class="fa-regular fa-eye"></i>
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="form-group">
+
+                                    <label>
+                                        Confirm Password
+                                    </label>
+
+                                    <div class="password-field">
+
+                                        <input
+                                            type="password"
+                                            id="confirmPassword"
+                                            placeholder="Confirm new password"
+                                        >
+
+                                        <button
+                                            type="button"
+                                            class="password-toggle"
+                                            data-target="confirmPassword"
+                                        >
+                                            <i class="fa-regular fa-eye"></i>
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="card-footer">
+
+                                <button
+                                    class="save-btn"
+                                    id="changePasswordBtn"
+                                >
+
+                                    <i class="fa-solid fa-key"></i>
+
+                                    Change Password
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- ================= NOTIFICATIONS ================= -->
+
+                    <section
+                        class="settings-section"
+                        id="notifications"
+                    >
+
+                        <div class="section-heading">
+
+                            <div>
+
+                                <span class="section-label">
+                                    NOTIFICATIONS
+                                </span>
+
+                                <h2>Notification Settings</h2>
+
+                                <p>
+                                    Choose which notifications you want to receive.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="settings-card">
+
+                            <div class="notification-setting">
+
+                                <div>
+
+                                    <strong>
+                                        New Student Registration
+                                    </strong>
+
+                                    <p>
+                                        Notify when a new student creates an account.
+                                    </p>
+
+                                </div>
+
+                                <label class="switch">
+
+                                    <input
+                                        type="checkbox"
+                                        checked
+                                    >
+
+                                    <span class="slider"></span>
+
+                                </label>
+
+                            </div>
+
+
+                            <div class="notification-setting">
+
+                                <div>
+
+                                    <strong>
+                                        New Material Upload
+                                    </strong>
+
+                                    <p>
+                                        Notify when new study materials are uploaded.
+                                    </p>
+
+                                </div>
+
+                                <label class="switch">
+
+                                    <input
+                                        type="checkbox"
+                                        checked
+                                    >
+
+                                    <span class="slider"></span>
+
+                                </label>
+
+                            </div>
+
+
+                            <div class="notification-setting">
+
+                                <div>
+
+                                    <strong>
+                                        Contact Messages
+                                    </strong>
+
+                                    <p>
+                                        Notify when students send new messages.
+                                    </p>
+
+                                </div>
+
+                                <label class="switch">
+
+                                    <input
+                                        type="checkbox"
+                                        checked
+                                    >
+
+                                    <span class="slider"></span>
+
+                                </label>
+
+                            </div>
+
+
+                            <div class="notification-setting">
+
+                                <div>
+
+                                    <strong>
+                                        Security Alerts
+                                    </strong>
+
+                                    <p>
+                                        Receive notifications about important security events.
+                                    </p>
+
+                                </div>
+
+                                <label class="switch">
+
+                                    <input
+                                        type="checkbox"
+                                        checked
+                                    >
+
+                                    <span class="slider"></span>
+
+                                </label>
+
+                            </div>
+
+
+                            <div class="notification-setting">
+
+                                <div>
+
+                                    <strong>
+                                        System Updates
+                                    </strong>
+
+                                    <p>
+                                        Receive updates about website maintenance and changes.
+                                    </p>
+
+                                </div>
+
+                                <label class="switch">
+
+                                    <input
+                                        type="checkbox"
+                                    >
+
+                                    <span class="slider"></span>
+
+                                </label>
+
+                            </div>
+
+
+                            <div class="card-footer">
+
+                                <button
+                                    class="save-btn"
+                                    id="saveNotificationsBtn"
+                                >
+
+                                    <i class="fa-solid fa-floppy-disk"></i>
+
+                                    Save Preferences
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= TOAST ================= -->
+
+    <div class="toast" id="toast">
+
+        <div class="toast-icon">
+            <i class="fa-solid fa-check"></i>
+        </div>
+
+        <div class="toast-content">
+
+            <strong id="toastTitle">
+                Success
+            </strong>
+
+            <p id="toastMessage">
+                Settings saved successfully.
+            </p>
+
+        </div>
+
+        <button class="toast-close" id="toastClose">
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="js/settings.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,1328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Past Papers Management | MathsWorld Admin</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <link rel="stylesheet" href="css/past-papers-management.css">
+</head>
+
+<body>
+
+<div class="admin-layout">
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="admin-sidebar" id="adminSidebar">
+
+        <div class="sidebar-logo">
+
+            <div class="logo-icon">
+                <i class="fa-solid fa-calculator"></i>
+            </div>
+
+            <div>
+                <h2>MathsWorld</h2>
+                <span>Admin Panel</span>
+            </div>
+
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+            <p class="nav-title">MAIN MENU</p>
+
+            <a href="dashboard.html" class="nav-link">
+                <i class="fa-solid fa-chart-pie"></i>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="#" class="nav-link">
+                <i class="fa-solid fa-users"></i>
+                <span>Students</span>
+            </a>
+
+            <a href="subjects-management.html" class="nav-link">
+                <i class="fa-solid fa-book"></i>
+                <span>Subjects</span>
+            </a>
+
+            <a href="materials-management.html" class="nav-link">
+                <i class="fa-solid fa-file-lines"></i>
+                <span>Materials</span>
+            </a>
+
+            <a href="past-papers-management.html" class="nav-link active">
+                <i class="fa-solid fa-file-pdf"></i>
+                <span>Past Papers</span>
+            </a>
+
+            <a href="model-papers.html" class="nav-link">
+                <i class="fa-solid fa-copy"></i>
+                <span>Model Papers</span>
+            </a>
+
+            <a href="#" class="nav-link">
+                <i class="fa-solid fa-clock-rotate-left"></i>
+                <span>Activity</span>
+            </a>
+
+
+            <p class="nav-title">SYSTEM</p>
+
+            <a href="#" class="nav-link">
+                <i class="fa-solid fa-gear"></i>
+                <span>Settings</span>
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <div class="admin-mini-profile">
+
+                <div class="admin-avatar">
+                    A
+                </div>
+
+                <div>
+                    <strong>Administrator</strong>
+                    <span>Super Admin</span>
+                </div>
+
+                <button>
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="admin-main">
+
+        <!-- HEADER -->
+
+        <header class="admin-header">
+
+            <button class="mobile-menu-btn" id="menuBtn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+
+            <div class="header-title">
+
+                <span>Admin Panel</span>
+
+                <h1>Past Papers</h1>
+
+            </div>
+
+
+            <div class="header-actions">
+
+                <button class="icon-btn" id="notificationBtn">
+
+                    <i class="fa-regular fa-bell"></i>
+
+                    <span class="notification-dot"></span>
+
+                </button>
+
+
+                <div class="header-profile">
+
+                    <div class="header-avatar">
+                        A
+                    </div>
+
+                    <div>
+                        <strong>Administrator</strong>
+                        <span>Super Admin</span>
+                    </div>
+
+                    <i class="fa-solid fa-chevron-down"></i>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================= CONTENT ================= -->
+
+        <section class="content-area">
+
+            <div class="page-top">
+
+                <div>
+
+                    <span class="page-label">
+                        <i class="fa-solid fa-file-pdf"></i>
+                        Examination Resources
+                    </span>
+
+                    <h2>Past Papers Management</h2>
+
+                    <p>
+                        Manage previous examination papers and make them available to students.
+                    </p>
+
+                </div>
+
+
+                <button
+                    class="primary-btn"
+                    id="openPaperModal"
+                >
+                    <i class="fa-solid fa-plus"></i>
+                    Add Past Paper
+                </button>
+
+            </div>
+
+
+            <!-- ================= STATISTICS ================= -->
+
+            <div class="stats-grid">
+
+                <div class="stat-card">
+
+                    <div class="stat-icon blue">
+                        <i class="fa-solid fa-file-pdf"></i>
+                    </div>
+
+                    <div>
+
+                        <span>Total Papers</span>
+
+                        <h3>186</h3>
+
+                        <small>
+                            <i class="fa-solid fa-arrow-up"></i>
+                            14 this year
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon sky">
+                        <i class="fa-solid fa-calendar-days"></i>
+                    </div>
+
+                    <div>
+
+                        <span>Years Covered</span>
+
+                        <h3>12</h3>
+
+                        <small>
+                            2015 — 2026
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon yellow">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+
+                    <div>
+
+                        <span>A/L Papers</span>
+
+                        <h3>94</h3>
+
+                        <small>
+                            All main subjects
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon green">
+                        <i class="fa-solid fa-download"></i>
+                    </div>
+
+                    <div>
+
+                        <span>Total Downloads</span>
+
+                        <h3>24.6K</h3>
+
+                        <small>
+                            <i class="fa-solid fa-arrow-up"></i>
+                            11.2% this month
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= PAPERS PANEL ================= -->
+
+            <div class="papers-panel">
+
+                <div class="panel-toolbar">
+
+                    <div class="search-box">
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                        <input
+                            type="text"
+                            id="searchPaper"
+                            placeholder="Search past papers..."
+                        >
+
+                    </div>
+
+
+                    <div class="filter-group">
+
+                        <select id="subjectFilter">
+
+                            <option value="all">
+                                All Subjects
+                            </option>
+
+                            <option value="Combined Mathematics">
+                                Combined Mathematics
+                            </option>
+
+                            <option value="Physics">
+                                Physics
+                            </option>
+
+                            <option value="Chemistry">
+                                Chemistry
+                            </option>
+
+                            <option value="Biology">
+                                Biology
+                            </option>
+
+                            <option value="Mathematics">
+                                Mathematics
+                            </option>
+
+                            <option value="Science">
+                                Science
+                            </option>
+
+                        </select>
+
+
+                        <select id="levelFilter">
+
+                            <option value="all">
+                                All Levels
+                            </option>
+
+                            <option value="Grade 6">
+                                Grade 6
+                            </option>
+
+                            <option value="Grade 7">
+                                Grade 7
+                            </option>
+
+                            <option value="Grade 8">
+                                Grade 8
+                            </option>
+
+                            <option value="Grade 9">
+                                Grade 9
+                            </option>
+
+                            <option value="Grade 10">
+                                Grade 10
+                            </option>
+
+                            <option value="Grade 11">
+                                Grade 11
+                            </option>
+
+                            <option value="A/L">
+                                A/L
+                            </option>
+
+                        </select>
+
+
+                        <select id="yearFilter">
+
+                            <option value="all">
+                                All Years
+                            </option>
+
+                            <option value="2026">2026</option>
+                            <option value="2025">2025</option>
+                            <option value="2024">2024</option>
+                            <option value="2023">2023</option>
+                            <option value="2022">2022</option>
+
+                        </select>
+
+
+                        <select id="statusFilter">
+
+                            <option value="all">
+                                All Status
+                            </option>
+
+                            <option value="Published">
+                                Published
+                            </option>
+
+                            <option value="Draft">
+                                Draft
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ================= TABLE ================= -->
+
+                <div class="table-wrapper">
+
+                    <table class="papers-table">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>Past Paper</th>
+                                <th>Subject</th>
+                                <th>Level</th>
+                                <th>Year</th>
+                                <th>Paper</th>
+                                <th>Downloads</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="papersTable">
+
+
+                            <!-- PAPER 1 -->
+
+                            <tr
+                                data-subject="Combined Mathematics"
+                                data-level="A/L"
+                                data-year="2026"
+                                data-status="Published"
+                            >
+
+                                <td>
+
+                                    <div class="paper-info">
+
+                                        <div class="pdf-icon">
+                                            <i class="fa-solid fa-file-pdf"></i>
+                                        </div>
+
+                                        <div>
+
+                                            <strong>
+                                                G.C.E. A/L Combined Mathematics
+                                            </strong>
+
+                                            <span>
+                                                2026 • PDF • 8.4 MB
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+
+                                <td>
+                                    Combined Mathematics
+                                </td>
+
+
+                                <td>
+                                    <span class="level-badge al">
+                                        A/L
+                                    </span>
+                                </td>
+
+
+                                <td>
+                                    2026
+                                </td>
+
+
+                                <td>
+
+                                    <span class="paper-badge">
+                                        Paper I & II
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+                                    4,825
+                                </td>
+
+
+                                <td>
+
+                                    <span class="status published">
+
+                                        <i class="fa-solid fa-circle"></i>
+
+                                        Published
+
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+
+                                    <div class="action-buttons">
+
+                                        <button
+                                            class="action-btn view"
+                                            title="View"
+                                        >
+                                            <i class="fa-regular fa-eye"></i>
+                                        </button>
+
+                                        <button
+                                            class="action-btn edit"
+                                            title="Edit"
+                                        >
+                                            <i class="fa-solid fa-pen"></i>
+                                        </button>
+
+                                        <button
+                                            class="action-btn delete"
+                                            title="Delete"
+                                        >
+                                            <i class="fa-solid fa-trash"></i>
+                                        </button>
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+
+                            <!-- PAPER 2 -->
+
+                            <tr
+                                data-subject="Physics"
+                                data-level="A/L"
+                                data-year="2025"
+                                data-status="Published"
+                            >
+
+                                <td>
+
+                                    <div class="paper-info">
+
+                                        <div class="pdf-icon">
+                                            <i class="fa-solid fa-file-pdf"></i>
+                                        </div>
+
+                                        <div>
+
+                                            <strong>
+                                                G.C.E. A/L Physics
+                                            </strong>
+
+                                            <span>
+                                                2025 • PDF • 7.2 MB
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+
+                                <td>
+                                    Physics
+                                </td>
+
+
+                                <td>
+                                    <span class="level-badge al">
+                                        A/L
+                                    </span>
+                                </td>
+
+
+                                <td>
+                                    2025
+                                </td>
+
+
+                                <td>
+
+                                    <span class="paper-badge">
+                                        Full Paper
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+                                    3,762
+                                </td>
+
+
+                                <td>
+
+                                    <span class="status published">
+
+                                        <i class="fa-solid fa-circle"></i>
+
+                                        Published
+
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+
+                                    <div class="action-buttons">
+
+                                        <button class="action-btn view">
+                                            <i class="fa-regular fa-eye"></i>
+                                        </button>
+
+                                        <button class="action-btn edit">
+                                            <i class="fa-solid fa-pen"></i>
+                                        </button>
+
+                                        <button class="action-btn delete">
+                                            <i class="fa-solid fa-trash"></i>
+                                        </button>
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+
+                            <!-- PAPER 3 -->
+
+                            <tr
+                                data-subject="Chemistry"
+                                data-level="A/L"
+                                data-year="2024"
+                                data-status="Published"
+                            >
+
+                                <td>
+
+                                    <div class="paper-info">
+
+                                        <div class="pdf-icon">
+                                            <i class="fa-solid fa-file-pdf"></i>
+                                        </div>
+
+                                        <div>
+
+                                            <strong>
+                                                G.C.E. A/L Chemistry
+                                            </strong>
+
+                                            <span>
+                                                2024 • PDF • 6.8 MB
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+
+                                <td>
+                                    Chemistry
+                                </td>
+
+
+                                <td>
+                                    <span class="level-badge al">
+                                        A/L
+                                    </span>
+                                </td>
+
+
+                                <td>
+                                    2024
+                                </td>
+
+
+                                <td>
+
+                                    <span class="paper-badge">
+                                        Full Paper
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+                                    2,918
+                                </td>
+
+
+                                <td>
+
+                                    <span class="status published">
+
+                                        <i class="fa-solid fa-circle"></i>
+
+                                        Published
+
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+
+                                    <div class="action-buttons">
+
+                                        <button class="action-btn view">
+                                            <i class="fa-regular fa-eye"></i>
+                                        </button>
+
+                                        <button class="action-btn edit">
+                                            <i class="fa-solid fa-pen"></i>
+                                        </button>
+
+                                        <button class="action-btn delete">
+                                            <i class="fa-solid fa-trash"></i>
+                                        </button>
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+
+                            <!-- PAPER 4 -->
+
+                            <tr
+                                data-subject="Biology"
+                                data-level="A/L"
+                                data-year="2023"
+                                data-status="Draft"
+                            >
+
+                                <td>
+
+                                    <div class="paper-info">
+
+                                        <div class="pdf-icon">
+                                            <i class="fa-solid fa-file-pdf"></i>
+                                        </div>
+
+                                        <div>
+
+                                            <strong>
+                                                G.C.E. A/L Biology
+                                            </strong>
+
+                                            <span>
+                                                2023 • PDF • 9.1 MB
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+
+                                <td>
+                                    Biology
+                                </td>
+
+
+                                <td>
+                                    <span class="level-badge al">
+                                        A/L
+                                    </span>
+                                </td>
+
+
+                                <td>
+                                    2023
+                                </td>
+
+
+                                <td>
+
+                                    <span class="paper-badge">
+                                        Full Paper
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+                                    1,126
+                                </td>
+
+
+                                <td>
+
+                                    <span class="status draft">
+
+                                        <i class="fa-solid fa-circle"></i>
+
+                                        Draft
+
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+
+                                    <div class="action-buttons">
+
+                                        <button class="action-btn view">
+                                            <i class="fa-regular fa-eye"></i>
+                                        </button>
+
+                                        <button class="action-btn edit">
+                                            <i class="fa-solid fa-pen"></i>
+                                        </button>
+
+                                        <button class="action-btn delete">
+                                            <i class="fa-solid fa-trash"></i>
+                                        </button>
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+
+                            <!-- PAPER 5 -->
+
+                            <tr
+                                data-subject="Mathematics"
+                                data-level="Grade 11"
+                                data-year="2025"
+                                data-status="Published"
+                            >
+
+                                <td>
+
+                                    <div class="paper-info">
+
+                                        <div class="pdf-icon">
+                                            <i class="fa-solid fa-file-pdf"></i>
+                                        </div>
+
+                                        <div>
+
+                                            <strong>
+                                                Grade 11 Mathematics
+                                            </strong>
+
+                                            <span>
+                                                2025 • PDF • 4.3 MB
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+
+                                <td>
+                                    Mathematics
+                                </td>
+
+
+                                <td>
+                                    <span class="level-badge grade">
+                                        Grade 11
+                                    </span>
+                                </td>
+
+
+                                <td>
+                                    2025
+                                </td>
+
+
+                                <td>
+
+                                    <span class="paper-badge">
+                                        Full Paper
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+                                    2,084
+                                </td>
+
+
+                                <td>
+
+                                    <span class="status published">
+
+                                        <i class="fa-solid fa-circle"></i>
+
+                                        Published
+
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+
+                                    <div class="action-buttons">
+
+                                        <button class="action-btn view">
+                                            <i class="fa-regular fa-eye"></i>
+                                        </button>
+
+                                        <button class="action-btn edit">
+                                            <i class="fa-solid fa-pen"></i>
+                                        </button>
+
+                                        <button class="action-btn delete">
+                                            <i class="fa-solid fa-trash"></i>
+                                        </button>
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+                <!-- EMPTY -->
+
+                <div class="empty-state" id="emptyState">
+
+                    <i class="fa-solid fa-file-circle-xmark"></i>
+
+                    <h3>No past papers found</h3>
+
+                    <p>
+                        Try changing your search or filter options.
+                    </p>
+
+                </div>
+
+
+                <!-- PAGINATION -->
+
+                <div class="pagination">
+
+                    <span>
+                        Showing
+                        <strong id="resultCount">5</strong>
+                        past papers
+                    </span>
+
+
+                    <div class="pagination-buttons">
+
+                        <button class="page-btn active">
+                            1
+                        </button>
+
+                        <button class="page-btn">
+                            2
+                        </button>
+
+                        <button class="page-btn">
+                            3
+                        </button>
+
+                        <button class="page-btn">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<!-- ================= ADD PAPER MODAL ================= -->
+
+<div class="modal-overlay" id="paperModal">
+
+    <div class="paper-modal">
+
+        <div class="modal-header">
+
+            <div>
+
+                <span class="modal-label">
+                    <i class="fa-solid fa-file-circle-plus"></i>
+                    Examination Resource
+                </span>
+
+                <h2>Add Past Paper</h2>
+
+            </div>
+
+
+            <button
+                class="close-modal"
+                id="closePaperModal"
+            >
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+        </div>
+
+
+        <form id="paperForm">
+
+            <div class="form-grid">
+
+
+                <div class="form-group full">
+
+                    <label>
+                        Paper Title
+                    </label>
+
+                    <input
+                        type="text"
+                        id="paperTitle"
+                        placeholder="Example: G.C.E. A/L Combined Mathematics 2026"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Subject
+                    </label>
+
+                    <select id="paperSubject" required>
+
+                        <option value="">
+                            Select Subject
+                        </option>
+
+                        <option>
+                            Combined Mathematics
+                        </option>
+
+                        <option>
+                            Physics
+                        </option>
+
+                        <option>
+                            Chemistry
+                        </option>
+
+                        <option>
+                            Biology
+                        </option>
+
+                        <option>
+                            Mathematics
+                        </option>
+
+                        <option>
+                            Science
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Level
+                    </label>
+
+                    <select id="paperLevel" required>
+
+                        <option value="">
+                            Select Level
+                        </option>
+
+                        <option>Grade 6</option>
+                        <option>Grade 7</option>
+                        <option>Grade 8</option>
+                        <option>Grade 9</option>
+                        <option>Grade 10</option>
+                        <option>Grade 11</option>
+                        <option>A/L</option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Examination Year
+                    </label>
+
+                    <select id="paperYear" required>
+
+                        <option value="">
+                            Select Year
+                        </option>
+
+                        <option>2026</option>
+                        <option>2025</option>
+                        <option>2024</option>
+                        <option>2023</option>
+                        <option>2022</option>
+                        <option>2021</option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Paper Type
+                    </label>
+
+                    <select id="paperType" required>
+
+                        <option value="">
+                            Select Type
+                        </option>
+
+                        <option>Full Paper</option>
+                        <option>Paper I</option>
+                        <option>Paper II</option>
+                        <option>Paper I & II</option>
+                        <option>Answer Scheme</option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group full">
+
+                    <label>
+                        Description
+                    </label>
+
+                    <textarea
+                        id="paperDescription"
+                        rows="4"
+                        placeholder="Enter a short description..."
+                    ></textarea>
+
+                </div>
+
+
+                <div class="form-group full">
+
+                    <label>
+                        Upload PDF
+                    </label>
+
+
+                    <div
+                        class="upload-box"
+                        id="uploadBox"
+                    >
+
+                        <input
+                            type="file"
+                            id="paperFile"
+                            accept=".pdf"
+                        >
+
+
+                        <div class="upload-content">
+
+                            <div class="upload-icon">
+
+                                <i class="fa-solid fa-file-arrow-up"></i>
+
+                            </div>
+
+                            <strong>
+                                Click to upload PDF
+                            </strong>
+
+                            <span>
+                                PDF files only
+                            </span>
+
+                            <small>
+                                Maximum file size: 20 MB
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="selected-file"
+                        id="selectedFile"
+                    ></div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Status
+                    </label>
+
+                    <select id="paperStatus">
+
+                        <option>
+                            Published
+                        </option>
+
+                        <option>
+                            Draft
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <div class="modal-footer">
+
+                <button
+                    type="button"
+                    class="secondary-btn"
+                    id="cancelPaper"
+                >
+                    Cancel
+                </button>
+
+
+                <button
+                    type="submit"
+                    class="primary-btn"
+                >
+                    <i class="fa-solid fa-cloud-arrow-up"></i>
+                    Upload Past Paper
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<!-- ================= TOAST ================= -->
+
+<div class="toast" id="toast">
+
+    <i class="fa-solid fa-circle-check"></i>
+
+    <span id="toastMessage">
+        Action completed successfully.
+    </span>
+
+</div>
+
+
+<script src="js/past-papers-management.js"></script>
+
+</body>
+</html>
