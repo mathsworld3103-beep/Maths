@@ -195,7 +195,7 @@
     }
 
 
-    .mobile-menu.active {
+    .mobile-menu.show {
 
         opacity: 1;
 
